@@ -1,4 +1,4 @@
-<%@language="VBScript" CodePage="65001"%>
+﻿<%@language="VBScript" CodePage="65001"%>
 <%Option Explicit%>
 <%Session.CodePage=65001%>
 <%Response.Charset="UTF-8"%>
