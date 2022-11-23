@@ -9,7 +9,7 @@
   <a href="" target="_blank"><img src="https://img.shields.io/badge/研若-科技-blue" alt="QQ"></a>
 </p>
 
-# 目录（善用Ctrl+F）
+# 目录【善用搜索(Ctrl+F)】
 * [一、学习资料](#learnFile)
     *  [1.书籍](#learnBook)
     *  [2.Python](#learnPython)
@@ -68,6 +68,7 @@
 ## 音乐<span id="learnMp3"></span>
 ### 免费音乐网站
 [下歌吧_音乐免费下载_音乐在线试听_无损音乐下载](https://music.y444.cn/#/ "本站名为下歌吧，免费提供音乐在线试听、下载服务，是全网最全、最快的音乐下载网站，提供超高、无损等音质音乐下载，在线下载歌曲，在线免费下载音乐，免费下载歌曲等服务。")  
+[铜钟: Listen to all the music in one place.](https://tonzhon.com/ "铜钟是一个纯粹的音乐网站, 没有干扰, 可以让你方便地听歌, 专注于学习和工作.")  
 ## 游戏<span id="learnGames"></span>
 ### 游戏下载站
 [Switch520](https://xxxxx520.com/ "switch游戏下载-PC游戏下载-switch破解游戏下载")  
