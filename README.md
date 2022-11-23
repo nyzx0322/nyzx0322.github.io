@@ -21,7 +21,8 @@
     *  
 * [三、休闲娱乐](#videosGames)
     *  [1.影视](#learnVideos)
-    *  [2.游戏](#learnGames)
+    *  [2.音乐](#learnMp3)
+    *  [3.游戏](#learnGames)
     *  
 * [其他](#more)
     *  [1.趣站](#moreSite)
@@ -30,9 +31,12 @@
 
 
 # 学习资料<span id="learnFile"></span>
-## 书籍<span id="learnBook"></span>
-[书栈网 · BookStack_程序员IT互联网开源编程书籍免费阅读，助您【码】力十足！](https://www.bookstack.cn/ "书栈网，IT程序员互联网开源编程书籍阅读分享，囊括小程序、前端、后端、移动端、云计算、大数据、区块链、机器学习、人工智能和面试笔试等相关书籍，助你【码】力十足！")\
-<img src="https://i.imgur.com/uDe6jJC.png" width="100%"/>
+## 资料书籍<span id="learnBook"></span>
+### 程序员相关
+[书栈网 · BookStack_程序员IT互联网开源编程书籍免费阅读，助您【码】力十足！](https://www.bookstack.cn/ "书栈网，IT程序员互联网开源编程书籍阅读分享，囊括小程序、前端、后端、移动端、云计算、大数据、区块链、机器学习、人工智能和面试笔试等相关书籍，助你【码】力十足！")
+<!-- <img src="https://i.imgur.com/uDe6jJC.png" width="100%"/> -->
+[小林 x 图解计算机基础：图解计算机网络、操作系统、计算机组成、数据库，让天下没有难懂的八股文！](https://xiaolincoding.com/ "图解计算机网络、操作系统、计算机组成、数据库，让天下没有难懂的八股文！")  
+### 文学作品
 
 ## Python<span id="learnPython"></span>
 [Jack-Cherish/PythonPark: Python乐园。](https://github.com/Jack-Cherish/PythonPark "Python 开源项目之「自学编程之路」，保姆级教程：AI实验室、宝藏视频、数据结构、学习指南、机器学习实战、深度学习实战、网络爬虫、大厂面经、程序人生、资源分享。 - Jack-Cherish/PythonPark: Python 开源项目之「自学编程之路」，保姆级教程：AI实验室、宝藏视频、数据结构、学习指南、机器学习实战、深度学习实战、网络爬虫、大厂面经、程序人生、资源分享。")  
@@ -54,17 +58,26 @@
 
 ## 其他
 [ilovexjp/health-code-simulator: 基于 Web 的健康码模拟- Codeberg.org](https://codeberg.org/ilovexjp/health-code-simulator)
-### Love Deom
+### Love Demo
   [近期超火的表白页面：💗 Love u 💗](https://nyzx0322.github.io/nyzx0322/demo/love.html "修改版")  
 
 
 
 # 休闲娱乐<span id="videosGames"></span>
 ## 影视<span id="learnVideos"></span>
+## 音乐<span id="learnMp3"></span>
+### 免费音乐网站
+[下歌吧_音乐免费下载_音乐在线试听_无损音乐下载](https://music.y444.cn/#/ "本站名为下歌吧，免费提供音乐在线试听、下载服务，是全网最全、最快的音乐下载网站，提供超高、无损等音质音乐下载，在线下载歌曲，在线免费下载音乐，免费下载歌曲等服务。")  
 ## 游戏<span id="learnGames"></span>
+### 游戏下载站
+[Switch520](https://xxxxx520.com/ "switch游戏下载-PC游戏下载-switch破解游戏下载")  
+
 
 
 # 其他<span id="more"></span>
 ## 趣站<span id="moreSite"></span>
+### 2022-11-23
+[How To Cook：程序员做饭指南](https://cook.aiurs.co/ "")  
+[炒饭 - 世界那么大：网络迷踪](https://chao.fan/ "兴趣聚合的优质内容社区，每个兴趣都值得被尊重，在这里，一起讨论问题、分享趣事、了解最新时事，世界-尽在眼下")  
 
 
