@@ -7,7 +7,7 @@ function play() {
 	var paly = document.getElementById("palybox"); //获取播放窗口位置
 	if(rul == "") {
 		// alert("研若提示您：请输入链接，没连接我给你看个鬼呀");
-		paly.src="./static/images/ghost.gif";
+		paly.src="./showTip.html";
 	} else {
 		paly.src = jkv + rul; //接口赋值
 		//ajax数据传递
