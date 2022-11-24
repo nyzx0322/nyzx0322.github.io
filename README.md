@@ -47,11 +47,8 @@
 *  [Jiumo Search 鸠摩搜索 - 文档搜索引擎](https://www.jiumodiary.com/ "鸠摩搜索引擎")  
 
 ## Python<span id="learnPython"></span>
-### 博客
 *  [Jack-Cherish/PythonPark: Python乐园。](https://github.com/Jack-Cherish/PythonPark "Python 开源项目之「自学编程之路」，保姆级教程：AI实验室、宝藏视频、数据结构、学习指南、机器学习实战、深度学习实战、网络爬虫、大厂面经、程序人生、资源分享。 - Jack-Cherish/PythonPark: Python 开源项目之「自学编程之路」，保姆级教程：AI实验室、宝藏视频、数据结构、学习指南、机器学习实战、深度学习实战、网络爬虫、大厂面经、程序人生、资源分享。")  
 *  [迷途小书童的Note](https://xugaoxiang.com/ "徐高翔的个人站点，编程、技术、分享")  
-### 插件
-*  [CharlesPikachu/Games: Games: Python编写游戏](https://github.com/CharlesPikachu/Games "Games: Create interesting games by pure python. Contribute to CharlesPikachu/Games development by creating an account on GitHub.")  
 
 # 项目分享<span id="proShare"></span>
 ## 工具<span id="learnTool"></span>
@@ -60,6 +57,8 @@
 
 ## Web<span id="learnWeb"></span>
 
+## Python
+*  [CharlesPikachu/Games: Games: Python编写游戏](https://github.com/CharlesPikachu/Games "Games: Create interesting games by pure python. Contribute to CharlesPikachu/Games development by creating an account on GitHub.")  
 
 ## 机器人<span id="learnRebots"></span>
 ### nonebot2
@@ -73,7 +72,7 @@
 ## 其他
 *  [ilovexjp/health-code-simulator: 基于 Web 的健康码模拟- Codeberg.org](https://codeberg.org/ilovexjp/health-code-simulator)
 ### Love Demo
-*  [近期超火的表白页面：💗 Love u 💗](https://nyzx0322.github.io/nyzx0322/demo/love.html "修改版")  
+*  [近期超火的表白页面：💗 Love u 💗](https://nyzx0322.github.io/nyzx0322/demo/love.html "修改版")  ：<small>源码在本项目文件中</small>  
 
 
 
@@ -99,7 +98,7 @@
 
 * <span id="SoftStreammedia">媒体播放器</span>
     * [Potplayer](https://potplayer.daum.net/ "")  
-#### IOS
+#### IOS软件下载
 *  [Kurd store](https://kurdstore.info/ipa/null.php "")  
 #### MAC
 *  [Mac软件 下的所有内容 - MacApp分享频道](https://macapp.org.cn/app/?iao.su "Mac软件")  
@@ -111,10 +110,10 @@
 *  [炒饭 - 世界那么大：网络迷踪](https://chao.fan/ "兴趣聚合的优质内容社区，每个兴趣都值得被尊重，在这里，一起讨论问题、分享趣事、了解最新时事，世界-尽在眼下") 
 ## 影视<span id="learnVideos"></span>
 ### 观影网站
-*  [VIP视频解析1](https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/index.html "本窗口打开")  ：源码在本项目文件中  
-*  [VIP视频解析2](https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/02.html "新窗口打开")  ：源码在本项目文件中  
+*  [VIP视频解析1](https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/index.html "本窗口打开")  ：<small>源码在本项目文件中</small>
+*  [VIP视频解析2](https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/02.html "新窗口打开")  ：<small>源码在本项目文件中</small>  
 #### 体育直播
-*  [88直播：2022卡塔爾世界杯直播](http://www.88zhibo.cc/ "2022卡塔尔世界杯直播，NBA直播線上看，英超直播，西甲直播，歐冠直播等。全部賽事錄像回放，體育新聞資訊。 88直播看球，無插件免費看。")  
+*  [88直播：2022卡塔尔世界杯直播](http://www.88zhibo.cc/ "2022卡塔尔世界杯直播，NBA直播線上看，英超直播，西甲直播，歐冠直播等。全部賽事錄像回放，體育新聞資訊。 88直播看球，無插件免費看。")  
 *  [电视直播源搜索引擎](http://tonkiang.us/ "Search for public IPTV channels. Free and easy to use, online IPTV m3u8 live stream url search utility, IPTV m3u m3u8 links updated daily")  【搭配媒体播放软件： [PotPlayer]( #SoftStreammedia)  】
 
 ## 音乐<span id="learnMp3"></span>
@@ -133,6 +132,13 @@
 
 # Hack<span id="Hack"></span>
 ## 学习<span id="Hacklearn"></span>
+*  [MITRE ATT&CK®](https://attack.mitre.org/ "")：攻击矩阵  
+### 视频教程
+*  [Metasploit - YouTube](https://www.youtube.com/playlist?list=PLgZqc0esdeS9UyK_QPoCO5wIZ_XYAkCV5)：MSF教程
+
+### 在线靶场
+*  [Bugku CTF](https://ctf.bugku.com/ "国内最活跃的CTF平台，每日更新题目。")  
+*  [梦之光芒/Monyer——Monyer's Little Game](http://monyer.com/game/game1/ "")
 ## 工具<span id="HackTool"></span>
 
 # 其他<span id="more"></span>
