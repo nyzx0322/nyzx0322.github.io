@@ -53,7 +53,8 @@
 # 项目分享<span id="proShare"></span>
 ## 工具<span id="learnTool"></span>
 ### 去除马赛克
-*  [PULSE:去除马赛克](https://github.com/adamian98/pulse)  
+*  [PULSE:图片去除马赛克](https://github.com/adamian98/pulse)  
+*  [thunil/TecoGAN: 视频去除马赛克](https://github.com/thunil/TecoGAN "")  
 
 ## Web<span id="learnWeb"></span>
 
@@ -73,6 +74,8 @@
 *  [ilovexjp/health-code-simulator: 基于 Web 的健康码模拟- Codeberg.org](https://codeberg.org/ilovexjp/health-code-simulator)
 ### Love Demo
 *  [近期超火的表白页面：💗 Love u 💗](https://nyzx0322.github.io/nyzx0322/demo/love.html "修改版")  ：<small>源码在本项目文件中</small>  
+### 娱乐
+*  [svenstaro/genact: 程序员摸鱼神器](https://github.com/svenstaro/genact "🌀 A nonsense activity generator. Contribute to svenstaro/genact development by creating an account on GitHub.")  【[在线体验](https://svenstaro.github.io/genact/)】
 
 
 
@@ -81,7 +84,6 @@
 
 # 休闲娱乐<span id="videosGames"></span>
 ## 网站<span id="moreSite"></span>
-### 个人
 *  [不死鸟 - 分享为王官网](https://iui.su/ "不死鸟:专注分享优质资源")  
 ### 搜索引擎
 #### 资源搜索
@@ -114,6 +116,7 @@
 *  [VIP视频解析2](https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/02.html "新窗口打开")  ：<small>源码在本项目文件中</small>  
 #### 体育直播
 *  [88直播：2022卡塔尔世界杯直播](http://www.88zhibo.cc/ "2022卡塔尔世界杯直播，NBA直播線上看，英超直播，西甲直播，歐冠直播等。全部賽事錄像回放，體育新聞資訊。 88直播看球，無插件免費看。")  
+*  [高清直播网](http://www.fifa2022.tv/ "")  
 *  [电视直播源搜索引擎](http://tonkiang.us/ "Search for public IPTV channels. Free and easy to use, online IPTV m3u8 live stream url search utility, IPTV m3u m3u8 links updated daily")  【搭配媒体播放软件： [PotPlayer]( #SoftStreammedia)  】
 
 ## 音乐<span id="learnMp3"></span>
@@ -133,6 +136,7 @@
 # Hack<span id="Hack"></span>
 ## 学习<span id="Hacklearn"></span>
 *  [MITRE ATT&CK®](https://attack.mitre.org/ "")：攻击矩阵  
+*  [極客方舟 | 極客方舟](https://deelmind.com/ "極客方舟,DeeLMind,QKword")  
 ### 视频教程
 *  [Metasploit - YouTube](https://www.youtube.com/playlist?list=PLgZqc0esdeS9UyK_QPoCO5wIZ_XYAkCV5)：MSF教程
 
@@ -143,6 +147,5 @@
 
 # 其他<span id="more"></span>
 *  [简历模板下载_个人简历WORD模板_可编辑简历制作模板免费_简历下载](https://jianlixiazai.cn/ "简历下载网免费提供各行业简历制作模板WORD可编辑格式下载，涵盖求职简历模板、大学生简历模板、个人简历模板、留学简历模板、英文简历模板、免费简历模板、工作简历模板、保研简历模板、暑期实习简历、寒假实习简历、校招简历等。")  
-*  
 
 
