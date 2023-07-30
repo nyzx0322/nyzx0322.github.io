@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<meta name="author" content="研若">
+<meta name="description" content="研若">
+<link rel="shortcut icon" href="http://nyzx0322.3vfree.club/gymb/logo/yrkj.ico" type="image/x-icon">
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>README</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#undefined"># 目录【善用搜索(Ctrl+F)】</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#学习资料span-idlearnfilespan">学习资料</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#资料书籍span-idlearnbookspan">资料书籍</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#程序员相关">程序员相关</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#文学作品">文学作品 </a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#pythonspan-idlearnpythonspan">Python</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#项目分享span-idprosharespan">项目分享</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#工具span-idlearntoolspan">工具</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#去除马赛克">去除马赛克</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#webspan-idlearnwebspan">Web</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#python">Python</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#机器人span-idlearnrebotsspan">机器人</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#nonebot2">nonebot2</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#其他">其他</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#love-demo">Love Demo</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#娱乐">娱乐</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#休闲娱乐span-idvideosgamesspan">休闲娱乐</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#网站span-idmoresitespan">网站</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#搜索引擎">搜索引擎</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#资源搜索">资源搜索</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#软件">软件</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#综合">综合</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#andriod">Andriod</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#windows">Windows</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#ios软件下载">IOS软件下载</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#mac">MAC</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#趣站">趣站</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2022-11-23">2022-11-23</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#影视span-idlearnvideosspan">影视</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#观影网站">观影网站</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#体育直播">体育直播</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#音乐span-idlearnmp3span">音乐</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#音乐网站">音乐网站</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#游戏span-idlearngamesspan">游戏</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#游戏下载站">游戏下载站</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#好玩的游戏">好玩的游戏</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#自由模拟">自由模拟</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#hackspan-idhackspan">Hack</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#学习span-idhacklearnspan">学习</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#视频教程">视频教程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#在线靶场">在线靶场</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#工具span-idhacktoolspan">工具</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#其他span-idmorespan">其他</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><p><span>这里是杂谈交流的项目，</span><strong><span>主要内容</span></strong><span>：学习资料、项目分享、休闲娱乐、其他。</span><strong><span>项目逐渐完善中</span>…</strong></p><p align="center">
+    <a href="https://github.com/nyzx0322/nyzx0322" target="_blank">
+        <img src="https://nyzx0322.github.io/assets/logo.png" width="280" height="90">
+    </a>
+</p><p align="center">
+  <a href="https://github.com/nyzx0322/nyzx0322" target="_blank"><img src="https://img.shields.io/badge/研若-科技-blue" alt="QQ"></a>
+</p><h1><span>目录【善用搜索(Ctrl+F)】</span></h1><ul><li><p><a href='#learnFile'><span>一、学习资料</span></a></p><ul><li><a href='#learnBook'><span>1.书籍</span></a></li><li><a href='#learnPython'><span>2.Python</span></a></li><li></li></ul></li><li><p><a href='#proShare'><span>二、项目分享</span></a></p><ul><li><a href='#learnTool'><span>1.工具</span></a></li><li><a href='#learnWeb'><span>1.Web</span></a></li><li><a href='#learnRebots'><span>2.机器人</span></a></li><li></li></ul></li><li><p><a href='#videosGames'><span>三、休闲娱乐</span></a></p><ul><li><a href='#learnVideos'><span>1.影视</span></a></li><li><a href='#learnMp3'><span>2.音乐</span></a></li><li><a href='#learnGames'><span>3.游戏</span></a></li></ul></li><li><p><a href='#Hack'><span>四、Hack</span></a></p><ul><li><a href='#Hacklearn'><span>1.学习</span></a></li><li><a href='#HackTool'><span>2.工具</span></a></li><li></li></ul></li><li><p><a href='#more'><span>其他</span></a></p><ul><li><a href='#moreSite'><span>1.趣站</span></a></li><li></li></ul></li></ul><p>&nbsp;</p><h1 id='学习资料span-idlearnfilespan'><span>学习资料</span><span id="learnFile"></span></h1><h2 id='资料书籍span-idlearnbookspan'><span>资料书籍</span><span id="learnBook"></span></h2><h3 id='程序员相关'><span>程序员相关</span></h3><ul><li><a href='https://www.bookstack.cn/' title='书栈网，IT程序员互联网开源编程书籍阅读分享，囊括小程序、前端、后端、移动端、云计算、大数据、区块链、机器学习、人工智能和面试笔试等相关书籍，助你【码】力十足！'><span>书栈网 · BookStack_程序员IT互联网开源编程书籍免费阅读</span></a><span>  </span></li><li><a href='https://xiaolincoding.com/' title='图解计算机网络、操作系统、计算机组成、数据库，让天下没有难懂的八股文！'><span>小林 图解计算机基础</span></a><span>  </span></li><li><a href='https://wangchujiang.com/linux-command/' title='Linux命令搜索引擎:最专业的Linux命令大全，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。 - 最专业的Linux命令大全，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。'><span>Linux命令搜索引擎</span></a><span>  </span></li></ul><h3 id='文学作品'><span>文学作品 </span></h3><ul><li><a href='https://zhiso.top/?dalao.ru' title='知搜是一个专注知搜搜索的搜索引擎，收录网络上的各种书籍资源！'><span>知搜 - 一个专注知识搜索的引擎！</span></a><span>  </span></li><li><a href='https://www.shuxiangjia.cn/' title='书享家——最好用的电子书下载导航'><span>书享家-电子书下载导航</span></a><span>  </span></li><li><a href='https://homeofpdf.com/index.html' title='PDF之家(homeofpdf.com)是一个专注于收集并分享PDF图书的网站,在这里您可以免费下载和阅读大量涵盖各专业分类的PDF电子书.'><span>PDF之家</span></a><span>  </span></li><li><a href='https://www.jiumodiary.com/' title='鸠摩搜索引擎'><span>Jiumo Search 鸠摩搜索 - 文档搜索引擎</span></a><span>  </span></li></ul><h2 id='pythonspan-idlearnpythonspan'><span>Python</span><span id="learnPython"></span></h2><ul><li><a href='https://github.com/Jack-Cherish/PythonPark' title='Python 开源项目之「自学编程之路」，保姆级教程：AI实验室、宝藏视频、数据结构、学习指南、机器学习实战、深度学习实战、网络爬虫、大厂面经、程序人生、资源分享。 - Jack-Cherish/PythonPark: Python 开源项目之「自学编程之路」，保姆级教程：AI实验室、宝藏视频、数据结构、学习指南、机器学习实战、深度学习实战、网络爬虫、大厂面经、程序人生、资源分享。'><span>Jack-Cherish/PythonPark: Python乐园。</span></a><span>  </span></li><li><a href='https://xugaoxiang.com/' title='徐高翔的个人站点，编程、技术、分享'><span>迷途小书童的Note</span></a><span>  </span></li></ul><h1 id='项目分享span-idprosharespan'><span>项目分享</span><span id="proShare"></span></h1><h2 id='工具span-idlearntoolspan'><span>工具</span><span id="learnTool"></span></h2><h3 id='去除马赛克'><span>去除马赛克</span></h3><ul><li><a href='https://github.com/adamian98/pulse'><span>PULSE:图片去除马赛克</span></a><span>  </span></li><li><a href='https://github.com/thunil/TecoGAN'><span>thunil/TecoGAN: 视频去除马赛克</span></a><span>  </span></li></ul><h2 id='webspan-idlearnwebspan'><span>Web</span><span id="learnWeb"></span></h2><h2 id='python'><span>Python</span></h2><ul><li><a href='https://github.com/CharlesPikachu/Games' title='Games: Create interesting games by pure python. Contribute to CharlesPikachu/Games development by creating an account on GitHub.'><span>CharlesPikachu/Games: Games: Python编写游戏</span></a><span>  </span></li></ul><h2 id='机器人span-idlearnrebotsspan'><span>机器人</span><span id="learnRebots"></span></h2><h3 id='nonebot2'><span>nonebot2</span></h3><ul><li><a href='https://github.com/nonebot/nonebot2'><span>Python 异步聊天机器人框架:跨平台 Python 异步聊天机器人框架</span></a></li></ul><p>&nbsp;</p><p>&nbsp;</p><h2 id='其他'><span>其他</span></h2><ul><li><a href='https://codeberg.org/ilovexjp/health-code-simulator'><span>ilovexjp/health-code-simulator: 基于 Web 的健康码模拟- Codeberg.org</span></a></li></ul><h3 id='love-demo'><span>Love Demo</span></h3><ul><li><a href='https://nyzx0322.github.io/nyzx0322/demo/love.html' title='修改版'><span>近期超火的表白页面：💗 Love u 💗</span></a><span>  ：</span><small><span>源码在本项目文件中</span></small><span>  </span></li></ul><h3 id='娱乐'><span>娱乐</span></h3><ul><li><a href='https://github.com/svenstaro/genact' title='🌀 A nonsense activity generator. Contribute to svenstaro/genact development by creating an account on GitHub.'><span>svenstaro/genact: 程序员摸鱼神器</span></a><span>  【</span><a href='https://svenstaro.github.io/genact/'><span>在线体验</span></a><span>】</span></li></ul><p>&nbsp;</p><p>&nbsp;</p><h1 id='休闲娱乐span-idvideosgamesspan'><span>休闲娱乐</span><span id="videosGames"></span></h1><h2 id='网站span-idmoresitespan'><span>网站</span><span id="moreSite"></span></h2><ul><li><a href='https://iui.su/' title='不死鸟:专注分享优质资源'><span>不死鸟 - 分享为王官网</span></a><span>  </span></li></ul><h3 id='搜索引擎'><span>搜索引擎</span></h3><h4 id='资源搜索'><span>资源搜索</span></h4><ul><li><a href='https://yougit.net/?dalao.ru'><span>YouGit：云盘资源搜索引擎</span></a><span>  </span></li><li><a href='https://pan.ccof.cc/' title='Yapan - 网盘检索工具'><span>YaPan：阿里云盘搜索引擎</span></a><span>  </span></li></ul><h3 id='软件'><span>软件</span></h3><h4 id='综合'><span>综合</span></h4><ul><li><a href='https://alternativeto.net/' title='AlternativeTo lets you find apps and software for Windows, Mac, Linux, iPhone, iPad, Android, Android Tablets, Web Apps, Online, Windows Tablets and more by recommending alternatives to apps you already know.'><span>AlternativeTo - Crowdsourced software recommendations：寻找软件替代品</span></a><span>  </span></li><li><a href='https://www.ghxi.com/' title='本站更换域名为https://www.ghxi.com。果核剥壳是一家综合科技站点，看新闻，分享破解软件、绿色软件，Windows系统。守住互联网最后的一片净土。'><span>果核剥壳 - 互联网的净土</span></a><span>  </span></li></ul><h4 id='andriod'><span>Andriod</span></h4><h4 id='windows'><span>Windows</span></h4><ul><li><p><a href='https://github.com/sumatrapdfreader/sumatrapdf' title='SumatraPDF reader. Contribute to sumatrapdfreader/sumatrapdf development by creating an account on GitHub.'><span>sumatrapdfreader/sumatrapdf: 开源PDF阅读器</span></a><span>  </span></p></li><li><p><a href='https://www.ghxi.com/jexchandwj.html' title='本工具是自定义功能非常强的一款单文件制作工具，附带的sfx模块很多，可以制作出强大功能的单文件，但是需要研究一下怎么使用。 软件特色 1.可定制项比较多 2.采用较先进的打包方式（黑科技---&gt;PECMD自解压模块） 3.可mpress压缩，进一步减小体积 4.采用保护模式，防止7z、Winrar等软件右键打开 ...'><span>JexChan单文件制作工具 v7.0.2.36 - 果核剥壳</span></a><span>  </span></p></li><li><p><span id="SoftStreammedia"><span>媒体播放器</span></span></p><ul><li><a href='https://potplayer.daum.net/'><span>Potplayer</span></a><span>  </span></li></ul></li></ul><h4 id='ios软件下载'><span>IOS软件下载</span></h4><ul><li><a href='https://kurdstore.info/ipa/null.php'><span>Kurd store</span></a><span>  </span></li></ul><h4 id='mac'><span>MAC</span></h4><ul><li><a href='https://macapp.org.cn/app/?iao.su' title='Mac软件'><span>Mac软件 下的所有内容 - MacApp分享频道</span></a><span>  </span></li></ul><h3 id='趣站'><span>趣站</span></h3><ul><li><a href='https://youquhome.com/' title='分享有趣的国内外网站&amp;应用新奇的html5网站'><span>有趣网址之家 - 收藏全球最有趣的网站</span></a><span>  </span></li></ul><h4 id='2022-11-23'><span>2022-11-23</span></h4><ul><li><a href='https://cook.aiurs.co/'><span>How To Cook：程序员做饭指南</span></a><span>  </span></li><li><a href='https://chao.fan/' title='兴趣聚合的优质内容社区，每个兴趣都值得被尊重，在这里，一起讨论问题、分享趣事、了解最新时事，世界-尽在眼下'><span>炒饭 - 世界那么大：网络迷踪</span></a><span> </span></li></ul><h2 id='影视span-idlearnvideosspan'><span>影视</span><span id="learnVideos"></span></h2><h3 id='观影网站'><span>观影网站</span></h3><ul><li><a href='https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/index.html' title='本窗口打开'><span>VIP视频解析1</span></a><span>  ：</span><small><span>源码在本项目文件中</span></small></li><li><a href='https://nyzx0322.github.io/nyzx0322/demo/vipVIdeoPlayer/02.html' title='新窗口打开'><span>VIP视频解析2</span></a><span>  ：</span><small><span>源码在本项目文件中</span></small><span>  </span></li></ul><h4 id='体育直播'><span>体育直播</span></h4><ul><li><a href='http://www.88zhibo.cc/' title='2022卡塔尔世界杯直播，NBA直播線上看，英超直播，西甲直播，歐冠直播等。全部賽事錄像回放，體育新聞資訊。 88直播看球，無插件免費看。'><span>88直播：2022卡塔尔世界杯直播</span></a><span>  </span></li><li><a href='http://www.fifa2022.tv/'><span>高清直播网</span></a><span>  </span></li><li><a href='http://tonkiang.us/' title='Search for public IPTV channels. Free and easy to use, online IPTV m3u8 live stream url search utility, IPTV m3u m3u8 links updated daily'><span>电视直播源搜索引擎</span></a><span>  【搭配媒体播放软件： </span><a href='#SoftStreammedia'><span>PotPlayer</span></a><span>  】</span></li></ul><h2 id='音乐span-idlearnmp3span'><span>音乐</span><span id="learnMp3"></span></h2><h3 id='音乐网站'><span>音乐网站</span></h3><ul><li><a href='https://music.y444.cn/#/' title='本站名为下歌吧，免费提供音乐在线试听、下载服务，是全网最全、最快的音乐下载网站，提供超高、无损等音质音乐下载，在线下载歌曲，在线免费下载音乐，免费下载歌曲等服务。'><span>下歌吧</span><em><span>音乐免费下载</span></em><span>音乐在线试听_无损音乐下载</span></a><span>  </span></li><li><a href='https://tonzhon.com/' title='铜钟是一个纯粹的音乐网站, 没有干扰, 可以让你方便地听歌, 专注于学习和工作.'><span>铜钟: Listen to all the music in one place.</span></a><span>  </span></li></ul><h2 id='游戏span-idlearngamesspan'><span>游戏</span><span id="learnGames"></span></h2><h3 id='游戏下载站'><span>游戏下载站</span></h3><ul><li><a href='https://xxxxx520.com/' title='switch游戏下载-PC游戏下载-switch破解游戏下载'><span>Switch520</span></a><span>  </span></li><li><a href='https://www.vgter.com/archives/category/pc'><span>PC游戏 | 上游世界：单机游戏下载</span></a><span>  </span></li></ul><h3 id='好玩的游戏'><span>好玩的游戏</span></h3><h4 id='自由模拟'><span>自由模拟</span></h4><ul><li><a href='https://xxxxx520.com/14746.html'><span>看门狗2/Watch Dogs 2</span></a><span>  </span></li><li><a href='https://xxxxx520.com/42788.html' title='《文明VI》带给玩家与世界互动的新方式：城市现在可以在地图上实际地扩张，积极钻研科技和文化可以解锁新潜能，  互相竞争的领袖会依据历史所记载的个人特征去追求自我宗旨，而且玩家可通过五种方式之一取得游戏胜利。  扩张帝国 让您以前所未有的方式看着帝国在地图上扩张壮大。每座城市都会占...'><span>文明6 </span></a><span>  </span></li></ul><h1 id='hackspan-idhackspan'><span>Hack</span><span id="Hack"></span></h1><h2 id='学习span-idhacklearnspan'><span>学习</span><span id="Hacklearn"></span></h2><ul><li><a href='https://attack.mitre.org/'><span>MITRE ATT&amp;CK®</span></a><span>：攻击矩阵  </span></li><li><a href='https://deelmind.com/' title='極客方舟,DeeLMind,QKword'><span>極客方舟 | 極客方舟</span></a><span>  </span></li></ul><h3 id='视频教程'><span>视频教程</span></h3><ul><li><a href='https://www.youtube.com/playlist?list=PLgZqc0esdeS9UyK_QPoCO5wIZ_XYAkCV5'><span>Metasploit - YouTube</span></a><span>：MSF教程</span></li></ul><h3 id='在线靶场'><span>在线靶场</span></h3><ul><li><a href='https://ctf.bugku.com/' title='国内最活跃的CTF平台，每日更新题目。'><span>Bugku CTF</span></a><span>  </span></li><li><a href='http://monyer.com/game/game1/'><span>梦之光芒/Monyer——Monyer</span>’<span>s Little Game</span></a></li></ul><h2 id='工具span-idhacktoolspan'><span>工具</span><span id="HackTool"></span></h2><h1 id='其他span-idmorespan'><span>其他</span><span id="more"></span></h1><ul><li><a href='https://jianlixiazai.cn/' title='简历下载网免费提供各行业简历制作模板WORD可编辑格式下载，涵盖求职简历模板、大学生简历模板、个人简历模板、留学简历模板、英文简历模板、免费简历模板、工作简历模板、保研简历模板、暑期实习简历、寒假实习简历、校招简历等。'><span>简历模板下载</span><em><span>个人简历WORD模板</span></em><span>可编辑简历制作模板免费_简历下载</span></a><span>  </span></li></ul><p>&nbsp;</p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
