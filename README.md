@@ -3,6 +3,7 @@
 欢迎来到 **nyzx0322** 的 GitHub Pages 项目！这是一个集技术分享、学习笔记、项目展示于一体的个人网站，旨在记录成长，分享知识，激发灵感。
 
 🔗 在线预览：[nyzx0322.github.io](https://nyzx0322.github.io)
+🔗 我的博客：[nyzx0322 - 博客园](https://www.cnblogs.com/nyzx0322 "")  
 
 ---
 
