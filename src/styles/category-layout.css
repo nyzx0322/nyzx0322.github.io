@@ -1,0 +1,117 @@
+.category-page {
+  padding: 24px 16px 40px;
+  text-align: left;
+}
+
+.category-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.category-sidebar {
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  padding: 16px 14px 18px;
+  border-radius: 18px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.sidebar-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.sidebar-subtitle {
+  margin: 6px 0 10px 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #374151;
+  text-decoration: none;
+  transition: background-color 0.12s ease-out, color 0.12s ease-out;
+}
+
+.sidebar-nav a:hover {
+  background-color: #e0edff;
+  color: #1d4ed8;
+}
+
+.category-section {
+  padding: 24px 20px 28px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.category-title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #0f172a;
+}
+
+.category-subtitle {
+  margin: 6px 0 0 0;
+  font-size: 0.98rem;
+  color: #6b7280;
+}
+
+.sub-section {
+  margin-top: 8px;
+  padding: 16px 16px 14px 16px;
+  border-radius: 14px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  scroll-margin-top: 96px;
+}
+
+.sub-section h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.06rem;
+  color: #111827;
+}
+
+.sub-section h4 {
+  margin: 8px 0 4px 0;
+  font-size: 0.96rem;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .category-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-sidebar {
+    position: static;
+  }
+}
+

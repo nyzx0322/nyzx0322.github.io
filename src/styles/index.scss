@@ -33,6 +33,10 @@ body {
   min-height: 100vh;
 }
 
+.d-none {
+  display: none !important;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
