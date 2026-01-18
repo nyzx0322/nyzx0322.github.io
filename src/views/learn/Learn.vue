@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from 'vue'
+
+const keyword = ref('')
 </script>
 
 <template>
@@ -22,10 +25,19 @@
           <p class="category-subtitle">编程书籍、文学作品与 Python 学习资源。</p>
         </header>
 
+        <div class="resource-filter-bar">
+          <input
+            v-model="keyword"
+            type="text"
+            class="resource-filter-input"
+            placeholder="输入关键字过滤本页资源"
+          />
+        </div>
+
         <section class="sub-section" id="learnBook">
           <h3>1. 资料书籍 · 程序员相关</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://www.bookstack.cn/"
@@ -37,7 +49,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://xiaolincoding.com/"
@@ -49,7 +61,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://wangchujiang.com/linux-command/"
@@ -67,7 +79,7 @@
         <section class="sub-section" id="learnLiterature">
           <h3>2. 资料书籍 · 文学作品</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://zhiso.top/?dalao.ru"
@@ -79,7 +91,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://www.shuxiangjia.cn/"
@@ -91,7 +103,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://homeofpdf.com/index.html"
@@ -103,7 +115,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://www.jiumodiary.com/"
@@ -121,7 +133,7 @@
         <section class="sub-section" id="learnPython">
           <h3>3. Python 相关</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://github.com/Jack-Cherish/PythonPark"
@@ -133,7 +145,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://xugaoxiang.com/"
@@ -151,50 +163,3 @@
     </div>
   </div>
 </template>
-
-<style scoped src="../../styles/category-layout.css"></style>
-
-<style scoped>
-.resource-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.resource-item {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-}
-
-.resource-main a {
-  color: #2563eb;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.resource-main a:hover {
-  text-decoration: underline;
-}
-
-.small-tip {
-  margin: 4px 0 0 0;
-  font-size: 0.86rem;
-  color: #6b7280;
-}
-
-@media (max-width: 768px) {
-  .category-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .category-sidebar {
-    position: static;
-  }
-}
-</style>

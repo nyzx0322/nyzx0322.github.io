@@ -1,5 +1,100 @@
-# Vue 3 + Vite
+# 研若 · 资源导航站
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+一个以「个人常用资源」为核心的导航站，把学习资料、项目示例、休闲娱乐网站、安全 Hack 相关内容集中到一个入口，方便随时查阅与扩展。
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## 这个站点有什么
+
+- **学习资料**  
+  编程书籍、技术博客、Linux 命令索引、Python 学习资源等，偏「自学与查阅」向。
+
+- **项目分享**  
+  图像/视频去马赛克、Python 游戏项目、聊天机器人框架、Web 小项目、表白页面 Demo 等，更偏实践与玩具项目。
+
+- **休闲娱乐**  
+  影视解析站、音乐站、趣味网站收藏、云盘/资源搜索、软件导航等，适合摸鱼放松或查找资源。
+
+- **Hack 相关**  
+  信息安全学习资料、视频教程、在线靶场、常用工具入口等，用于安全方向的基础学习与练习。
+
+- **其他**  
+  简历模板、求职相关网站等，偏工具与生活效率。
+
+你可以把这里当成：
+
+- 自己的「在线收藏夹」
+- 学习/娱乐/安全几种状态之间的快速切换面板
+- 之后继续扩展的个人导航中心
+
+---
+
+## 导航结构一览
+
+- `/` 首页  
+  - 展示站点简介与各分类入口卡片。
+- `/learn` 学习资料  
+  - 书籍站点、技术博客、命令索引、Python 学习入口等。
+- `/projects` 项目分享  
+  - 去马赛克项目、Python 游戏、机器人框架、Web Demo、趣味项目等。
+- `/entertainment` 休闲娱乐  
+  - 影视解析、音乐站、趣味网站、资源搜索、软件导航等。
+- `/hack` Hack  
+  - 安全教程、在线靶场、工具链接等。
+- `/others` 其他  
+  - 简历模板、求职支持等。
+
+每个分类页面都采用同样的布局：
+
+- 左侧：固定的目录导航（按子分类分组）
+- 右侧：卡片化的资源列表（标题 + 描述/说明 + 链接）
+
+---
+
+## 如何使用
+
+### 在线访问
+
+项目部署在 **GitHub Pages** 上，可以直接在浏览器打开：
+
+- `https://nyzx0322.github.io`
+
+适合日常使用、收藏在浏览器书签或手机桌面。
+
+### 本地浏览（可选）
+
+如果你想在本地调整内容或样式，只需要：
+
+```bash
+npm install
+npm run dev
+```
+
+然后在浏览器打开提示的本地地址（一般为 `http://localhost:5173/`）即可。
+
+---
+
+## 技术栈一眼看懂
+
+- **框架与构建**
+  - Vue 3（`<script setup>`）
+  - Vite
+  - Vue Router 4（基础路由 + 自动路由）
+
+- **样式与交互**
+  - 原生 CSS / SCSS
+  - 分类页面通用布局样式
+  - 深色科技风主题 + 渐变 + 轻量动效
+
+- **部署**
+  - GitHub Pages 静态托管
+  - GitHub Actions 自动构建与发布
+
+---
+
+## 未来可能的扩展
+
+- 用 JSON / 后端接口管理资源数据，让增删改更方便
+- 增强搜索与标签功能，从大量链接中快速定位特定资源
+- 增加主题切换（浅色/专注阅读模式等），适配不同使用场景
+- 对资源增加「收藏/推荐」维度，变成更个性化的知识与兴趣中转站

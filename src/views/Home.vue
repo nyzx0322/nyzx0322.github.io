@@ -1,21 +1,23 @@
 <script setup>
+import { siteText } from '../config/siteText'
 </script>
 
 <template>
   <div class="home-page">
     <section class="hero">
       <div class="hero-text">
-        <h1 class="hero-title">研若 · 资源导航</h1>
+        <h1 class="hero-title">
+          {{ siteText.home.heroTitle }}
+        </h1>
         <p class="hero-subtitle">
-          学习资料、项目分享、休闲娱乐与安全 Hack 一站式入口。
+          {{ siteText.home.heroSubtitle }}
         </p>
         <p class="hero-desc">
-          这是你自己的知识与兴趣中转站，所有链接都来自旧版首页中整理的内容，
-          现在以更清晰的结构和布局呈现。
+          {{ siteText.home.heroDesc }}
         </p>
         <div class="hero-actions">
           <RouterLink to="/learn" class="hero-button primary">
-            开始学习
+            {{ siteText.home.primaryButton }}
           </RouterLink>
           <a
             class="hero-button secondary"
@@ -23,7 +25,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub 主页
+            {{ siteText.home.secondaryButton }}
           </a>
         </div>
       </div>
@@ -61,34 +63,21 @@
     </section>
 
     <section class="cards-section">
-      <h2 class="cards-title">按分类浏览</h2>
+      <h2 class="cards-title">
+        {{ siteText.home.cardsTitle }}
+      </h2>
       <p class="cards-subtitle">
-        选择一个分类，进入单独页面查看对应的链接与资源。
+        {{ siteText.home.cardsSubtitle }}
       </p>
       <div class="card-grid">
-        <RouterLink to="/learn" class="nav-card">
-          <h3>学习资料</h3>
-          <p>编程书籍、文学作品与 Python 学习入口。</p>
-        </RouterLink>
-
-        <RouterLink to="/projects" class="nav-card">
-          <h3>项目分享</h3>
-          <p>图像/视频处理、Web 项目和机器人框架。</p>
-        </RouterLink>
-
-        <RouterLink to="/entertainment" class="nav-card">
-          <h3>休闲娱乐</h3>
-          <p>影视、音乐、游戏与趣站收藏。</p>
-        </RouterLink>
-
-        <RouterLink to="/hack" class="nav-card">
-          <h3>Hack</h3>
-          <p>安全学习资料、视频教程与在线靶场。</p>
-        </RouterLink>
-
-        <RouterLink to="/others" class="nav-card">
-          <h3>其他</h3>
-          <p>简历模板与求职相关实用链接。</p>
+        <RouterLink
+          v-for="card in siteText.home.cards"
+          :key="card.path"
+          :to="card.path"
+          class="nav-card"
+        >
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
         </RouterLink>
       </div>
     </section>
@@ -100,6 +89,8 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -108,8 +99,18 @@
   gap: 32px;
   padding: 32px 24px;
   border-radius: 24px;
-  background: radial-gradient(circle at top left, #e0f2fe 0%, #f5f3ff 35%, #ffffff 100%);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.4), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.38), transparent 55%),
+    linear-gradient(135deg, #020617, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow:
+    0 28px 80px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(30, 64, 175, 0.5);
+  overflow: hidden;
+  position: relative;
+  background-size: 180% 180%, 160% 160%, 100% 100%;
+  animation: heroGradient 22s ease-in-out infinite alternate;
 }
 
 .hero-text {
@@ -122,20 +123,24 @@
   margin: 0;
   font-size: 2.4rem;
   letter-spacing: 0.04em;
-  color: #0f172a;
+  background-image: linear-gradient(120deg, #e5e7eb, #a5b4fc, #38bdf8);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .hero-subtitle {
   margin: 0;
   font-size: 1.1rem;
-  color: #334155;
+  color: #cbd5f5;
 }
 
 .hero-desc {
   margin: 0;
   font-size: 0.96rem;
   line-height: 1.7;
-  color: #475569;
+  color: #9ca3af;
 }
 
 .hero-actions {
@@ -158,23 +163,28 @@
 }
 
 .hero-button.primary {
-  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  background: linear-gradient(120deg, #4f46e5, #0ea5e9, #22c55e);
   color: #ffffff;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  box-shadow:
+    0 14px 32px rgba(37, 99, 235, 0.8),
+    0 0 0 1px rgba(191, 219, 254, 0.9);
 }
 
 .hero-button.primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+  box-shadow:
+    0 18px 40px rgba(56, 189, 248, 0.95),
+    0 0 0 1px rgba(248, 250, 252, 0.9);
 }
 
 .hero-button.secondary {
-  background: #eff6ff;
-  color: #1d4ed8;
+  background: linear-gradient(135deg, #020617, #111827);
+  color: #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
 }
 
 .hero-button.secondary:hover {
-  background: #dbeafe;
+  background: linear-gradient(135deg, #020617, #020617);
 }
 
 .hero-side {
@@ -186,9 +196,27 @@
 .hero-logo-card {
   padding: 16px 18px 14px 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.24), transparent 60%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(30, 64, 175, 0.5);
   text-align: center;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  transform: translateZ(0);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.22s ease-out,
+    border-color 0.18s ease-out;
+}
+
+.hero-logo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(129, 140, 248, 0.95);
+  box-shadow:
+    0 24px 64px rgba(37, 99, 235, 0.9),
+    0 0 0 1px rgba(191, 219, 254, 0.98);
 }
 
 .hero-logo {
@@ -196,19 +224,22 @@
   margin: 0 auto 10px auto;
   max-width: 220px;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.2);
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.95),
+    0 0 40px rgba(56, 189, 248, 0.55);
+  animation: heroFloat 16s ease-in-out infinite alternate;
 }
 
 .hero-badge {
   margin: 0;
   font-weight: 600;
-  color: #1d4ed8;
+  color: #bfdbfe;
 }
 
 .hero-small {
   margin: 4px 0 0 0;
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .hero-category-grid {
@@ -220,20 +251,23 @@
 .hero-category-card {
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+  box-shadow:
+    0 12px 26px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(30, 64, 175, 0.4);
+  color: #e5e7eb;
 }
 
 .hero-category-card h3 {
   margin: 0 0 4px 0;
   font-size: 0.98rem;
-  color: #111827;
+  color: #e5e7eb;
 }
 
 .hero-category-card p {
   margin: 0;
   font-size: 0.82rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .cards-section {
@@ -245,13 +279,13 @@
 .cards-title {
   margin: 0;
   font-size: 1.4rem;
-  color: #111827;
+  color: #e5e7eb;
 }
 
 .cards-subtitle {
   margin: 0;
   font-size: 0.96rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .card-grid {
@@ -265,10 +299,14 @@
   display: block;
   padding: 16px 18px;
   border-radius: 16px;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.16), transparent 55%),
+    linear-gradient(150deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.92));
+  border: 1px solid rgba(51, 65, 85, 0.8);
   text-decoration: none;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  box-shadow:
+    0 16px 40px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(30, 64, 175, 0.45);
   transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
     border-color 0.12s ease-out;
 }
@@ -276,19 +314,45 @@
 .nav-card h3 {
   margin: 0 0 6px 0;
   font-size: 1.05rem;
-  color: #111827;
+  color: #e5e7eb;
 }
 
 .nav-card p {
   margin: 0;
   font-size: 0.92rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .nav-card:hover {
   transform: translateY(-2px);
-  border-color: #2563eb;
-  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.25);
+  border-color: rgba(96, 165, 250, 0.95);
+  box-shadow:
+    0 22px 52px rgba(37, 99, 235, 0.95),
+    0 0 0 1px rgba(191, 219, 254, 0.95);
+}
+
+@keyframes heroGradient {
+  0% {
+    background-position: 0% 0%, 100% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%, 50% 50%, 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%;
+  }
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -4px, 0);
+  }
+  100% {
+    transform: translate3d(0, 3px, 0);
+  }
 }
 
 @media (max-width: 960px) {

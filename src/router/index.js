@@ -1,11 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Learn from '../views/learn/Learn.vue'
-import Projects from '../views/projects/Projects.vue'
-import Entertainment from '../views/entertainment/Entertainment.vue'
-import Hack from '../views/hack/Hack.vue'
-import Others from '../views/others/Others.vue'
 
 const learnModules = import.meta.glob('../views/learn/**/*.vue')
 const projectModules = import.meta.glob('../views/projects/**/*.vue')
@@ -43,37 +36,37 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import('../views/Home.vue'),
   },
   {
     path: '/about',
     name: 'About',
-    component: About,
+    component: () => import('../views/About.vue'),
   },
   {
     path: '/learn',
     name: 'Learn',
-    component: Learn,
+    component: () => import('../views/learn/Learn.vue'),
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: Projects,
+    component: () => import('../views/projects/Projects.vue'),
   },
   {
     path: '/entertainment',
     name: 'Entertainment',
-    component: Entertainment,
+    component: () => import('../views/entertainment/Entertainment.vue'),
   },
   {
     path: '/hack',
     name: 'Hack',
-    component: Hack,
+    component: () => import('../views/hack/Hack.vue'),
   },
   {
     path: '/others',
     name: 'Others',
-    component: Others,
+    component: () => import('../views/others/Others.vue'),
   },
   ...learnAutoRoutes,
   ...projectAutoRoutes,

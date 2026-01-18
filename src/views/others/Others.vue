@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from 'vue'
+
+const keyword = ref('')
 </script>
 
 <template>
@@ -20,10 +23,19 @@
           <p class="category-subtitle">与求职、简历相关的实用链接。</p>
         </header>
 
+        <div class="resource-filter-bar">
+          <input
+            v-model="keyword"
+            type="text"
+            class="resource-filter-input"
+            placeholder="输入关键字过滤本页资源"
+          />
+        </div>
+
         <section class="sub-section" id="more">
           <h3>1. 简历模板与求职支持</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://jianlixiazai.cn/"
@@ -41,56 +53,3 @@
     </div>
   </div>
 </template>
-
-<style scoped src="../../styles/category-layout.css"></style>
-
-<style scoped>
-.resource-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.resource-item {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-}
-
-.resource-main a {
-  color: #2563eb;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.resource-main a:hover {
-  text-decoration: underline;
-}
-
-.resource-meta {
-  margin: 4px 0 0 0;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-.small-tip {
-  margin: 4px 0 0 0;
-  font-size: 0.86rem;
-  color: #6b7280;
-}
-
-@media (max-width: 768px) {
-  .category-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .category-sidebar {
-    position: static;
-  }
-}
-</style>

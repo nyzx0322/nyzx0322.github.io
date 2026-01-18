@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from 'vue'
+
+const keyword = ref('')
 </script>
 
 <template>
@@ -26,10 +29,19 @@
           <p class="category-subtitle">影视、音乐、游戏与趣站聚合。</p>
         </header>
 
+        <div class="resource-filter-bar">
+          <input
+            v-model="keyword"
+            type="text"
+            class="resource-filter-input"
+            placeholder="输入关键字过滤本页资源"
+          />
+        </div>
+
         <section class="sub-section" id="moreSite">
           <h3>1. 网站 · 趣味资源</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://iui.su/"
@@ -47,7 +59,7 @@
         <section class="sub-section" id="entSearch">
           <h3>2. 搜索引擎 · 资源搜索</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://yougit.net/?dalao.ru"
@@ -58,7 +70,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://pan.ccof.cc/"
@@ -78,7 +90,7 @@
 
           <h4>3.1 综合软件站</h4>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://alternativeto.net/"
@@ -90,7 +102,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://www.ghxi.com/"
@@ -106,7 +118,7 @@
 
           <h4>3.2 Windows 相关</h4>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://github.com/sumatrapdfreader/sumatrapdf"
@@ -118,7 +130,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://www.ghxi.com/jexchandwj.html"
@@ -130,7 +142,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div id="SoftStreammedia" class="resource-main">
                 <a
                   href="https://potplayer.daum.net/"
@@ -145,7 +157,7 @@
 
           <h4>3.3 其它平台</h4>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://kurdstore.info/ipa/null.php"
@@ -156,7 +168,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://macapp.org.cn/app/?iao.su"
@@ -174,7 +186,7 @@
         <section class="sub-section" id="entSites">
           <h3>4. 趣站收藏</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://youquhome.com/"
@@ -190,7 +202,7 @@
 
           <h4>4.1 2022-11-23 记录</h4>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://cook.aiurs.co/"
@@ -201,7 +213,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://chao.fan/"
@@ -219,7 +231,7 @@
         <section class="sub-section" id="learnVideos">
           <h3>5. 影视 · 观影网站</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="/legacy/demo/vipVIdeoPlayer/index.html"
@@ -232,7 +244,7 @@
                 <p class="resource-meta">源码位于本项目的 legacy/demo 目录中</p>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="/legacy/demo/vipVIdeoPlayer/02.html"
@@ -295,7 +307,7 @@
         <section class="sub-section" id="learnMp3">
           <h3>6. 音乐 · 听歌网站</h3>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://music.y444.cn/#/"
@@ -307,7 +319,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://tonzhon.com/"
@@ -326,7 +338,7 @@
           <h3>7. 游戏与站点</h3>
           <h4>7.1 游戏下载站</h4>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://xxxxx520.com/"
@@ -338,7 +350,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://www.vgter.com/archives/category/pc"
@@ -353,7 +365,7 @@
 
           <h4>7.2 好玩的游戏 · 自由模拟</h4>
           <ul class="resource-list">
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://xxxxx520.com/14746.html"
@@ -364,7 +376,7 @@
                 </a>
               </div>
             </li>
-            <li class="resource-item">
+            <li class="resource-item" v-resource-filter="keyword">
               <div class="resource-main">
                 <a
                   href="https://xxxxx520.com/42788.html"
@@ -382,57 +394,4 @@
     </div>
   </div>
 </template>
-
-<style scoped src="../../styles/category-layout.css"></style>
-
-<style scoped>
-.resource-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.resource-item {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-}
-
-.resource-main a {
-  color: #2563eb;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.resource-main a:hover {
-  text-decoration: underline;
-}
-
-.resource-meta {
-  margin: 4px 0 0 0;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-.small-tip {
-  margin: 4px 0 0 0;
-  font-size: 0.86rem;
-  color: #6b7280;
-}
-
-@media (max-width: 768px) {
-  .category-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .category-sidebar {
-    position: static;
-  }
-}
-</style>
 
