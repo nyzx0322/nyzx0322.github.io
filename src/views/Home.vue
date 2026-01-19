@@ -1,86 +1,238 @@
 <script setup>
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { siteText } from '../config/siteText'
+import { allResources } from '../data/allResourcesIndex'
+import { useVisitStats } from '../composables/useVisitStats'
+
+const { getVisitCount, incrementVisit } = useVisitStats()
+
+// --- Random Resources Logic ---
+const shuffleResources = (items) => {
+  const arr = Array.isArray(items) ? items.slice() : []
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+  }
+  return arr
+}
+
+const randomResources = computed(() => {
+  const base = allResources.filter((item) => item && item.href && item.label)
+  const shuffled = shuffleResources(base)
+  return shuffled.slice(0, 8)
+})
+
+const handleRandomResourceClick = (item) => {
+  if (!item || !item.id) return
+  incrementVisit(item.id)
+}
+
+// --- Typing Effect ---
+const displayedSubtitle = ref('')
+const fullSubtitle = siteText.home.heroSubtitle || ''
+const typeIndex = ref(0)
+let typeTimeout = null
+
+const typeText = () => {
+  if (typeIndex.value < fullSubtitle.length) {
+    displayedSubtitle.value += fullSubtitle.charAt(typeIndex.value)
+    typeIndex.value++
+    typeTimeout = setTimeout(typeText, 50) // Typing speed
+  }
+}
+
+// --- Hero Mouse Interaction ---
+const heroRef = ref(null)
+const logoCardRef = ref(null)
+
+const handleHeroMouseMove = (e) => {
+  if (!heroRef.value) return
+  
+  // Spotlight effect
+  const rect = heroRef.value.getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+  heroRef.value.style.setProperty('--mouse-x', `${x}px`)
+  heroRef.value.style.setProperty('--mouse-y', `${y}px`)
+
+  // 3D Tilt for Logo Card
+  if (logoCardRef.value) {
+    const cardRect = logoCardRef.value.getBoundingClientRect()
+    const cardCenterX = cardRect.left + cardRect.width / 2
+    const cardCenterY = cardRect.top + cardRect.height / 2
+    
+    const rotateX = -((e.clientY - cardCenterY) / 20)
+    const rotateY = (e.clientX - cardCenterX) / 20
+
+    logoCardRef.value.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`
+  }
+}
+
+const resetHeroInteraction = () => {
+  if (logoCardRef.value) {
+    logoCardRef.value.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)'
+  }
+}
+
+
+const parseCardTitle = (title) => {
+  if (!title) return { icon: '', text: '' }
+  // Try to split by space first (assuming "Emoji Title" format)
+  const parts = title.split(' ')
+  if (parts.length > 1) {
+    return { icon: parts[0], text: parts.slice(1).join(' ') }
+  }
+  // Fallback: use first character (emoji-safe) as icon, full title as text
+  const chars = [...title]
+  return { icon: chars[0] || '', text: title }
+}
+
+onMounted(() => {
+  typeText()
+})
+
+onUnmounted(() => {
+  if (typeTimeout) clearTimeout(typeTimeout)
+})
 </script>
 
 <template>
   <div class="home-page">
-    <section class="hero">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          {{ siteText.home.heroTitle }}
-        </h1>
-        <p class="hero-subtitle">
-          {{ siteText.home.heroSubtitle }}
-        </p>
-        <p class="hero-desc">
-          {{ siteText.home.heroDesc }}
-        </p>
-        <div class="hero-actions">
-          <RouterLink to="/learn" class="hero-button primary">
-            {{ siteText.home.primaryButton }}
-          </RouterLink>
-          <a
-            class="hero-button secondary"
-            href="https://github.com/nyzx0322"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ siteText.home.secondaryButton }}
-          </a>
-        </div>
-      </div>
-      <div class="hero-side">
-        <div class="hero-logo-card">
-          <img
-            class="hero-logo"
-            :src="'/logo.png'"
-            alt="研若-科技"
-          />
-          <p class="hero-badge">研若-科技</p>
-          <p class="hero-small">
-            项目逐渐完善中 · 欢迎收藏并持续补充你的优质链接
+    <!-- Hero Section -->
+    <section 
+      class="hero" 
+      ref="heroRef" 
+      @mousemove="handleHeroMouseMove"
+      @mouseleave="resetHeroInteraction"
+    >
+      <div class="hero-grid-bg"></div>
+      
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title" data-text="研若-科技">
+            {{ siteText.home.heroTitle }}
+            <span class="cursor">_</span>
+          </h1>
+          <p class="hero-subtitle">
+            {{ displayedSubtitle }}<span class="typing-cursor">|</span>
           </p>
+          <p class="hero-desc">
+            {{ siteText.home.heroDesc }}
+          </p>
+          
+          <div class="hero-actions">
+            <RouterLink to="/learn" class="cyber-button primary">
+              <span class="btn-content">{{ siteText.home.primaryButton }}</span>
+              <span class="btn-glitch"></span>
+            </RouterLink>
+            <a
+              class="cyber-button secondary"
+              href="https://github.com/nyzx0322"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="btn-content">{{ siteText.home.secondaryButton }}</span>
+            </a>
+          </div>
         </div>
-        <div class="hero-category-grid d-none">
-          <div class="hero-category-card">
-            <h3>学习资料</h3>
-            <p>编程、书籍、Python 学习入口。</p>
-          </div>
-          <div class="hero-category-card">
-            <h3>项目分享</h3>
-            <p>各种工具、Web 项目与机器人框架。</p>
-          </div>
-          <div class="hero-category-card">
-            <h3>休闲娱乐</h3>
-            <p>影视、音乐、游戏与趣味网站。</p>
-          </div>
-          <div class="hero-category-card">
-            <h3>Hack & 其他</h3>
-            <p>安全学习、在线靶场与实用工具集合。</p>
+        
+        <div class="hero-visual">
+          <div class="logo-card-wrapper" ref="logoCardRef">
+            <div class="logo-card">
+              <div class="card-shine"></div>
+              <img
+                class="hero-logo"
+                :src="'/logo.png'"
+                alt="研若-科技"
+              />
+              <div class="logo-info">
+                <p class="hero-badge">NYZX TECH</p>
+                <p class="hero-small">
+                  项目逐渐完善中 · 欢迎收藏
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Random Recommendations Section -->
+    <section v-if="randomResources.length" class="recommend-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="hash">#</span> 随机探索
+        </h2>
+        <p class="section-subtitle">
+          Data Stream · 发现未知的价值
+        </p>
+      </div>
+      
+      <div class="recommend-grid">
+        <a
+          v-for="(item, index) in randomResources"
+          :key="item.id"
+          class="recommend-card"
+          :href="item.href"
+          :title="item.titleAttr"
+          target="_blank"
+          rel="noopener noreferrer"
+          @click="handleRandomResourceClick(item)"
+          :style="{ animationDelay: `${index * 0.05}s` }"
+        >
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="recommend-body">
+            <h3 class="recommend-label">
+              > {{ item.label }}
+            </h3>
+            <p class="recommend-meta">
+              // {{ item.category }} · {{ item.sectionTitle }}
+            </p>
+            <div class="recommend-footer" v-if="getVisitCount(item.id) > 0">
+              <span class="visit-tag">Hits: {{ getVisitCount(item.id) }}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Navigation Cards Section -->
     <section class="cards-section">
-      <h2 class="cards-title">
-        {{ siteText.home.cardsTitle }}
-      </h2>
-      <p class="cards-subtitle">
-        {{ siteText.home.cardsSubtitle }}
-      </p>
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="hash">#</span> {{ siteText.home.cardsTitle }}
+        </h2>
+        <p class="section-subtitle">
+          {{ siteText.home.cardsSubtitle }}
+        </p>
+      </div>
+      
       <div class="card-grid">
         <RouterLink
-          v-for="card in siteText.home.cards"
+          v-for="(card, index) in siteText.home.cards"
           :key="card.path"
           :to="card.path"
           class="nav-card"
+          :style="{ animationDelay: `${index * 0.1}s` }"
         >
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.description }}</p>
+          <div class="card-content">
+            <div class="card-icon-placeholder">
+              {{ parseCardTitle(card.title).icon }}
+            </div>
+            <h3>{{ parseCardTitle(card.title).text }}</h3>
+            <p>{{ card.description }}</p>
+          </div>
+          <div class="card-border"></div>
         </RouterLink>
       </div>
     </section>
+
   </div>
 </template>
 
@@ -88,286 +240,396 @@ import { siteText } from '../config/siteText'
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  max-width: 1120px;
+  gap: 16px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 64px;
 }
 
+/* --- Hero Section --- */
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 32px;
-  padding: 32px 24px;
-  border-radius: 24px;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.4), transparent 55%),
-    radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.38), transparent 55%),
-    linear-gradient(135deg, #020617, #020617);
-  border: 1px solid rgba(148, 163, 184, 0.45);
-  box-shadow:
-    0 28px 80px rgba(15, 23, 42, 0.95),
-    0 0 0 1px rgba(30, 64, 175, 0.5);
-  overflow: hidden;
   position: relative;
-  background-size: 180% 180%, 160% 160%, 100% 100%;
-  animation: heroGradient 22s ease-in-out infinite alternate;
+  min-height: 380px;
+  border-radius: 24px;
+  background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+/* Dynamic Grid Background */
+.hero-grid-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Spotlight */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.08), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  width: 100%;
+  align-items: center;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
   margin: 0;
-  font-size: 2.4rem;
-  letter-spacing: 0.04em;
-  background-image: linear-gradient(120deg, #e5e7eb, #a5b4fc, #38bdf8);
-  background-size: 200% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: #38bdf8;
 }
 
 .hero-subtitle {
+  font-size: 1.25rem;
+  color: #94a3b8;
   margin: 0;
-  font-size: 1.1rem;
-  color: #cbd5f5;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 1.8em;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 8px;
+  background: #38bdf8;
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
 }
 
 .hero-desc {
-  margin: 0;
-  font-size: 0.96rem;
-  line-height: 1.7;
-  color: #9ca3af;
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 90%;
+  line-height: 1.6;
 }
 
+/* Cyber Buttons */
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
-.hero-button {
+.cyber-button {
+  position: relative;
+  padding: 12px 32px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.15s ease-out;
 }
 
-.hero-button.primary {
-  background: linear-gradient(120deg, #4f46e5, #0ea5e9, #22c55e);
-  color: #ffffff;
-  box-shadow:
-    0 14px 32px rgba(37, 99, 235, 0.8),
-    0 0 0 1px rgba(191, 219, 254, 0.9);
+.cyber-button.primary {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
 }
 
-.hero-button.primary:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 18px 40px rgba(56, 189, 248, 0.95),
-    0 0 0 1px rgba(248, 250, 252, 0.9);
+.cyber-button.primary:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
 }
 
-.hero-button.secondary {
-  background: linear-gradient(135deg, #020617, #111827);
-  color: #e5e7eb;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
+.cyber-button.secondary {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #94a3b8;
 }
 
-.hero-button.secondary:hover {
-  background: linear-gradient(135deg, #020617, #020617);
+.cyber-button.secondary:hover {
+  border-color: #94a3b8;
+  color: #fff;
 }
 
-.hero-side {
+/* 3D Logo Card */
+.logo-card-wrapper {
+  perspective: 1000px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
 }
 
-.hero-logo-card {
-  padding: 16px 18px 14px 18px;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.24), transparent 60%),
-    linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
-  box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.95),
-    0 0 0 1px rgba(30, 64, 175, 0.5);
+.logo-card {
+  width: 260px;
+  padding: 24px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   text-align: center;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  transform: translateZ(0);
-  transition:
-    transform 0.18s ease-out,
-    box-shadow 0.22s ease-out,
-    border-color 0.18s ease-out;
+  transition: transform 0.1s ease-out; /* Smooth follow */
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-.hero-logo-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(129, 140, 248, 0.95);
-  box-shadow:
-    0 24px 64px rgba(37, 99, 235, 0.9),
-    0 0 0 1px rgba(191, 219, 254, 0.98);
+.card-shine {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  border-radius: 20px;
+  pointer-events: none;
 }
 
 .hero-logo {
-  display: block;
-  margin: 0 auto 10px auto;
-  max-width: 220px;
-  border-radius: 12px;
-  box-shadow:
-    0 18px 40px rgba(15, 23, 42, 0.95),
-    0 0 40px rgba(56, 189, 248, 0.55);
-  animation: heroFloat 16s ease-in-out infinite alternate;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-badge {
-  margin: 0;
-  font-weight: 600;
-  color: #bfdbfe;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 8px;
 }
 
 .hero-small {
-  margin: 4px 0 0 0;
   font-size: 0.8rem;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-.hero-category-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+/* --- Cards Section --- */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.hero-category-card {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
-  box-shadow:
-    0 12px 26px rgba(15, 23, 42, 0.95),
-    0 0 0 1px rgba(30, 64, 175, 0.4);
-  color: #e5e7eb;
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #e2e8f0;
 }
 
-.hero-category-card h3 {
-  margin: 0 0 4px 0;
-  font-size: 0.98rem;
-  color: #e5e7eb;
+.hash {
+  color: #38bdf8;
 }
 
-.hero-category-card p {
-  margin: 0;
-  font-size: 0.82rem;
-  color: #9ca3af;
-}
-
-.cards-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cards-title {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #e5e7eb;
-}
-
-.cards-subtitle {
-  margin: 0;
-  font-size: 0.96rem;
-  color: #9ca3af;
+.section-subtitle {
+  color: #64748b;
 }
 
 .card-grid {
-  margin-top: 12px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 .nav-card {
-  display: block;
-  padding: 16px 18px;
+  position: relative;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
   border-radius: 16px;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.16), transparent 55%),
-    linear-gradient(150deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.92));
-  border: 1px solid rgba(51, 65, 85, 0.8);
+  padding: 24px;
   text-decoration: none;
-  box-shadow:
-    0 16px 40px rgba(15, 23, 42, 0.95),
-    0 0 0 1px rgba(30, 64, 175, 0.45);
-  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
-    border-color 0.12s ease-out;
-}
-
-.nav-card h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.05rem;
-  color: #e5e7eb;
-}
-
-.nav-card p {
-  margin: 0;
-  font-size: 0.92rem;
-  color: #9ca3af;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out backwards;
 }
 
 .nav-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(96, 165, 250, 0.95);
-  box-shadow:
-    0 22px 52px rgba(37, 99, 235, 0.95),
-    0 0 0 1px rgba(191, 219, 254, 0.95);
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
 }
 
-@keyframes heroGradient {
-  0% {
-    background-position: 0% 0%, 100% 100%, 0% 0%;
+.card-content h3 {
+  color: #f1f5f9;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-content p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card-icon-placeholder {
+  width: 40px;
+  height: 40px;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 8px;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+/* --- Recommend Section (Terminal Style) --- */
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recommend-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out backwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend-card:hover {
+  border-color: #38bdf8;
+  transform: scale(1.02);
+}
+
+.terminal-header {
+  background: #1e293b;
+  padding: 8px 12px;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid #334155;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #eab308; }
+.dot.green { background: #22c55e; }
+
+.recommend-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend-label {
+  font-family: 'Courier New', monospace;
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.recommend-meta {
+  font-family: 'Courier New', monospace;
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.recommend-footer {
+  margin-top: auto;
+}
+
+.visit-tag {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* --- Animations --- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  50% {
-    background-position: 50% 50%, 50% 50%, 0% 0%;
-  }
-  100% {
-    background-position: 100% 0%, 0% 100%, 0% 0%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes heroFloat {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -4px, 0);
-  }
-  100% {
-    transform: translate3d(0, 3px, 0);
-  }
-}
-
-@media (max-width: 960px) {
+/* Mobile Responsive */
+@media (max-width: 768px) {
   .hero {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    padding: 24px;
+    text-align: center;
   }
-
-  .hero-side {
-    order: -1;
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-}
-
-@media (max-width: 640px) {
-  .hero {
-    padding: 20px 16px;
+  
+  .hero-text {
+    align-items: center;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .logo-card-wrapper {
+    margin-top: 20px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
   }
 }
 </style>

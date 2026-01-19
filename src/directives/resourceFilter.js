@@ -5,7 +5,8 @@ function applyFilter(el, keyword) {
     return
   }
   const text = el.__rfText || ''
-  const matched = text.includes(value)
+  const tokens = value.split(/\s+/).filter(Boolean)
+  const matched = tokens.every((token) => text.includes(token))
   el.style.display = matched ? '' : 'none'
 }
 
@@ -22,4 +23,3 @@ export const vResourceFilter = {
     applyFilter(el, binding.value)
   },
 }
-

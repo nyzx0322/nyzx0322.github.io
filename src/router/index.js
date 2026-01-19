@@ -32,6 +32,38 @@ const entertainmentAutoRoutes = buildAutoRoutes(entertainmentModules, 'Entertain
 const hackAutoRoutes = buildAutoRoutes(hackModules, 'Hack')
 const othersAutoRoutes = buildAutoRoutes(othersModules, 'Others')
 
+const adminRoutes = [
+  {
+    path: '/admin/login',
+    name: 'AdminLogin',
+    component: () => import('../views/admin/Login.vue'),
+  },
+  {
+    path: '/admin/',
+    name: 'AdminIndex',
+    component: () => import('../views/admin/Index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/admin/groups',
+    name: 'AdminGroups',
+    component: () => import('../views/admin/GroupManager.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/admin/resources',
+    name: 'AdminResources',
+    component: () => import('../views/admin/Resources.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/admin/editor',
+    name: 'AdminEditor',
+    redirect: '/admin/resources',
+    meta: { requiresAuth: true },
+  },
+]
+
 const routes = [
   {
     path: '/',
@@ -42,6 +74,21 @@ const routes = [
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue'),
+  },
+  {
+    path: '/favorites',
+    name: 'Favorites',
+    component: () => import('../views/Favorites.vue'),
+  },
+  {
+    path: '/stats',
+    name: 'Stats',
+    component: () => import('../views/Stats.vue'),
+  },
+  {
+    path: '/search',
+    name: 'GlobalSearch',
+    component: () => import('../views/GlobalSearch.vue'),
   },
   {
     path: '/learn',
@@ -68,16 +115,42 @@ const routes = [
     name: 'Others',
     component: () => import('../views/others/Others.vue'),
   },
+  ...adminRoutes,
   ...learnAutoRoutes,
   ...projectAutoRoutes,
   ...entertainmentAutoRoutes,
   ...hackAutoRoutes,
   ...othersAutoRoutes,
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('../views/NotFound.vue'),
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+})
+
+router.beforeEach((to, from, next) => {
+  if (!to.meta.requiresAuth) {
+    next()
+    return
+  }
+
+  if (typeof window === 'undefined') {
+    next()
+    return
+  }
+
+  const token = window.localStorage.getItem('admin_token')
+
+  if (!token) {
+    next('/admin/login')
+  } else {
+    next()
+  }
 })
 
 export default router
