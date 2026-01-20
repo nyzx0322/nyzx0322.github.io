@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import TagFilterBar from '../components/TagFilterBar.vue'
-import CategorySidebar from '../components/CategorySidebar.vue'
 import { allResources } from '../data/allResourcesIndex'
 
 const keyword = ref('')
@@ -65,38 +64,54 @@ const filteredResources = computed(() => {
 <template>
   <div class="category-page">
     <div class="category-layout">
-      <CategorySidebar
-        title="全局搜索"
-        subtitle="在所有分类中按关键字、标签和分类搜索资源。"
-      />
+      <!-- Left Sidebar with Filters -->
+      <aside class="category-sidebar search-sidebar">
+        <h2 class="sidebar-title">全局搜索</h2>
+        <p class="sidebar-subtitle">
+          在所有分类中按关键字、标签和分类搜索资源。
+        </p>
 
+        <div class="sidebar-filters">
+          <!-- Keyword Search -->
+          <div class="filter-group">
+            <label class="filter-label">关键字</label>
+            <input
+              v-model="keyword"
+              type="text"
+              class="sidebar-input"
+              placeholder="搜索标题、描述..."
+            />
+          </div>
+
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <label class="filter-label">分类筛选</label>
+            <select v-model="activeCategory" class="sidebar-select">
+              <option value="all">全部分类</option>
+              <option v-for="cat in categories" :key="cat" :value="cat">
+                {{ cat }}
+              </option>
+            </select>
+          </div>
+
+          <!-- Tag Filter -->
+          <div class="filter-group">
+            <label class="filter-label">标签筛选 ({{ activeTags.length }})</label>
+            <div class="tag-scroll-area custom-scrollbar">
+              <TagFilterBar v-model="activeTags" :available-tags="allTags" />
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Content Section -->
       <section class="category-section">
         <header class="category-header">
-          <h2 class="category-title">全站资源搜索</h2>
+          <h2 class="category-title">搜索结果</h2>
           <p class="category-subtitle">
             当前共 {{ allResources.length }} 条资源，匹配到 {{ filteredResources.length }} 条结果。
           </p>
         </header>
-
-        <div class="resource-filter-bar">
-          <input
-            v-model="keyword"
-            type="text"
-            class="resource-filter-input"
-            placeholder="输入关键字搜索标题、描述或标签"
-          />
-        </div>
-
-        <div class="resource-filter-bar" style="margin-top: 8px">
-          <select v-model="activeCategory" class="resource-filter-input">
-            <option value="all">全部分类</option>
-            <option v-for="cat in categories" :key="cat" :value="cat">
-              {{ cat }}
-            </option>
-          </select>
-        </div>
-
-        <TagFilterBar v-model="activeTags" :available-tags="allTags" />
 
         <ul class="resource-list">
           <li
@@ -129,4 +144,101 @@ const filteredResources = computed(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Sidebar specific overrides */
+.search-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: calc(100vh - 40px);
+  overflow: hidden; /* Prevent sidebar itself from scrolling, we scroll inner areas */
+}
+
+.sidebar-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden; /* Contain children */
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group:last-child {
+  flex: 1; /* Make tag group take remaining space */
+  min-height: 0; /* Important for flex child scrolling */
+}
+
+.filter-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.sidebar-input,
+.sidebar-select {
+  width: auto;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.sidebar-input:focus,
+.sidebar-select:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-ring);
+}
+
+.tag-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px; /* Space for scrollbar */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  background: var(--bg-sub-section);
+}
+
+/* Custom Scrollbar for Tags */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .tag-scroll-area {
+    max-height: 300px; /* Limit height on mobile */
+  }
+}
+</style>
 

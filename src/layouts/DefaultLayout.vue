@@ -132,7 +132,6 @@ onBeforeUnmount(() => {
           >
             <span
               class="theme-toggle-track"
-              :class="{ 'theme-toggle-track--light': isLightTheme }"
             >
               <span
                 class="theme-toggle-thumb"
@@ -164,11 +163,11 @@ onBeforeUnmount(() => {
 
 .layout-footer {
   margin-top: auto;
-  padding: 2rem;
-  background: rgba(15, 23, 42, 0.8);
-  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  padding: 0.1rem;
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
   text-align: center;
-  color: #94a3b8;
+  color: var(--footer-text);
   font-size: 0.9rem;
 }
 
@@ -180,7 +179,7 @@ onBeforeUnmount(() => {
 }
 
 .admin-link {
-  color: #475569;
+  color: var(--color-admin-link);
   text-decoration: none;
   font-size: 0.8rem;
   opacity: 0.5;
@@ -189,7 +188,7 @@ onBeforeUnmount(() => {
 
 .admin-link:hover {
   opacity: 1;
-  color: #6366f1;
+  color: var(--admin-link-hover-color);
 }
 
 .layout-header {
@@ -197,13 +196,9 @@ onBeforeUnmount(() => {
   top: 0;
   z-index: 10;
   padding: 12px 24px;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.35), transparent 45%),
-    linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(17, 24, 39, 0.92));
-  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
-  box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.75),
-    0 0 0 1px rgba(30, 64, 175, 0.3);
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-header);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -226,7 +221,7 @@ onBeforeUnmount(() => {
 .brand-title {
   font-size: 1.1rem;
   font-weight: 700;
-  background-image: linear-gradient(120deg, #e5e7eb, #a5b4fc, #38bdf8);
+  background-image: var(--brand-gradient);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
@@ -237,7 +232,7 @@ onBeforeUnmount(() => {
 
 .brand-subtitle {
   font-size: 0.8rem;
-  color: #9ca3af;
+  color: var(--color-brand-subtitle);
 }
 
 .layout-nav {
@@ -255,7 +250,7 @@ onBeforeUnmount(() => {
 .layout-nav a,
 .nav-link {
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--nav-link-color);
   padding: 6px 10px;
   border-radius: 999px;
   position: relative;
@@ -283,30 +278,24 @@ onBeforeUnmount(() => {
 
 .layout-nav a:hover,
 .nav-link:hover {
-  color: #0b1020;
-  background: radial-gradient(circle at 0% 0%, #e0f2fe, #a5b4fc);
-  box-shadow:
-    0 10px 22px rgba(37, 99, 235, 0.5),
-    0 0 0 1px rgba(191, 219, 254, 0.7);
+  color: var(--nav-hover-color);
+  background: var(--nav-hover-bg);
+  box-shadow: var(--nav-hover-shadow);
   transform: translateY(-1px);
 }
 
 .layout-nav .router-link-active {
-  color: #020617;
-  background: linear-gradient(120deg, #bfdbfe, #c7d2fe, #7dd3fc);
+  color: var(--nav-active-color);
+  background: var(--nav-active-bg);
   font-weight: 600;
-  box-shadow:
-    0 12px 26px rgba(56, 189, 248, 0.55),
-    0 0 0 1px rgba(125, 211, 252, 0.9);
+  box-shadow: var(--nav-active-shadow);
 }
 
 .layout-nav .router-link-exact-active {
-  color: #020617;
-  background: linear-gradient(135deg, #4f46e5, #0ea5e9, #22c55e);
+  color: var(--nav-exact-active-color);
+  background: var(--nav-exact-active-bg);
   font-weight: 700;
-  box-shadow:
-    0 15px 32px rgba(59, 130, 246, 0.75),
-    0 0 0 1px rgba(248, 250, 252, 0.7);
+  box-shadow: var(--nav-exact-active-shadow);
 }
 
 .nav-icon {
@@ -341,12 +330,8 @@ onBeforeUnmount(() => {
   margin-top: 0;
   padding: 8px;
   border-radius: 14px;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.26), transparent 60%),
-    linear-gradient(150deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
-  box-shadow:
-    0 18px 40px rgba(15, 23, 42, 0.95),
-    0 0 0 1px rgba(30, 64, 175, 0.55);
+  background: var(--bg-nav-dropdown);
+  box-shadow: var(--nav-dropdown-shadow);
   display: none;
   min-width: 100px;
   z-index: 20;
@@ -372,20 +357,20 @@ onBeforeUnmount(() => {
   padding: 8px 14px;
   border-radius: 999px;
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--nav-link-color);
   font-size: 0.9rem;
   line-height: 1.2;
 }
 
 .nav-dropdown-item:hover {
-  color: #020617;
-  background: radial-gradient(circle at 0% 0%, #e0f2fe, #a5b4fc);
+  color: var(--nav-hover-color);
+  background: var(--nav-hover-bg);
 }
 
 .theme-toggle {
   padding: 4px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.7);
+  border: 1px solid var(--border-theme-toggle);
   background-color: transparent;
   cursor: pointer;
   transition:
@@ -396,11 +381,9 @@ onBeforeUnmount(() => {
 }
 
 .theme-toggle:hover {
-  background-color: rgba(30, 64, 175, 0.35);
-  border-color: rgba(191, 219, 254, 0.8);
-  box-shadow:
-    0 12px 26px rgba(59, 130, 246, 0.8),
-    0 0 0 1px rgba(191, 219, 254, 0.9);
+  background-color: var(--theme-toggle-hover-bg);
+  border-color: var(--theme-toggle-hover-border);
+  box-shadow: var(--theme-toggle-hover-shadow);
   transform: translateY(-1px);
 }
 
@@ -408,26 +391,22 @@ onBeforeUnmount(() => {
   width: 38px;
   height: 18px;
   border-radius: 999px;
-  background-color: rgba(15, 23, 42, 0.9);
+  background-color: var(--bg-theme-toggle-track);
   display: flex;
   align-items: center;
   padding: 2px;
   transition:
     background-color 0.18s ease-out,
     box-shadow 0.18s ease-out;
-  box-shadow:
-    inset 0 0 0 1px rgba(15, 23, 42, 0.7),
-    0 4px 10px rgba(15, 23, 42, 0.65);
+  box-shadow: var(--shadow-theme-toggle-track);
 }
 
 .theme-toggle-thumb {
   width: 14px;
   height: 14px;
   border-radius: 999px;
-  background-color: #e5e7eb;
-  box-shadow:
-    0 2px 4px rgba(15, 23, 42, 0.7),
-    0 0 0 1px rgba(148, 163, 184, 0.7);
+  background-color: var(--bg-theme-toggle-thumb);
+  box-shadow: var(--shadow-theme-toggle-thumb);
   transform: translateX(0);
   transition:
     transform 0.2s ease-out,
@@ -436,19 +415,8 @@ onBeforeUnmount(() => {
 }
 
 /* 浅色主题时切换按钮外观（通过计算属性控制） */
-.theme-toggle-track--light {
-  background-color: rgba(226, 232, 240, 0.96);
-  box-shadow:
-    inset 0 0 0 1px rgba(148, 163, 184, 0.6),
-    0 4px 10px rgba(148, 163, 184, 0.55);
-}
-
 .theme-toggle-thumb--light {
   transform: translateX(18px);
-  background-color: #0f172a;
-  box-shadow:
-    0 2px 4px rgba(15, 23, 42, 0.7),
-    0 0 0 1px rgba(30, 64, 175, 0.7);
 }
 
 .layout-main {

@@ -130,9 +130,9 @@ const handleFileChange = (event) => {
 
 .action-btn {
   padding: 6px 12px;
-  background: rgba(56, 189, 248, 0.1);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: var(--btn-action-bg);
+  color: var(--btn-action-color);
+  border: 1px solid var(--btn-action-border);
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.85rem;
@@ -140,7 +140,7 @@ const handleFileChange = (event) => {
 }
 
 .action-btn:hover {
-  background: rgba(56, 189, 248, 0.2);
+  background: var(--btn-action-bg-hover);
 }
 
 /* 复用 GlobalSearch.vue 的部分样式，或直接依赖全局样式 */

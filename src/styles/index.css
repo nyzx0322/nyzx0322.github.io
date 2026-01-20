@@ -35,18 +35,245 @@
   --bg-category-sidebar:
     radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.26), transparent 55%),
     linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.92));
+  --border-category-sidebar: rgba(148, 163, 184, 0.2);
+  --shadow-category-sidebar: 0 18px 40px rgba(15, 23, 42, 0.8), 0 0 0 1px rgba(30, 64, 175, 0.3);
+  --border-category-header: rgba(148, 163, 184, 0.5);
+  --shadow-input-focus: 0 0 24px rgba(59, 130, 246, 0.25);
   --bg-about-card:
     radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.2), transparent 55%),
     linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.93));
   --bg-about-tech-card:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.22), transparent 55%),
     linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.93));
+  --bg-about-container:
+    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.2), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.22), transparent 60%),
+    linear-gradient(150deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
+  --shadow-about-container: 0 28px 80px rgba(15, 23, 42, 0.98), 0 0 0 1px rgba(30, 64, 175, 0.55);
+  --bg-about-tag: rgba(15, 23, 42, 0.9);
+  --color-about-tag: #bfdbfe;
+  --border-about-tag: rgba(59, 130, 246, 0.7);
+  --bg-about-pill: rgba(15, 23, 42, 0.85);
+  --color-about-pill: #e5e7eb;
+  --border-about-pill: rgba(148, 163, 184, 0.65);
+  --gradient-heading: linear-gradient(120deg, #e5e7eb, #a5b4fc, #38bdf8);
   --color-category-title: #f9fafb;
   --color-category-subtitle: #9ca3af;
   --color-resource-link: #bfdbfe;
   --color-resource-meta: #9ca3af;
+  --border-color: rgba(148, 163, 184, 0.1);
+  --border-color-hover: rgba(56, 189, 248, 0.5);
+  --tag-bg: rgba(30, 41, 59, 0.8);
+  --tag-border: rgba(148, 163, 184, 0.2);
+  --tag-text: #cbd5e1;
+  --tag-bg-hover: rgba(51, 65, 85, 0.9);
+  --tag-text-hover: #e2e8f0;
+  --footer-bg: rgba(15, 23, 42, 0.8);
+  --footer-border: rgba(148, 163, 184, 0.1);
+  --footer-text: #94a3b8;
+  --btn-icon-bg: rgba(15, 23, 42, 0.3);
+  --btn-icon-border: rgba(148, 163, 184, 0.1);
+  --btn-icon-text: #94a3b8;
+  --btn-action-bg: rgba(56, 189, 248, 0.1);
+  --btn-action-color: #38bdf8;
+  --btn-action-border: rgba(56, 189, 248, 0.2);
+  --btn-action-bg-hover: rgba(56, 189, 248, 0.2);
+  --hash-color: #38bdf8;
+  --count-bg: rgba(30, 41, 59, 0.5);
+  --count-text: #64748b;
+  --resource-title-color: #f1f5f9;
+  --resource-title-hover: #38bdf8;
+  --action-link-bg: rgba(59, 130, 246, 0.1);
+  --action-link-color: #60a5fa;
+  --action-link-bg-hover: rgba(59, 130, 246, 0.2);
+  --tag-active-bg: rgba(56, 189, 248, 0.15);
+  --tag-active-color: #38bdf8;
+  --tag-active-border: rgba(56, 189, 248, 0.4);
+  --tag-highlight-bg: rgba(234, 179, 8, 0.15);
+  --tag-highlight-color: #fbbf24;
+  --tag-highlight-border: rgba(234, 179, 8, 0.4);
+  --shadow-card: 0 18px 40px rgba(15, 23, 42, 0.85), 0 0 0 1px rgba(30, 64, 175, 0.4);
+  --bg-resource-item-hover: rgba(15, 23, 42, 0.96);
+  --border-resource-item-hover: rgba(96, 165, 250, 0.95);
+  --bg-resource-link-secondary: linear-gradient(120deg, #0f172a, #1f2937);
+  --color-resource-link-secondary: #e5e7eb;
+  --bg-favorite-toggle-hover: rgba(30, 64, 175, 0.9);
+  --shadow-card-hover: 0 20px 48px rgba(37, 99, 235, 0.9), 0 0 0 1px rgba(191, 219, 254, 0.9);
+  --nav-hover-bg: radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.25), rgba(165, 180, 252, 0.25));
+  --nav-hover-color: #e5e7eb;
+  --nav-hover-shadow: 0 10px 22px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(191, 219, 254, 0.3);
+  --nav-active-bg: linear-gradient(120deg, rgba(56, 189, 248, 0.2), rgba(199, 210, 254, 0.2), rgba(125, 211, 252, 0.2));
+  --nav-active-color: #f0f9ff;
+  --nav-active-shadow: 0 12px 26px rgba(56, 189, 248, 0.3), 0 0 0 1px rgba(125, 211, 252, 0.4);
+  --nav-exact-active-bg: linear-gradient(135deg, rgba(79, 70, 229, 0.4), rgba(14, 165, 233, 0.4), rgba(34, 197, 94, 0.4));
+  --nav-exact-active-color: #ffffff;
+  --nav-exact-active-shadow: 0 15px 32px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(248, 250, 252, 0.3);
+  --tag-chip-active-bg: linear-gradient(120deg, rgba(79, 70, 229, 0.3), rgba(14, 165, 233, 0.3));
+  --tag-chip-active-border: rgba(191, 219, 254, 0.4);
+  --tag-chip-active-color: #e0f2fe;
+  --resource-link-primary-bg: linear-gradient(120deg, rgba(79, 70, 229, 0.3), rgba(14, 165, 233, 0.3), rgba(34, 197, 94, 0.3));
+  --resource-link-primary-color: #f0f9ff;
+  --resource-link-primary-border: rgba(59, 130, 246, 0.5);
+  --resource-link-hover-shadow: 0 12px 26px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(191, 219, 254, 0.4);
+  --theme-toggle-hover-bg: rgba(30, 64, 175, 0.35);
+  --theme-toggle-hover-border: rgba(191, 219, 254, 0.8);
+  --theme-toggle-hover-shadow: 0 12px 26px rgba(59, 130, 246, 0.8), 0 0 0 1px rgba(191, 219, 254, 0.9);
+  --bg-hero-gradient: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+  --border-hero: rgba(148, 163, 184, 0.1);
+  --shadow-hero: 0 0 50px rgba(0, 0, 0, 0.5);
+  --bg-hero-grid: linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+  --bg-hero-spotlight: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.08), transparent 40%);
+  --color-hero-title: #fff;
+  --shadow-hero-title: 0 0 10px rgba(56, 189, 248, 0.5);
+  --color-hero-subtitle: #94a3b8;
+  --color-hero-desc: #64748b;
+  --shadow-logo-card: 0 20px 50px rgba(0, 0, 0, 0.3);
+  --btn-cyber-primary-bg: rgba(56, 189, 248, 0.1);
+  --btn-cyber-primary-border: #38bdf8;
+  --btn-cyber-primary-color: #38bdf8;
+  --btn-cyber-primary-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+  --btn-cyber-primary-hover-bg: #38bdf8;
+  --btn-cyber-primary-hover-color: #0f172a;
+  --btn-cyber-primary-hover-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+  --btn-stats-link-bg: linear-gradient(120deg, #4f46e5, #0ea5e9);
+  --btn-stats-link-text: #020617;
+  --btn-stats-link-shadow: 0 10px 26px rgba(37, 99, 235, 0.95), 0 0 0 1px rgba(191, 219, 254, 0.9);
+  --btn-cyber-secondary-bg: transparent;
+  --btn-cyber-secondary-border: #475569;
+  --btn-cyber-secondary-color: #94a3b8;
+  --btn-cyber-secondary-hover-border: #94a3b8;
+  --btn-cyber-secondary-hover-color: #fff;
+  --bg-recommend-card: #0f172a;
+  --border-recommend-card: #334155;
+  --bg-terminal-header: #1e293b;
+  --border-terminal-header: #334155;
+  --color-recommend-label: #e2e8f0;
+  --bg-home-nav-card: rgba(30, 41, 59, 0.4);
+  --border-home-nav-card: rgba(148, 163, 184, 0.1);
+  --bg-home-nav-card-hover: rgba(30, 41, 59, 0.8);
+  --border-home-nav-card-hover: rgba(56, 189, 248, 0.3);
+  --shadow-home-nav-card-hover: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+  --bg-logo-card: rgba(30, 41, 59, 0.7);
+  --border-logo-card: rgba(255, 255, 255, 0.1);
+  --color-section-title: #e2e8f0;
+  --color-card-title: #f1f5f9;
+  --bg-visit-tag: rgba(56, 189, 248, 0.1);
+  --color-visit-tag: #38bdf8;
+  --bg-stats-card:
+    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.2), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.22), transparent 60%),
+    linear-gradient(150deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
+  --border-stats-card: rgba(148, 163, 184, 0.5);
+  --shadow-stats-card: 0 28px 80px rgba(15, 23, 42, 0.98), 0 0 0 1px rgba(30, 64, 175, 0.55);
+  --bg-stats-summary: rgba(15, 23, 42, 0.96);
+  --border-stats-summary: rgba(148, 163, 184, 0.6);
+  --shadow-stats-summary: 0 16px 40px rgba(15, 23, 42, 0.9), 0 0 0 1px rgba(30, 64, 175, 0.45);
+  --bg-stats-trend: rgba(30, 41, 59, 0.3);
+  --bg-stats-bar: linear-gradient(to top, rgba(56, 189, 248, 0.5), rgba(56, 189, 248, 0.8));
+  --bg-stats-bar-hover: linear-gradient(to top, rgba(56, 189, 248, 0.7), rgba(56, 189, 248, 1));
+  --bg-stats-table-head: rgba(15, 23, 42, 0.96);
+  --bg-stats-table-odd: rgba(15, 23, 42, 0.9);
+  --bg-stats-table-even: rgba(15, 23, 42, 0.88);
+  --bg-stats-table-hover: rgba(30, 64, 175, 0.9);
+  --color-stats-table-text: #e5e7eb;
+  --color-stats-table-head: #bfdbfe;
+  --color-stats-link: #bfdbfe;
+  --input-bg: rgba(15, 23, 42, 0.9);
+  --input-border: rgba(148, 163, 184, 0.55);
+  --input-text: #e5e7eb;
+  --input-focus-border: rgba(129, 140, 248, 0.9);
+  --bg-hero-spotlight: rgba(56, 189, 248, 0.08);
+  --shadow-hero-logo: rgba(56, 189, 248, 0.4);
+  --color-hero-cursor: #38bdf8;
+  --bg-card-shine: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 100%);
+  --border-section-header: rgba(148, 163, 184, 0.1);
+  /* Scrollbar */
+  --scrollbar-track: rgba(203, 213, 225, 0.5);
+  --scrollbar-thumb: rgba(148, 163, 184, 0.5);
+  --scrollbar-thumb-hover: rgba(100, 116, 139, 0.6);
+  /* Input Focus */
+  --input-focus-ring: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  /* Favorite Toggle */
+  --btn-favorite-bg-hover: rgba(251, 191, 36, 0.2);
+  --btn-favorite-color-hover: #d97706;
+  --btn-favorite-border-hover: rgba(251, 191, 36, 0.5);
+  --btn-favorite-active-color: #d97706;
+  /* Visit Badge */
+  --badge-visit-bg: rgba(245, 158, 11, 0.15);
+  --badge-visit-color: #d97706;
+  /* Card Effects */
+  --card-highlight-gradient: linear-gradient(90deg, #2563eb, #7c3aed);
+  --card-glow-bg: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 70%);
+  /* Action Links */
+  --action-link-primary-bg: rgba(37, 99, 235, 0.1);
+  --action-link-primary-color: #2563eb;
+  --action-link-primary-bg-hover: rgba(37, 99, 235, 0.2);
+  --action-link-secondary-bg: rgba(203, 213, 225, 0.3);
+  --action-link-secondary-color: #475569;
+  --action-link-secondary-bg-hover: rgba(203, 213, 225, 0.5);
+  --action-link-secondary-color-hover: #1e293b;
+  --btn-reset-border: rgba(100, 116, 139, 0.4);
+  --admin-link-hover-color: #6366f1;
+  --color-admin-link: #64748b;
+  --color-brand-subtitle: #9ca3af;
+  --border-theme-toggle: rgba(148, 163, 184, 0.7);
+  --bg-theme-toggle-track: rgba(15, 23, 42, 0.9);
+  --shadow-theme-toggle-track: inset 0 0 0 1px rgba(15, 23, 42, 0.7), 0 4px 10px rgba(15, 23, 42, 0.65);
+  --bg-theme-toggle-thumb: #e5e7eb;
+  --shadow-theme-toggle-thumb: 0 2px 4px rgba(15, 23, 42, 0.7), 0 0 0 1px rgba(148, 163, 184, 0.7);
+  --bg-login-card: rgba(30, 41, 59, 0.8);
+  --border-login-card: rgba(148, 163, 184, 0.2);
+  --gradient-error-code: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  --shadow-error-code: 0 10px 30px rgba(99, 102, 241, 0.3);
+  --color-dot-red: #ef4444;
+  --color-dot-yellow: #eab308;
+  --color-dot-green: #22c55e;
+  --bg-home-btn: linear-gradient(135deg, #4f46e5, #7c3aed);
+  /* Badge & Danger */
+  --bg-badge-warning: #fef3c7;
+  --color-badge-warning-text: #b45309;
+  --bg-danger-hover: #fee2e2;
+  --bg-home-btn-hover: linear-gradient(135deg, #4338ca, #6d28d9);
+  --shadow-home-btn: 0 4px 15px rgba(79, 70, 229, 0.4);
+  --shadow-home-btn-hover: 0 8px 25px rgba(79, 70, 229, 0.5);
+  --color-home-btn: #ffffff;
+  /* Additional Variables */
+  --gradient-resource-highlight: linear-gradient(90deg, #38bdf8, #818cf8);
+  --gradient-about-hero: linear-gradient(120deg, #4f46e5, #0ea5e9, #22c55e);
+  --color-about-hero-text: #020617;
+  --bg-header: rgba(15, 23, 42, 0.8);
+  --shadow-header: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(148, 163, 184, 0.1);
+  --brand-gradient: linear-gradient(120deg, #38bdf8, #818cf8);
+  --bg-nav-dropdown: rgba(30, 41, 59, 0.95);
+  --nav-dropdown-shadow: 0 10px 25px rgba(15, 23, 42, 0.6), 0 0 0 1px rgba(30, 64, 175, 0.3);
+  --nav-link-color: #e5e7eb;
+  --bg-card-icon: rgba(56, 189, 248, 0.15);
+  --color-card-icon: #38bdf8;
+  /* Status Colors */
+  --color-error: #f87171;
+  --color-warning: #fbbf24;
+  --color-success: #34d399;
+  /* Admin Badge */
+  --bg-badge-warning: rgba(245, 158, 11, 0.2);
+  --color-badge-warning-text: #fbbf24;
+  --bg-danger-hover: rgba(220, 38, 38, 0.2);
+  /* NotFound Page */
+  --gradient-error-code: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+  --shadow-error-code: 0 10px 30px rgba(129, 140, 248, 0.3);
+  --bg-home-btn: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --bg-home-btn-hover: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --shadow-home-btn: 0 4px 15px rgba(99, 102, 241, 0.4);
+  --shadow-home-btn-hover: 0 8px 25px rgba(99, 102, 241, 0.5);
+  --color-home-btn: #ffffff;
   background: radial-gradient(circle at 0% 0%, #0f172a 0%, #020617 38%, #000000 100%), #020617;
   background-attachment: fixed;
+  /* New variables for simplified About page */
+  --color-primary: #6366f1;
+  --color-primary-rgb: 99, 102, 241;
+  --bg-card: var(--bg-about-card);
+  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --bg-secondary: rgba(30, 41, 59, 0.5);
+  --color-text: #e5e7eb;
 }
 
 :root.theme-light {
@@ -77,18 +304,258 @@
   --bg-category-sidebar:
     radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.65), transparent 55%),
     linear-gradient(145deg, #ffffff, #e5e7eb);
+  --border-category-sidebar: rgba(203, 213, 225, 0.6);
+  --shadow-category-sidebar: 0 18px 40px rgba(148, 163, 184, 0.15), 0 0 0 1px rgba(203, 213, 225, 0.6);
+  --border-category-header: rgba(203, 213, 225, 0.8);
+  --input-bg: #ffffff;
+  --input-border: rgba(203, 213, 225, 0.8);
+  --input-text: #1f293b;
+  --input-focus-border: #4f46e5;
+  --shadow-input-focus: 0 0 24px rgba(59, 130, 246, 0.25);
+  --btn-primary-bg: #4f46e5;
+  --btn-primary-hover-bg: #4338ca;
+  --btn-primary-text: #ffffff;
+  --color-error: #dc2626;
+  --color-warning: #d97706;
+  --color-success: #059669;
   --bg-about-card:
     radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.6), transparent 55%),
     linear-gradient(145deg, #ffffff, #e5e7eb);
   --bg-about-tech-card:
     radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.7), transparent 55%),
     linear-gradient(145deg, #ffffff, #e5e7eb);
+  --bg-about-container:
+    radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.6), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(167, 139, 250, 0.5), transparent 60%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.9));
+  --shadow-about-container: 0 20px 60px rgba(148, 163, 184, 0.2), 0 0 0 1px rgba(203, 213, 225, 0.6);
+  --bg-about-tag: rgba(224, 242, 254, 0.8);
+  --color-about-tag: #0369a1;
+  --border-about-tag: rgba(56, 189, 248, 0.5);
+  --bg-about-pill: rgba(241, 245, 249, 0.8);
+  --color-about-pill: #475569;
+  --border-about-pill: rgba(203, 213, 225, 0.6);
+  --gradient-heading: linear-gradient(120deg, #1e293b, #4f46e5, #0ea5e9);
   --color-category-title: #111827;
   --color-category-subtitle: #4b5563;
   --color-resource-link: #1d4ed8;
   --color-resource-meta: #6b7280;
+  --border-color: rgba(203, 213, 225, 0.8);
+  --border-color-hover: rgba(37, 99, 235, 0.5);
+  --tag-bg: rgba(241, 245, 249, 0.8);
+  --tag-border: rgba(203, 213, 225, 0.8);
+  --tag-text: #475569;
+  --tag-bg-hover: rgba(226, 232, 240, 0.9);
+  --tag-border-hover: rgba(37, 99, 235, 0.5);
+  --tag-text-hover: #1e293b;
+  --footer-bg: rgba(255, 255, 255, 0.8);
+  --footer-border: rgba(203, 213, 225, 0.5);
+  --footer-text: #64748b;
+  --btn-icon-bg: rgba(255, 255, 255, 0.6);
+  --btn-icon-border: rgba(203, 213, 225, 0.6);
+  --btn-icon-text: #64748b;
+  --btn-action-bg: rgba(224, 242, 254, 0.5);
+  --btn-action-color: #0369a1;
+  --btn-action-border: rgba(186, 230, 253, 0.6);
+  --btn-action-bg-hover: rgba(224, 242, 254, 0.8);
+  --hash-color: #0284c7;
+  --count-bg: rgba(226, 232, 240, 0.8);
+  --count-text: #64748b;
+  --resource-title-color: #1e293b;
+  --resource-title-hover: #0284c7;
+  --action-link-bg: rgba(37, 99, 235, 0.1);
+  --action-link-color: #2563eb;
+  --action-link-bg-hover: rgba(37, 99, 235, 0.2);
+  --tag-active-bg: rgba(14, 165, 233, 0.15);
+  --tag-active-color: #0284c7;
+  --tag-active-border: rgba(14, 165, 233, 0.4);
+  --tag-highlight-bg: rgba(234, 179, 8, 0.2);
+  --tag-highlight-color: #b45309;
+  --tag-highlight-border: rgba(234, 179, 8, 0.5);
+  --shadow-card: 0 18px 40px rgba(148, 163, 184, 0.15), 0 0 0 1px rgba(203, 213, 225, 0.6);
+  --nav-link-color: #475569;
+  --bg-nav-dropdown: linear-gradient(150deg, #ffffff, #f8fafc);
+  --nav-dropdown-shadow: 0 10px 25px rgba(148, 163, 184, 0.2), 0 0 0 1px rgba(203, 213, 225, 0.6);
+  --bg-resource-item-hover: #ffffff;
+  --border-resource-item-hover: rgba(37, 99, 235, 0.6);
+  --bg-resource-link-secondary: linear-gradient(120deg, #f1f5f9, #e2e8f0);
+  --color-resource-link-secondary: #334155;
+  --bg-favorite-toggle-hover: rgba(224, 242, 254, 0.8);
+  --shadow-card-hover: 0 20px 48px rgba(37, 99, 235, 0.2), 0 0 0 1px rgba(37, 99, 235, 0.3);
+  --nav-hover-bg: radial-gradient(circle at 0% 0%, #e0f2fe, #a5b4fc);
+  --nav-hover-color: #0b1020;
+  --nav-hover-shadow: 0 10px 22px rgba(37, 99, 235, 0.5), 0 0 0 1px rgba(191, 219, 254, 0.7);
+  --nav-active-bg: linear-gradient(120deg, #bfdbfe, #c7d2fe, #7dd3fc);
+  --nav-active-color: #020617;
+  --nav-active-shadow: 0 12px 26px rgba(56, 189, 248, 0.55), 0 0 0 1px rgba(125, 211, 252, 0.9);
+  --nav-exact-active-bg: linear-gradient(135deg, #4f46e5, #0ea5e9, #22c55e);
+  --nav-exact-active-color: #ffffff;
+  --nav-exact-active-shadow: 0 15px 32px rgba(59, 130, 246, 0.75), 0 0 0 1px rgba(248, 250, 252, 0.7);
+  --tag-chip-active-bg: linear-gradient(120deg, #4f46e5, #0ea5e9);
+  --tag-chip-active-border: rgba(191, 219, 254, 0.9);
+  --tag-chip-active-color: #ffffff;
+  --resource-link-primary-bg: linear-gradient(120deg, #4f46e5, #0ea5e9, #22c55e);
+  --resource-link-primary-color: #020617;
+  --resource-link-primary-border: rgba(59, 130, 246, 0.9);
+  --resource-link-hover-shadow: 0 12px 26px rgba(59, 130, 246, 0.9), 0 0 0 1px rgba(191, 219, 254, 0.95);
+  --theme-toggle-hover-bg: rgba(226, 232, 240, 0.9);
+  --theme-toggle-hover-border: rgba(37, 99, 235, 0.6);
+  --theme-toggle-hover-shadow: 0 12px 26px rgba(37, 99, 235, 0.2), 0 0 0 1px rgba(37, 99, 235, 0.3);
+  --btn-stats-link-bg: linear-gradient(120deg, #4f46e5, #0ea5e9);
+  --btn-stats-link-text: #ffffff;
+  --btn-stats-link-shadow: 0 10px 26px rgba(59, 130, 246, 0.4), 0 0 0 1px rgba(191, 219, 254, 0.6);
+  --bg-header:
+    radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.8), transparent 45%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.9));
+  --shadow-header:
+    0 4px 20px rgba(148, 163, 184, 0.15),
+    0 0 0 1px rgba(203, 213, 225, 0.6);
+  --color-hero-cursor: #0284c7;
+  --bg-card-icon: rgba(14, 165, 233, 0.15);
+  --color-card-icon: #0284c7;
+  --bg-visit-tag: rgba(14, 165, 233, 0.15);
+  --color-visit-tag: #0284c7;
+  --bg-stats-card:
+    radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.6), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(167, 139, 250, 0.5), transparent 60%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.9));
+  --border-stats-card: rgba(203, 213, 225, 0.6);
+  --shadow-stats-card: 0 20px 60px rgba(148, 163, 184, 0.2), 0 0 0 1px rgba(203, 213, 225, 0.6);
+  --bg-stats-summary: #ffffff;
+  --border-stats-summary: rgba(203, 213, 225, 0.8);
+  --gradient-error-code: linear-gradient(135deg, #4f46e5, #8b5cf6, #ec4899);
+  --shadow-error-code: 0 10px 30px rgba(79, 70, 229, 0.2);
+  --bg-home-btn: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --bg-home-btn-hover: linear-gradient(135deg, #4338ca, #6d28d9);
+  --shadow-home-btn: 0 4px 15px rgba(79, 70, 229, 0.25);
+  --shadow-home-btn-hover: 0 8px 25px rgba(79, 70, 229, 0.35);
+  --color-home-btn: #ffffff;
+  --shadow-stats-summary: 0 10px 30px rgba(148, 163, 184, 0.15), 0 0 0 1px rgba(203, 213, 225, 0.6);
+  --bg-stats-trend: rgba(241, 245, 249, 0.6);
+  --bg-stats-bar: linear-gradient(to top, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.8));
+  --border-section-header: rgba(203, 213, 225, 0.8);
+  --gradient-resource-highlight: linear-gradient(90deg, #3b82f6, #6366f1);
+  --card-glow-bg: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 70%);
+  --color-admin-link: #64748b;
+  --admin-link-hover-color: #4f46e5;
+  --brand-gradient: linear-gradient(120deg, #2563eb, #7c3aed);
+  --border-theme-toggle: rgba(203, 213, 225, 0.8);
+  --bg-theme-toggle-track: #f1f5f9;
+  --shadow-theme-toggle-track: inset 0 0 0 1px #cbd5e1;
+  --bg-theme-toggle-thumb: #ffffff;
+  --shadow-theme-toggle-thumb: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --color-brand-subtitle: #6b7280;
+  --color-dot-red: #ef4444;
+  --color-dot-yellow: #eab308;
+  --color-dot-green: #22c55e;
+  --bg-stats-bar-hover: linear-gradient(to top, rgba(59, 130, 246, 0.7), rgba(59, 130, 246, 1));
+  --bg-stats-table-head: #f8fafc;
+  --bg-stats-table-odd: #ffffff;
+  --bg-stats-table-even: #f1f5f9;
+  --bg-stats-table-hover: rgba(191, 219, 254, 0.5);
+  --color-stats-table-text: #374151;
+  --color-stats-table-head: #1e293b;
+  --color-stats-link: #2563eb;
+  --btn-reset-border: rgba(100, 116, 139, 0.4);
+  --btn-reset-color: #475569;
+  --btn-reset-hover-bg: rgba(226, 232, 240, 0.5);
+  --btn-reset-hover-color: #1e293b;
+  --btn-reset-hover-shadow: 0 8px 20px rgba(148, 163, 184, 0.15), 0 0 0 1px rgba(148, 163, 184, 0.5);
+  --gradient-error-code: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  --shadow-error-code: 0 10px 30px rgba(99, 102, 241, 0.3);
+  --bg-home-btn: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --bg-home-btn-hover: linear-gradient(135deg, #4338ca, #6d28d9);
+  --shadow-home-btn: 0 4px 15px rgba(79, 70, 229, 0.4);
+  --shadow-home-btn-hover: 0 8px 25px rgba(79, 70, 229, 0.5);
+  --color-home-btn: #ffffff;
+  /* Login & Admin */
+  --btn-primary-bg: #4f46e5;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: #4338ca;
+  --color-error: #dc2626;
+  --admin-link-color: #94a3b8;
+  --admin-link-hover-color: #4f46e5;
+  --color-admin-link: #475569;
+  --color-brand-subtitle: #9ca3af;
+  --border-theme-toggle: rgba(148, 163, 184, 0.7);
+  --bg-theme-toggle-track: rgba(226, 232, 240, 0.96);
+  --shadow-theme-toggle-track: inset 0 0 0 1px rgba(148, 163, 184, 0.6), 0 4px 10px rgba(148, 163, 184, 0.55);
+  --bg-theme-toggle-thumb: #0f172a;
+  --shadow-theme-toggle-thumb: 0 2px 4px rgba(15, 23, 42, 0.7), 0 0 0 1px rgba(30, 64, 175, 0.7);
+  --bg-login-card: rgba(255, 255, 255, 0.9);
+  --border-login-card: rgba(203, 213, 225, 0.8);
+  --brand-gradient: linear-gradient(120deg, #1e293b, #4f46e5, #0ea5e9);
+  --bg-hero-spotlight: rgba(37, 99, 235, 0.1);
+  --shadow-hero-logo: rgba(37, 99, 235, 0.4);
+  --bg-hero-gradient: radial-gradient(circle at 50% 50%, #ffffff 0%, #f1f5f9 100%);
+  --border-hero: rgba(203, 213, 225, 0.8);
+  --shadow-hero: 0 0 50px rgba(148, 163, 184, 0.2);
+  --bg-hero-grid: linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  --bg-hero-spotlight: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(79, 70, 229, 0.08), transparent 40%);
+  --color-hero-title: #0f172a;
+  --shadow-hero-title: 0 0 10px rgba(59, 130, 246, 0.2);
+  --color-hero-subtitle: #475569;
+  --color-hero-desc: #64748b;
+  --shadow-logo-card: 0 20px 50px rgba(148, 163, 184, 0.2);
+  --btn-cyber-primary-bg: rgba(79, 70, 229, 0.1);
+  --btn-cyber-primary-border: #4f46e5;
+  --btn-cyber-primary-color: #4f46e5;
+  --btn-cyber-primary-shadow: 0 0 10px rgba(79, 70, 229, 0.2);
+  --btn-cyber-primary-hover-bg: #4f46e5;
+  --btn-cyber-primary-hover-color: #ffffff;
+  --btn-cyber-primary-hover-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+  --btn-cyber-secondary-bg: transparent;
+  --btn-cyber-secondary-border: #cbd5e1;
+  --btn-cyber-secondary-color: #64748b;
+  --btn-cyber-secondary-hover-border: #475569;
+  --btn-cyber-secondary-hover-color: #1e293b;
+  --bg-recommend-card: #ffffff;
+  --border-recommend-card: #cbd5e1;
+  --bg-terminal-header: #f8fafc;
+  --border-terminal-header: #e2e8f0;
+  --color-recommend-label: #1e293b;
+  --bg-card-shine: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, transparent 100%);
+  --border-section-header: rgba(203, 213, 225, 0.6);
+  --color-hero-cursor: #4f46e5;
+  /* Card Effects & Favorite - Light Mode */
+  --card-highlight-gradient: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  --card-glow-bg: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 70%);
+  --btn-favorite-bg-hover: rgba(245, 158, 11, 0.15);
+  --btn-favorite-color-hover: #d97706;
+  --btn-favorite-border-hover: rgba(245, 158, 11, 0.4);
+  --btn-favorite-active-color: #d97706;
+  /* Additional Variables */
+  --gradient-resource-highlight: linear-gradient(90deg, #38bdf8, #818cf8);
+  --gradient-about-hero: linear-gradient(120deg, #4f46e5, #0ea5e9, #22c55e);
+  --color-about-hero-text: #020617;
+  --bg-badge-warning: #f59e0b;
+  --color-badge-warning-text: #000000;
+  --color-status-warning: #d97706;
+  --color-status-success: #059669;
+  --bg-danger-hover: rgba(239, 68, 68, 0.1);
+  --bg-home-nav-card: rgba(255, 255, 255, 0.5);
+  --border-home-nav-card: rgba(203, 213, 225, 0.6);
+  --bg-home-nav-card-hover: rgba(255, 255, 255, 0.9);
+  --border-home-nav-card-hover: rgba(59, 130, 246, 0.5);
+  --shadow-home-nav-card-hover: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+  --bg-logo-card: rgba(255, 255, 255, 0.8);
+  --border-logo-card: rgba(203, 213, 225, 0.8);
+  --color-section-title: #1e293b;
+  --color-card-title: #111827;
+  --scrollbar-track: rgba(203, 213, 225, 0.3);
+  --scrollbar-thumb: rgba(148, 163, 184, 0.5);
+  --scrollbar-thumb-hover: rgba(100, 116, 139, 0.6);
+  --input-focus-ring: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  --badge-visit-bg: rgba(14, 165, 233, 0.15);
+  --badge-visit-color: #0284c7;
+  --action-link-primary-bg: rgba(37, 99, 235, 0.1);
+  --action-link-primary-color: #2563eb;
+  --action-link-primary-bg-hover: rgba(37, 99, 235, 0.2);
+  --action-link-secondary-bg: rgba(203, 213, 225, 0.3);
+  --action-link-secondary-color: #475569;
+  --action-link-secondary-bg-hover: rgba(203, 213, 225, 0.5);
+  --action-link-secondary-color-hover: #1e293b;
   background: radial-gradient(circle at 0% 0%, #e5f0ff 0%, #e5e7eb 32%, #f3f4f6 100%), #eef2ff;
-  background-attachment: fixed;
 }
 
 body {

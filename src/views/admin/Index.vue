@@ -64,8 +64,7 @@ const goResources = (fileKey) => {
 <style scoped>
 .admin-index {
   min-height: 100vh;
-  background: #0f172a;
-  color: #e2e8f0;
+  color: var(--color-body);
   display: flex;
   flex-direction: column;
 }
@@ -73,7 +72,7 @@ const goResources = (fileKey) => {
   padding: 1.5rem 2rem 0.5rem;
 }
 .subtitle {
-  color: #94a3b8;
+  color: var(--color-muted);
   margin-top: 0.25rem;
 }
 .admin-main {
@@ -86,8 +85,8 @@ const goResources = (fileKey) => {
   gap: 1rem;
 }
 .card {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--bg-login-card);
+  border: 1px solid var(--border-login-card);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -98,22 +97,23 @@ const goResources = (fileKey) => {
 .card-title {
   margin: 0;
   font-size: 1rem;
+  color: var(--color-heading);
 }
 .card-meta {
   margin: 0.5rem 0 0;
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--color-muted);
 }
 .card-footer {
   padding: 0.75rem 1rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  border-top: 1px solid var(--border-login-card);
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
 }
 .manage-btn {
-  background: #6366f1;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   padding: 0.4rem 0.9rem;
   border-radius: 4px;
@@ -121,12 +121,12 @@ const goResources = (fileKey) => {
   font-weight: 600;
 }
 .manage-btn:hover {
-  background: #4f46e5;
+  background: var(--btn-primary-hover-bg);
 }
 .outline-btn {
   background: transparent;
-  color: #e2e8f0;
-  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: var(--color-body);
+  border: 1px solid var(--btn-reset-border);
   padding: 0.4rem 0.9rem;
   border-radius: 4px;
   cursor: pointer;
@@ -134,7 +134,7 @@ const goResources = (fileKey) => {
 }
 
 .outline-btn:hover {
-  border-color: #a5b4fc;
-  color: #c7d2fe;
+  border-color: var(--btn-primary-bg);
+  color: var(--btn-primary-bg);
 }
 </style>

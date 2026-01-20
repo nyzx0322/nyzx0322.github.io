@@ -476,16 +476,15 @@ const goGroups = () => {
 <style scoped>
 .admin-dashboard {
   min-height: 100vh;
-  background: #0f172a;
-  color: #e2e8f0;
+  color: var(--color-body);
   display: flex;
   flex-direction: column;
 }
 
 .admin-header {
   padding: 1rem 2rem;
-  background: rgba(30, 41, 59, 0.8);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -497,8 +496,8 @@ const goGroups = () => {
 }
 
 .env-badge {
-  background: #f59e0b;
-  color: #000;
+  background: var(--bg-badge-warning);
+  color: var(--color-badge-warning-text);
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -508,8 +507,8 @@ const goGroups = () => {
 
 .logout-btn {
   background: transparent;
-  border: 1px solid #475569;
-  color: #94a3b8;
+  border: 1px solid var(--btn-reset-border);
+  color: var(--color-muted);
   padding: 4px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -530,9 +529,10 @@ const goGroups = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--bg-sub-section);
   padding: 1rem;
   border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .actions {
@@ -548,13 +548,13 @@ const goGroups = () => {
 }
 
 .current-file {
-  color: #cbd5e1;
+  color: var(--color-muted);
   font-size: 0.85rem;
 }
 
 .save-btn {
-  background: #6366f1;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
@@ -563,7 +563,7 @@ const goGroups = () => {
 }
 
 .save-btn:hover {
-  background: #4f46e5;
+  background: var(--btn-primary-hover-bg);
 }
 
 .save-btn:disabled {
@@ -573,11 +573,11 @@ const goGroups = () => {
 
 .dirty-indicator {
   font-size: 0.8rem;
-  color: #fbbf24;
+  color: var(--color-warning);
 }
 
 .dirty-indicator.clean {
-  color: #6ee7b7;
+  color: var(--color-success);
 }
 
 .editor-layout {
@@ -589,9 +589,9 @@ const goGroups = () => {
 }
 
 .panel {
-  background: rgba(15, 23, 42, 0.8);
+  background: var(--bg-login-card);
   border-radius: 8px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid var(--border-login-card);
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -607,6 +607,7 @@ const goGroups = () => {
 .panel-header h3 {
   margin: 0;
   font-size: 0.95rem;
+  color: var(--color-heading);
 }
 
 .panel-toolbar {
@@ -625,17 +626,17 @@ const goGroups = () => {
 .search-input {
   padding: 0.3rem 0.5rem;
   border-radius: 4px;
-  border: 1px solid #4b5563;
-  background: #020617;
-  color: #e5e7eb;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   font-size: 0.8rem;
   min-width: 150px;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.4);
+  border-color: var(--btn-primary-bg);
+  box-shadow: 0 0 0 1px var(--btn-primary-bg);
 }
 
 .list {
@@ -652,16 +653,16 @@ const goGroups = () => {
   border: 1px solid transparent;
   cursor: pointer;
   margin-bottom: 0.35rem;
-  background: rgba(15, 23, 42, 0.6);
+  background: var(--bg-sub-section);
 }
 
 .list-item:hover {
-  border-color: rgba(129, 140, 248, 0.5);
+  border-color: var(--border-color-hover);
 }
 
 .list-item.active {
-  border-color: #6366f1;
-  background: rgba(79, 70, 229, 0.2);
+  border-color: var(--btn-primary-bg);
+  background: var(--action-link-bg);
 }
 
 .list-item-main {
@@ -673,17 +674,18 @@ const goGroups = () => {
 
 .list-item-title {
   font-weight: 500;
+  color: var(--color-heading);
 }
 
 .list-item-count {
   font-size: 0.75rem;
-  color: #9ca3af;
+  color: var(--color-muted);
 }
 
 .list-item-sub {
   margin-top: 0.15rem;
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--color-muted);
 }
 
 .list-item-id {
@@ -694,23 +696,24 @@ const goGroups = () => {
 .secondary-btn {
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
-  border: 1px solid #4b5563;
+  border: 1px solid var(--btn-reset-border);
   background: transparent;
-  color: #e5e7eb;
+  color: var(--color-body);
   cursor: pointer;
   font-size: 0.85rem;
 }
 
 .secondary-btn:hover {
-  background: rgba(55, 65, 81, 0.9);
+  background: var(--btn-reset-hover-bg);
+  color: var(--btn-reset-hover-color);
 }
 
 .danger-btn {
   padding: 0.4rem 0.6rem;
   border-radius: 4px;
-  border: 1px solid #b91c1c;
-  background: rgba(239, 68, 68, 0.1);
-  color: #fecaca;
+  border: 1px solid var(--color-error);
+  background: transparent;
+  color: var(--color-error);
   cursor: pointer;
   font-size: 0.85rem;
   margin-top: 0.5rem;
@@ -722,7 +725,7 @@ const goGroups = () => {
 }
 
 .danger-btn:not(:disabled):hover {
-  background: rgba(239, 68, 68, 0.2);
+  background: var(--bg-danger-hover);
 }
 
 .full-width {
@@ -749,36 +752,36 @@ const goGroups = () => {
 
 .form-row label {
   font-size: 0.8rem;
-  color: #9ca3af;
+  color: var(--color-muted);
 }
 
 .text-input {
   width: auto;
   padding: 0.45rem 0.5rem;
   border-radius: 4px;
-  border: 1px solid #4b5563;
-  background: #020617;
-  color: #e5e7eb;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   font-size: 0.85rem;
 }
 
 .text-input:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.4);
+  border-color: var(--btn-primary-bg);
+  box-shadow: 0 0 0 1px var(--btn-primary-bg);
 }
 
 .form-tip {
   margin-top: 0.5rem;
   font-size: 0.78rem;
-  color: #9ca3af;
+  color: var(--color-muted);
 }
 
 .actions-panel {
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 0.75rem;
-  background: rgba(2, 6, 23, 0.5);
+  background: var(--bg-sub-section);
 }
 
 .actions-header {
@@ -787,7 +790,7 @@ const goGroups = () => {
   align-items: center;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: #cbd5e1;
+  color: var(--color-muted);
 }
 
 .actions-list {
@@ -797,10 +800,10 @@ const goGroups = () => {
 }
 
 .action-card {
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 0.75rem;
-  background: rgba(15, 23, 42, 0.6);
+  background: var(--bg-login-card);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -809,7 +812,7 @@ const goGroups = () => {
 
 .status-bar {
   padding: 1rem;
-  background: #10b981;
+  background: var(--color-success);
   color: white;
   border-radius: 8px;
   text-align: center;
@@ -817,7 +820,7 @@ const goGroups = () => {
 }
 
 .status-bar.error {
-  background: #ef4444;
+  background: var(--color-error);
 }
 
 @media (max-width: 1024px) {

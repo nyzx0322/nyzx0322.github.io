@@ -67,22 +67,22 @@ const handleLogin = async () => {
 }
 
 .login-card {
-  background: rgba(30, 41, 59, 0.8);
+  background: var(--bg-login-card);
   padding: 2rem;
   border-radius: 1rem;
   width: 100%;
   max-width: 400px;
   text-align: center;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid var(--border-login-card);
 }
 
 h2 {
   margin-bottom: 0.5rem;
-  color: #e2e8f0;
+  color: var(--color-heading);
 }
 
 .subtitle {
-  color: #94a3b8;
+  color: var(--color-muted);
   margin-bottom: 2rem;
   font-size: 0.9rem;
 }
@@ -91,23 +91,23 @@ h2 {
   width: 100%;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  background: rgba(15, 23, 42, 0.6);
-  color: white;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   margin-bottom: 1rem;
   outline: none;
   transition: border-color 0.2s;
 }
 
 .login-input:focus {
-  border-color: #6366f1;
+  border-color: var(--btn-primary-bg);
 }
 
 .login-btn {
   width: 100%;
   padding: 0.75rem;
-  background: #6366f1;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -116,17 +116,17 @@ h2 {
 }
 
 .login-btn:hover {
-  background: #4f46e5;
+  background: var(--btn-primary-hover-bg);
 }
 
 .hint {
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--color-muted);
   margin-top: 0.5rem;
 }
 
 .error-msg {
-  color: #ef4444;
+  color: var(--color-error);
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }

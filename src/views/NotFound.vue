@@ -48,13 +48,13 @@ const goHome = () => {
   font-size: 8rem;
   font-weight: 900;
   line-height: 1;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  background: var(--gradient-error-code);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin-bottom: 1rem;
   font-family: 'Segoe UI', sans-serif;
-  text-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  text-shadow: var(--shadow-error-code);
 }
 
 .title {
@@ -75,22 +75,22 @@ const goHome = () => {
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 2rem;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: white;
+  background: var(--bg-home-btn);
+  color: var(--color-home-btn);
   border: none;
   border-radius: 99px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+  box-shadow: var(--shadow-home-btn);
   text-decoration: none;
 }
 
 .home-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
-  background: linear-gradient(135deg, #4338ca, #6d28d9);
+  box-shadow: var(--shadow-home-btn-hover);
+  background: var(--bg-home-btn-hover);
 }
 
 .icon {
