@@ -1,5 +1,5 @@
-- id: Hacklearn
-  title: 📘 学习资料
+- id: ctf_range
+  title: 🚩 CTF 与靶场
   items:
     - id: ctf-wiki
       href: https://ctf-wiki.org/
@@ -8,354 +8,44 @@
         - CTF
         - Wiki
         - 学习
-    - id: owasp-top10
-      href: https://owasp.org/www-project-top-ten/
-      label: OWASP Top 10 · Web 应用安全风险
-      tags:
-        - 安全
-        - OWASP
-        - 标准
-    - id: mitre-attack
-      href: https://attack.mitre.org/
-      label: MITRE ATT&CK® · 攻击矩阵
-      tags:
-        - 攻防
-        - 知识库
-        - 矩阵
-    - id: deelmind
-      href: https://deelmind.com/
-      titleAttr: 極客方舟,DeeLMind,QKword
-      label: 極客方舟 · DeeLMind
-      tags:
-        - 安全
-        - 社区
-        - 资讯
-
-
-- id: hackNews
-  title: 📰 安全情报
-  items:
-    - id: freebuf
-      href: https://www.freebuf.com/
-      label: FreeBuf · 互联网安全新媒体
-      tags:
-        - 安全
-        - 资讯
-        - 社区
-    - id: seebug
-      href: https://www.seebug.org/
-      label: Seebug · 漏洞平台
-      tags:
-        - 安全
-        - 漏洞
-        - 情报
-    - id: 360-cert
-      href: https://cert.360.cn/
-      label: 360 CERT · 安全应急响应中心
-      tags:
-        - 安全
-        - 应急
-        - 情报
-
-
-- id: HackTools
-  title: 🛡️ 常用安全工具
-  items:
-    - id: kali
-      href: https://www.kali.org/
-      label: Kali Linux · 渗透测试平台
-      tags:
-        - 安全
-        - 系统
-        - 渗透
-    - id: burpsuite
-      href: https://portswigger.net/burp
-      label: Burp Suite · Web 安全测试
-      tags:
-        - 工具
-        - 抓包
-        - 测试
-    - id: wireshark
-      href: https://www.wireshark.org/
-      label: Wireshark · 网络协议分析
-      tags:
-        - 工具
-        - 抓包
-        - 网络
-    - id: nmap
-      href: https://nmap.org/
-      label: Nmap · 网络扫描工具
-      tags:
-        - 工具
-        - 扫描
-        - 网络
-    - id: sqlmap
-      href: https://sqlmap.org/
-      label: SQLMap · 自动 SQL 注入工具
-      tags:
-        - 工具
-        - 注入
-        - 数据库
-    - id: ghidra
-      href: https://ghidra-sre.org/
-      label: Ghidra · 软件逆向工程套件
-      tags:
-        - 工具
-        - 逆向
-        - NSA
-    - id: metasploit
-      href: https://www.metasploit.com/
-      label: Metasploit · 渗透测试框架
-      tags:
-        - 渗透
-        - 框架
-        - 漏洞
-    - id: fiddler
-      href: https://www.telerik.com/fiddler
-      label: Fiddler · Web 调试代理
-      tags:
-        - 工具
-        - 抓包
-        - HTTP
-
-
-- id: WebShellManage
-  title: 🐚 WebShell 管理
-  items:
-    - id: antsword
-      href: https://github.com/AntSwordProject/antSword
-      label: AntSword · 中国蚁剑
-      tags:
-        - WebShell
-        - 管理
-        - 跨平台
-    - id: behinder
-      href: https://github.com/rebeyond/Behinder
-      label: Behinder · 冰蝎
-      tags:
-        - WebShell
-        - 加密
-        - 动态
-    - id: godzilla
-      href: https://github.com/BeichenDream/Godzilla
-      label: Godzilla · 哥斯拉
-      tags:
-        - WebShell
-        - 流量加密
-        - 绕过
-
-
-- id: InfoGathering
-  title: 🔍 信息收集
-  items:
-    - id: oneforall
-      href: https://github.com/shmilylty/OneForAll
-      label: OneForAll · 子域名收集
-      tags:
-        - 域名
-        - 收集
-        - 自动化
-    - id: dirsearch
-      href: https://github.com/maurosoria/dirsearch
-      label: Dirsearch · 目录扫描
-      tags:
-        - 扫描
-        - 路径
-        - 爆破
-    - id: fofa
-      href: https://fofa.info/
-      label: FOFA · 网络空间测绘
-      tags:
-        - 搜索
-        - 资产
-        - 测绘
-    - id: shodan
-      href: https://www.shodan.io/
-      label: Shodan · 撒旦搜索
-      tags:
-        - 搜索
-        - 物联网
-        - 漏洞
-
-
-- id: IntranetProxy
-  title: 🚇 内网渗透 & 代理
-  items:
-    - id: frp
-      href: https://github.com/fatedier/frp
-      label: Frp · 内网穿透
-      tags:
-        - 代理
-        - 穿透
-        - 隧道
-    - id: neo-regeorg
-      href: https://github.com/L-codes/Neo-reGeorg
-      label: Neo-reGeorg · HTTP 隧道
-      tags:
-        - 隧道
-        - 代理
-        - 隐蔽
-    - id: proxifier
-      href: https://www.proxifier.com/
-      label: Proxifier · 全局代理客户端
-      tags:
-        - 代理
-        - 工具
-        - 转发
-
-
-- id: PassCracking
-  title: 🔑 密码破解 & 凭证
-  items:
-    - id: mimikatz
-      href: https://github.com/gentilkiwi/mimikatz
-      label: Mimikatz · 凭证抓取
-      tags:
-        - Windows
-        - 凭证
-        - 神器
-    - id: hashcat
-      href: https://hashcat.net/hashcat/
-      label: Hashcat · 密码恢复工具
-      tags:
-        - 破解
-        - GPU
-        - 哈希
-    - id: hydra
-      href: https://github.com/vanhauser-thc/thc-hydra
-      label: Hydra · 在线爆破工具
-      tags:
-        - 爆破
-        - 协议
-        - 暴力破解
-
-
-- id: ThreatIntel
-  title: 🧠 威胁情报 & 态势感知
-  items:
-    - id: virustotal
-      href: https://www.virustotal.com/
-      label: VirusTotal · 病毒分析平台
-      tags:
-        - 情报
-        - 病毒
-        - 样本
-    - id: threatbook
-      href: https://x.threatbook.com/
-      label: 微步在线 · 威胁情报社区
-      tags:
-        - 情报
-        - 沙箱
-        - 溯源
-    - id: qianxin-ti
-      href: https://ti.qianxin.com/
-      label: 奇安信 · 威胁情报中心
-      tags:
-        - 情报
-        - 态势
-        - 漏洞
-
-
-- id: WirelessForensics
-  title: 📡 无线安全 & 取证
-  items:
-    - id: aircrack-ng
-      href: https://www.aircrack-ng.org/
-      label: Aircrack-ng · WiFi 安全套件
-      tags:
-        - 无线
-        - 破解
-        - 审计
-    - id: volatility
-      href: https://www.volatilityfoundation.org/
-      label: Volatility · 内存取证框架
-      tags:
-        - 取证
-        - 内存
-        - 分析
-    - id: autopsy
-      href: https://www.autopsy.com/
-      label: Autopsy · 数字取证平台
-      tags:
-        - 取证
-        - 硬盘
-        - 分析
-
-
-- id: HackVideos
-  title: 视频教程
-  items:
-    - id: metasploit-tutorial
-      href: https://www.youtube.com/playlist?list=PLgZqc0esdeS9UyK_QPoCO5wIZ_XYAkCV5
-      label: Metasploit 教程 · YouTube 播放列表
-      tags:
-        - Metasploit
-        - 视频
-        - 教程
-
-
-- id: HackCTF
-  title: 🚩 CTF 平台 & 赛事
-  items:
-    - id: ctftime
-      href: https://ctftime.org/
-      label: CTFtime · 全球 CTF 赛事
-      tags:
-        - CTF
-        - 赛事
-        - 排名
-    - id: xctf
-      href: https://adworld.xctf.org.cn/
-      label: XCTF · 攻防世界
-      tags:
-        - CTF
-        - 靶场
-        - 国内
-    - id: buuctf
-      href: https://buuoj.cn/
-      label: BUUCTF · 在线评测
-      tags:
-        - CTF
-        - 刷题
-        - 平台
-
-
-- id: HackLabs
-  title: 🎯 在线靶场
-  items:
     - id: hackthebox
       href: https://www.hackthebox.com/
-      label: Hack The Box · 渗透测试实验室
+      label: Hack The Box · 渗透实验室
       tags:
         - 靶场
         - 渗透
         - 国外
-    - id: vulnhub
-      href: https://www.vulnhub.com/
-      label: VulnHub · 漏洞靶机下载
+    - id: vulhub
+      href: https://vulhub.org/
+      label: Vulhub · 漏洞环境集合
       tags:
         - 靶场
-        - 靶机
-        - 本地
-    - id: bugku-ctf
+        - Docker
+        - 复现
+    - id: ctftime
+      href: https://ctftime.org/
+      label: CTFtime · 全球赛事
+      tags:
+        - CTF
+        - 赛事
+        - 排名
+    - id: bugku
       href: https://ctf.bugku.com/
-      titleAttr: 国内较活跃的 CTF 平台，每日更新题目。
-      label: Bugku CTF
+      label: Bugku CTF · 活跃刷题平台
       tags:
         - CTF
         - 靶场
-        - 练习
-    - id: monyer-game
+        - 国内
+    - id: monyer
       href: http://monyer.com/game/game1/
-      label: 梦之光芒 / Monyer’s Little Game
+      label: Monyer's Game · 梦之光芒
       tags:
-        - 解谜
-        - 游戏
-        - 安全
+        - 闯关
+        - 黑客
+        - 经典
 
-
-- id: HackVulnDB
-  title: 🗄️ 漏洞数据库
+- id: vuln_intel
+  title: 🕷️ 漏洞与情报
   items:
     - id: cve
       href: https://cve.mitre.org/
@@ -366,11 +56,32 @@
         - 编号
     - id: nvd
       href: https://nvd.nist.gov/
-      label: NVD · 美国国家漏洞数据库
+      label: NVD · 国家漏洞数据库
       tags:
         - 漏洞
         - 评分
         - 检索
+    - id: seebug
+      href: https://www.seebug.org/
+      label: Seebug · 漏洞平台
+      tags:
+        - 安全
+        - 漏洞
+        - 情报
+    - id: threatbook
+      href: https://x.threatbook.com/
+      label: 微步在线 · 威胁情报
+      tags:
+        - 情报
+        - 沙箱
+        - 溯源
+    - id: virustotal
+      href: https://www.virustotal.com/
+      label: VirusTotal · 病毒分析
+      tags:
+        - 情报
+        - 病毒
+        - 样本
     - id: exploit-db
       href: https://www.exploit-db.com/
       label: Exploit Database · 漏洞利用库
@@ -378,3 +89,167 @@
         - 漏洞
         - POC
         - 渗透
+
+- id: web_security
+  title: 🌐 Web 安全
+  items:
+    - id: owasp-top10
+      href: https://owasp.org/www-project-top-ten/
+      label: OWASP Top 10 · Web 风险标准
+      tags:
+        - 安全
+        - OWASP
+        - 标准
+    - id: portswigger
+      href: https://portswigger.net/web-security
+      label: Web Security Academy · BP官方靶场
+      tags:
+        - Web
+        - 学习
+        - 靶场
+    - id: xianzhi
+      href: https://xz.aliyun.com/
+      label: 先知社区 · 安全技术分享
+      tags:
+        - 社区
+        - 阿里
+        - 技术
+
+- id: security_tools
+  title: 🧰 渗透工具
+  items:
+    - id: kali
+      href: https://www.kali.org/
+      label: Kali Linux · 渗透测试平台
+      tags:
+        - 安全
+        - 系统
+        - 渗透
+    - id: burpsuite
+      href: https://portswigger.net/burp
+      label: Burp Suite · 抓包神器
+      tags:
+        - Web
+        - 抓包
+        - 渗透
+    - id: metasploit
+      href: https://www.metasploit.com/
+      label: Metasploit · 渗透框架
+      tags:
+        - 渗透
+        - 漏洞
+        - 框架
+    - id: wireshark
+      href: https://www.wireshark.org/
+      label: Wireshark · 流量分析
+      tags:
+        - 流量
+        - 分析
+        - 抓包
+    - id: nmap
+      href: https://nmap.org/
+      label: Nmap · 网络扫描
+      tags:
+        - 扫描
+        - 网络
+        - 端口
+    - id: sqlmap
+      href: https://sqlmap.org/
+      label: SQLMap · 注入神器
+      tags:
+        - SQL
+        - 注入
+        - 工具
+    - id: cobaltstrike
+      href: https://www.cobaltstrike.com/
+      label: Cobalt Strike · 红队神器
+      tags:
+        - 红队
+        - 协同
+        - 渗透
+
+- id: wireless_security
+  title: 📶 无线安全
+  items:
+    - id: aircrack-ng
+      href: https://www.aircrack-ng.org/
+      label: Aircrack-ng · WiFi 安全
+      tags:
+        - 无线
+        - 破解
+        - 审计
+
+- id: reverse_engineering
+  title: 🔩 逆向工程
+  items:
+    - id: ghidra
+      href: https://ghidra-sre.org/
+      label: Ghidra · NSA 逆向工具
+      tags:
+        - 逆向
+        - 开源
+        - 免费
+    - id: ida-pro
+      href: https://hex-rays.com/ida-pro/
+      label: IDA Pro · 逆向神器
+      tags:
+        - 逆向
+        - 反汇编
+        - 专业
+    - id: ollydbg
+      href: http://www.ollydbg.de/
+      label: OllyDbg · 动态调试
+      tags:
+        - 调试
+        - 逆向
+        - 经典
+
+- id: security_community
+  title: 🏘️ 安全社区
+  items:
+    - id: freebuf
+      href: https://www.freebuf.com/
+      label: FreeBuf · 互联网安全新媒体
+      tags:
+        - 安全
+        - 资讯
+        - 社区
+    - id: t00ls
+      href: https://www.t00ls.com/
+      label: T00ls · 低调求发展
+      tags:
+        - 社区
+        - 渗透
+        - 交流
+    - id: geekark
+      href: https://deelmind.com/
+      label: 极客方舟 · 安全团队
+      tags:
+        - 社区
+        - 极客
+        - 交流
+    - id: hackone
+      href: https://www.hackone.com/
+      label: HackOne · 漏洞赏金平台
+      tags:
+        - 众测
+        - 赏金
+        - 平台
+
+- id: security_knowledge
+  title: 📚 安全知识与教程
+  items:
+    - id: mitre-attack
+      href: https://attack.mitre.org/
+      label: MITRE ATT&CK · 攻击矩阵
+      tags:
+        - 攻防
+        - 知识库
+        - 矩阵
+    - id: metasploit-tutorial
+      href: https://www.youtube.com/playlist?list=PLgZqc0esdeS9UyK_QPoCO5wIZ_XYAkCV5
+      label: Metasploit 教程 · YouTube
+      tags:
+        - Metasploit
+        - 视频
+        - 教程

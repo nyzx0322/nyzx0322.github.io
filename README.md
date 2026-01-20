@@ -1,84 +1,124 @@
-# 🌌 研若 · 资源导航站
-
-> 一个以「个人常用资源」为核心的导航站，汇集学习、项目、娱乐与安全攻防内容。  
-> 方便随时查阅，也是你的个人在线收藏夹。
-
-[![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?style=flat-square&logo=vue.js)](https://vuejs.org/)[![Vite](https://img.shields.io/badge/Vite-Build-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=flat-square&logo=github)](https://pages.github.com/)
-
----
-
-## 🧭 站点概览
-
-这里不仅仅是一个导航，更是学习与娱乐的快速切换面板。
-
-| 板块 | 图标 | 内容简介 | 适用场景 |
-| :--: | :---: | :--: | :--: |
-| **学习资料** | 📚 | 编程书籍、技术博客、Linux/Python 索引 | 自学查阅、知识补充 |
-| **项目分享** | 🛠️ | 实用工具、游戏 Demo、Web 小项目 | 实践参考、寻找灵感 |
-| **休闲娱乐** | 🎮 | 影视、音乐、趣味网站、摸鱼神器 | 放松心情、资源搜索 |
-| **Hack 安全** | 🛡️ | 信息安全教程、靶场、黑客工具 | 安全攻防、基础练习 |
-| **其他资源** | 🧩 | 简历模板、求职助手 | 生活效率、求职准备 |
+<div align="center">
+  <h1>🌌 研若 · 资源导航站</h1>
+  <p>
+    <strong>汇集全网优质资源，打造你的个人数字军火库</strong>
+  </p>
+  <p>
+    <a href="https://vuejs.org/"><img src="https://img.shields.io/badge/Vue-3.x-4FC08D?style=flat-square&logo=vue.js" alt="Vue"></a>
+    <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-Build-646CFF?style=flat-square&logo=vite" alt="Vite"></a>
+    <a href="https://github.com/nyzx0322/nyzx0322.github.io"><img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=flat-square&logo=github" alt="GitHub Pages"></a>
+    <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License">
+  </p>
+  <p>
+    <a href="https://nyzx0322.github.io">🚀 立即访问</a> · 
+    <a href="#-快速开始">💻 本地运行</a> · 
+    <a href="#-贡献指南">🤝 参与贡献</a>
+  </p>
+</div>
 
 ---
 
-## 🗺️ 导航结构
+## 📖 项目简介
 
-采用统一的布局：**左侧目录导航** + **右侧卡片资源列表**。
+**研若 (YanRuo)** 是一个基于现代前端技术栈构建的轻量级资源导航站。它不仅仅是一个书签管理器，更是一个集成了学习、开发、安全与娱乐的综合性知识中转站。
+
+无论你是需要查阅最新的**技术文档**，寻找好用的**开发工具**，还是探索**网络安全**的奥秘，亦或是工作之余寻找**休闲娱乐**，这里都有你想要的内容。
+
+## ✨ 核心亮点
+
+- 💎 **海量精选**: 精心筛选收录了数百个优质网站与工具，覆盖开发、运维、设计、安全等多个领域。
+- 🔍 **全局秒搜**: 内置强大的即时搜索功能，支持标题、标签、描述模糊匹配，快速定位目标资源。
+- 🌗 **多重主题**: 默认深色科技风，支持一键切换浅色模式，满足不同光照环境下的阅读需求。
+- 📱 **多端适配**: 响应式设计，无论是 4K 大屏还是手机移动端，都能提供完美的浏览体验。
+- ⚡ **极致性能**: 基于 Vite + Vue 3 构建，轻量级架构，秒级加载，丝滑流畅。
+- 🧩 **数据驱动**: 资源数据与 UI 彻底分离，通过 YAML/JSON 轻松管理和扩展内容。
+
+## 🧭 资源板块
+
+| 板块 | 标识 | 核心内容 | 适用人群 |
+| :--: | :---: | ---- | ---- |
+| **Hack 安全** | 🛡️ | 渗透测试、威胁情报、CTF 靶场、WebShell 管理、取证分析 | 安全研究员、白帽子 |
+| **学习资料** | 📚 | 编程语言文档、数据科学、前端/后端教程、在线教育 | 开发者、学生 |
+| **项目工坊** | 🛠️ | 云服务、开发工具、监控运维、静态站点生成器 | 开发者、运维工程师 |
+| **休闲娱乐** | 🎮 | 影视动漫、在线音乐、设计灵感、电子书与漫画 | 所有用户 |
+| **其他资源** | 🧩 | 隐私保护、文件传输、求职简历、AI 效率工具 | 职场人、效率控 |
+
+## 🗺️ 目录结构
+
+项目采用清晰的模块化结构，方便维护与扩展：
 
 ```text
-📂 首页 (/)
- ├── 📚 /learn          -> 学习资料 (书籍, 博客, 教程)
- ├── 🛠️ /projects       -> 项目分享 (Demo, 源码, 案例)
- ├── 🎮 /entertainment  -> 休闲娱乐 (影视, 音乐, 导航)
- ├── 🛡️ /hack           -> 安全攻防 (靶场, 工具, 资料)
- └── 🧩 /others         -> 其他资源 (简历, 求职)
+📂 src/
+ ├── 📂 assets/        # 静态资源 (Logo, Icons)
+ ├── 📂 components/    # Vue 组件 (导航栏, 侧边栏, 搜索框)
+ ├── 📂 data/          # 核心数据源 (YAML 格式)
+ │    ├── entertainmentResources.yaml  # 娱乐资源
+ │    ├── hackResources.yaml           # 安全资源
+ │    ├── learnResources.yaml          # 学习资源
+ │    ├── otherResources.yaml          # 其他资源
+ │    └── projectResources.yaml        # 项目资源
+ ├── 📂 views/         # 页面视图
+ ├── 📜 App.vue        # 根组件
+ └── 📜 main.js        # 入口文件
 ```
-
----
 
 ## 🚀 快速开始
 
 ### 🌐 在线访问
 
-无需部署，直接点击访问：  
+无需任何配置，直接点击下方链接即可使用：
 👉 **[https://nyzx0322.github.io](https://nyzx0322.github.io)**
 
-适合日常使用，建议收藏到浏览器书签或手机桌面。
+### 💻 本地开发
 
-### 💻 本地运行 (开发模式)
+如果你想在本地运行项目，或者自定义修改内容：
 
-如果你想在本地进行调整内容、修改样式或二次开发：
+1.  **克隆仓库**
+    ```bash
+    git clone https://github.com/nyzx0322/nyzx0322.github.io.git
+    cd nyzx0322.github.io
+    ```
 
-```bash
-# 1. 安装项目依赖
-npm install
+2.  **安装依赖**
+    ```bash
+    npm install
+    ```
 
-# 2. 启动本地开发服务器
-npm run dev
-```
+3.  **启动开发服务器**
+    ```bash
+    npm run dev
+    ```
+    启动后访问终端显示的地址（通常是 `http://localhost:5173/`）。
 
-启动后，打开浏览器访问终端提示的地址（通常为 `http://localhost:5173/`）即可。
-
----
+4.  **构建部署**
+    ```bash
+    npm run build
+    ```
 
 ## 🛠️ 技术栈
 
-本项目基于现代前端技术栈构建，追求轻量与高性能：
+*   **框架**: [Vue 3](https://vuejs.org/) (Composition API + Script Setup)
+*   **构建**: [Vite](https://vitejs.dev/)
+*   **路由**: [Vue Router 4](https://router.vuejs.org/)
+*   **样式**: SCSS + CSS Variables (实现主题切换)
+*   **图标**: SVG + Emoji
+*   **部署**: GitHub Actions + GitHub Pages
 
-- **核心框架**: 🟢 Vue 3 (Script Setup)
-- **构建工具**: ⚡ Vite
-- **路由管理**: 🛣️ Vue Router 4 (基础路由 + 自动路由)
-- **样式方案**: 🎨 原生 CSS / SCSS (深色科技风 + 渐变动效)
-- **部署托管**: ☁️ GitHub Pages + GitHub Actions 自动构建
+## 🤝 贡献指南
+
+欢迎提交 PR 来丰富资源库！
+
+1.  Fork 本仓库。
+2.  在 `src/data/` 目录下找到对应的 `.yaml` 文件。
+3.  按照现有格式添加新的资源条目（请确保链接有效且内容优质）。
+4.  提交 Pull Request，我们会尽快审核合并。
+
+## 📄 许可证
+
+本项目遵循 [MIT License](LICENSE) 开源协议。
 
 ---
 
-## 🔮 未来计划
-
-- [ ] 🔌 **数据分离**: 使用 JSON 或后端接口管理资源数据，让增删改更方便
-- [ ] 🔍 **全局搜索**: 增加搜索与标签功能，从大量链接中快速定位特定资源
-- [ ] 🌗 **主题切换**: 支持浅色/专注阅读模式，适配不同使用场景
-- [ ] ⭐ **收藏功能**: 增加「收藏/推荐」维度，打造个性化的知识中转站
-
----
-*Created with ❤️ by 研若*
+<div align="center">
+  <p>Created with ❤️ by <strong>研若</strong></p>
+</div>

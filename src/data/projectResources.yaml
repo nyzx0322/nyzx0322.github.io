@@ -1,78 +1,318 @@
-- id: severs_pay
-  title: 🖥️ 服务器选购
+- id: dev_tools_core
+  title: 🛠️ 开发工具核心
   items:
-    - id: racknerd
-      href: https://www.racknerd.com/
-      label: RackNerd · 高性价比 VPS
-      titleAttr: 价格低廉，经常有促销活动，适合新手入门和搭建小型应用。
+    - id: vscode
+      href: https://code.visualstudio.com/
+      label: VS Code · 代码编辑器
       tags:
-        - VPS
-        - 便宜
-        - 美国
-      recommended: false
-      highlightTags: []
-    - id: vultr
-      href: https://www.vultr.com/
-      label: Vultr · 全球云服务器
-      titleAttr: 支持按小时计费，全球节点众多（含日本、新加坡等），部署灵活。
-      tags:
-        - VPS
-        - 按时计费
-        - 全球
-      recommended: true
-      highlightTags:
-        - 按时计费
-    - id: digitalocean
-      href: https://www.digitalocean.com/
-      label: DigitalOcean · 开发者首选
-      titleAttr: 界面简洁，文档丰富，适合开发者使用的云基础设施。
-      tags:
-        - 云服务器
-        - 开发者
-        - 稳定
-    - id: tencent-lighthouse
-      href: https://cloud.tencent.com/product/lighthouse
-      label: 腾讯云 · 轻量应用服务器
-      titleAttr: 国内良心云厂商，香港/内地线路优秀，适合建站，新手推荐。
-      tags:
-        - 国内
-        - 建站
-        - 香港
-    - id: hetzner
-      href: https://www.hetzner.com/
-      label: Hetzner · 欧洲性价比之王
-      titleAttr: 来自德国的老牌服务商，硬件配置极高，价格实惠，适合高性能需求。
-      tags:
-        - 独服
-        - 欧洲
-        - 高性能
-    - id: bandwagon
-      href: https://bandwagonhost.com/
-      label: BandwagonHost · 搬瓦工
-      titleAttr: 以线路质量好著称（CN2 GIA），国内访问速度快，但价格稍高。
-      tags:
-        - VPS
-        - CN2
-        - 优化线路
-
-
-- id: learnTool
-  title: 🛠️ 在线工具 & AI 处理
-  items:
-    - id: carbon
-      href: https://carbon.now.sh/
-      label: Carbon · 代码图片生成
+        - 编辑器
+        - 微软
+        - 插件
+    - id: git
+      href: https://git-scm.com/
+      label: Git · 版本控制
       tags:
         - 工具
-        - 代码
-        - 美化
+        - 版本控制
+        - 必备
+    - id: sourcetree
+      href: https://www.sourcetreeapp.com/
+      label: Sourcetree · Git GUI
+      tags:
+        - Git
+        - GUI
+        - 免费
+    - id: navicat
+      href: https://www.navicat.com.cn/
+      label: Navicat · 数据库管理
+      tags:
+        - 数据库
+        - GUI
+        - 工具
+    - id: postman
+      href: https://www.postman.com/
+      label: Postman · API 调试
+      tags:
+        - API
+        - 测试
+        - 工具
+
+- id: cloud_services
+  title: ☁️ 云服务与运维
+  items:
+    - id: vercel
+      href: https://vercel.com/
+      label: Vercel · 前端部署
+      tags:
+        - 部署
+        - 静态
+        - 免费
+    - id: netlify
+      href: https://www.netlify.com/
+      label: Netlify · 静态托管
+      tags:
+        - 部署
+        - 静态
+        - CDN
+    - id: heroku
+      href: https://www.heroku.com/
+      label: Heroku · 应用托管
+      tags:
+        - 部署
+        - 后端
+        - PaaS
+    - id: cloudflare
+      href: https://www.cloudflare.com/
+      label: Cloudflare · CDN与安全
+      tags:
+        - CDN
+        - 安全
+        - DNS
+
+- id: design_assets
+  title: 🎨 设计与素材
+  items:
+    - id: figma
+      href: https://www.figma.com/
+      label: Figma · 在线设计
+      tags:
+        - 设计
+        - UI
+        - 协作
+    - id: canva
+      href: https://www.canva.com/
+      label: Canva · 在线平面设计
+      tags:
+        - 设计
+        - 海报
+        - 简单
+    - id: iconfont
+      href: https://www.iconfont.cn/
+      label: Iconfont · 矢量图标库
+      tags:
+        - 图标
+        - 阿里
+        - 素材
+    - id: unsplash
+      href: https://unsplash.com/
+      label: Unsplash · 免费图片
+      tags:
+        - 图片
+        - 素材
+        - 免费
+    - id: huaban
+      href: https://huaban.com/
+      label: 花瓣网 · 灵感采集
+      tags:
+        - 设计
+        - 灵感
+        - 采集
+    - id: pinterest
+      href: https://www.pinterest.com/
+      label: Pinterest · 创意图片
+      tags:
+        - 灵感
+        - 图片
+        - 设计
+
+- id: image_video_tools
+  title: 🖼️ 图像与视频工具
+  items:
+    - id: pulse
+      href: https://github.com/adamian98/pulse
+      label: PULSE · 图片去马赛克
+      tags:
+        - AI
+        - 图像
+        - 修复
+    - id: tecogan
+      href: https://github.com/thunil/TecoGAN
+      label: TecoGAN · 视频去马赛克
+      tags:
+        - AI
+        - 视频
+        - 修复
+    - id: tinypng
+      href: https://tinypng.com/
+      label: TinyPNG · 图片压缩
+      tags:
+        - 工具
+        - 图片
+        - 压缩
+    - id: removebg
+      href: https://www.remove.bg/
+      label: remove.bg · 自动抠图
+      tags:
+        - 工具
+        - 图像
+        - AI
+
+- id: efficiency_office
+  title: ⚡ 效率与办公
+  items:
+    - id: notion
+      href: https://www.notion.so/
+      label: Notion · 全能知识库
+      tags:
+        - 笔记
+        - 协作
+        - 效率
+    - id: obsidian
+      href: https://obsidian.md/
+      label: Obsidian · 第二大脑
+      tags:
+        - 笔记
+        - Markdown
+        - 本地
+    - id: yuque
+      href: https://www.yuque.com/
+      label: 语雀 · 专业的云端知识库
+      tags:
+        - 笔记
+        - 文档
+        - 协作
+    - id: wolai
+      href: https://www.wolai.com/
+      label: 我来 · 中文 Notion
+      tags:
+        - 笔记
+        - 协作
+        - 效率
+    - id: xmind
+      href: https://www.xmind.cn/
+      label: XMind · 思维导图
+      tags:
+        - 导图
+        - 思考
+        - 工具
+    - id: processon
+      href: https://www.processon.com/
+      label: ProcessOn · 在线作图
+      tags:
+        - 流程图
+        - 协作
+        - 在线
     - id: excalidraw
       href: https://excalidraw.com/
-      label: Excalidraw · 手绘风格白板
+      label: Excalidraw · 手绘白板
       tags:
         - 工具
         - 绘图
         - 白板
+
+- id: system_utils
+  title: 🔧 系统工具
+  items:
+    - id: utools
+      href: https://u.tools/
+      label: uTools · 生产力工具集
+      tags:
+        - 效率
+        - 启动器
+        - 插件
+    - id: raycast
+      href: https://www.raycast.com/
+      label: Raycast · 极速启动器
+      tags:
+        - 效率
+        - Mac
+        - 工具
+    - id: wannengrun
+      href: https://wannengrun.net/zh/
+      label: 万能命令 · 在线工具快捷跳转
+      tags:
+        - 工具
+        - 效率
+        - 聚合
+    - id: snipaste
+      href: https://www.snipaste.com/
+      label: Snipaste · 截图神器
+      tags:
+        - 工具
+        - 截图
+        - 效率
+    - id: bitwarden
+      href: https://bitwarden.com/
+      label: Bitwarden · 密码管理
+      tags:
+        - 隐私
+        - 密码
+        - 安全
+    - id: wetransfer
+      href: https://wetransfer.com/
+      label: WeTransfer · 文件传输
+      tags:
+        - 文件
+        - 传输
+        - 效率
+    - id: potplayer
+      href: https://potplayer.daum.net/
+      label: Potplayer · 媒体播放器
+      tags:
+        - 播放器
+        - 视频
+        - 全能
+
+- id: bot_automation
+  title: 🤖 机器人与自动化
+  items:
+    - id: nonebot2
+      href: https://github.com/nonebot/nonebot2
+      label: Nonebot2 · 跨平台机器人
+      tags:
+        - Python
+        - 机器人
+        - 自动化
+    - id: ifttt
+      href: https://ifttt.com/
+      label: IFTTT · 自动化流程
+      tags:
+        - 自动化
+        - 效率
+        - 连接
+
+- id: fun_projects
+  title: 🎮 趣味项目
+  items:
+    - id: genact
+      href: https://github.com/svenstaro/genact
+      label: Genact · 摸鱼神器
+      tags:
+        - 趣味
+        - 终端
+        - 模拟
+    - id: games-python
+      href: https://github.com/CharlesPikachu/Games
+      label: Python Games · 纯Python游戏
+      tags:
+        - Python
+        - 游戏
+        - 学习
+    - id: health-code
+      href: https://codeberg.org/ilovexjp/health-code-simulator
+      label: Health Code Simulator · 健康码模拟
+      tags:
+        - 趣味
+        - Web
+        - 模拟
+    - id: love-demo
+      href: /demo/love.html
+      label: Love Demo · 表白页面
+      meta: 项目源码在 /demo/love.html
+      tags:
+        - Demo
+        - 趣味
+        - 前端
+        - 表白
+        - 前端
+      actions:
+        - id: love-demo
+          href: /demo/love.html
+          label: 打开 Demo
+
+- id: json_tools
+  title: 📋 JSON 工具
+  items:
     - id: jsoncrack
       href: https://jsoncrack.com/
       label: JSON Crack · JSON 可视化
@@ -80,249 +320,10 @@
         - 工具
         - JSON
         - 可视化
-    - id: pulse
-      href: https://github.com/adamian98/pulse
-      label: PULSE · 图片去除马赛克
-      tags:
-        - 图像
-        - AI
-        - 去马赛克
-    - id: tecogan
-      href: https://github.com/thunil/TecoGAN
-      label: thunil/TecoGAN · 视频去除马赛克
-      tags:
-        - 视频
-        - AI
-        - 去马赛克
-
-
-- id: designTools
-  title: 🎨 设计与原型
-  items:
-    - id: figma
-      href: https://www.figma.com/
-      label: Figma · 在线协作界面设计
+    - id: json-cn
+      href: https://www.json.cn/
+      label: JSON.cn · JSON 解析
       tags:
         - 工具
-        - 设计
-        - 协作
-    - id: canva
-      href: https://www.canva.com/
-      label: Canva · 可画
-      tags:
-        - 工具
-        - 设计
-        - 平面
-    - id: mastergo
-      href: https://mastergo.com/
-      label: MasterGo · 莫高设计
-      tags:
-        - 工具
-        - 设计
-        - 国产
-
-
-- id: devTools
-  title: 💻 常用开发工具
-  items:
-    - id: vscode
-      href: https://code.visualstudio.com/
-      label: VS Code · 代码编辑器
-      tags:
-        - 工具
-        - IDE
-        - 微软
-    - id: git
-      href: https://git-scm.com/
-      label: Git · 分布式版本控制系统
-      tags:
-        - 工具
-        - 版本控制
-        - Git
-
-
-- id: projectAPI
-  title: 🔌 API 开发与调试
-  items:
-    - id: postman
-      href: https://www.postman.com/
-      label: Postman · API 调试工具
-      tags:
-        - 工具
-        - API
-        - 调试
-    - id: apifox
-      href: https://www.apifox.cn/
-      label: Apifox · API 一体化协作平台
-      tags:
-        - 工具
-        - API
-        - 协作
-    - id: yapi
-      href: https://hellosean1025.github.io/yapi/
-      label: YApi · 接口管理平台
-      tags:
-        - 工具
-        - API
-        - 开源
-    - id: swagger
-      href: https://swagger.io/
-      label: Swagger · API 设计与文档
-      tags:
-        - 工具
-        - API
-        - 标准
-
-
-- id: projectChrome
-  title: 🧩 浏览器插件
-  items:
-    - id: tampermonkey
-      href: https://www.tampermonkey.net/
-      label: Tampermonkey · 油猴插件
-      tags:
-        - 插件
-        - 脚本
-        - 增强
-    - id: adguard
-      href: https://adguard.com/
-      label: AdGuard · 广告拦截
-      tags:
-        - 插件
-        - 安全
-        - 净化
-
-
-- id: learnWeb
-  title: 🌐 Web / Python 项目
-  items:
-    - id: charles-games
-      href: https://github.com/CharlesPikachu/Games
-      titleAttr: Create interesting games by pure Python。
-      label: CharlesPikachu/Games · Python 编写游戏
-      tags:
-        - Python
-        - 游戏
-        - 开源项目
-
-
-- id: learnRebots
-  title: 🤖 机器人
-  items:
-    - id: nonebot2
-      href: https://github.com/nonebot/nonebot2
-      label: nonebot2 · Python 异步跨平台聊天机器人框架
-      tags:
-        - Python
-        - 机器人
-        - 聊天
-
-
-- id: projectOthers
-  title: 📂 其他项目
-  items:
-    - id: health-code-simulator
-      href: https://codeberg.org/ilovexjp/health-code-simulator
-      label: ilovexjp/health-code-simulator · 基于 Web 的健康码模拟
-      tags:
-        - Web
-        - 模拟
-        - 前端
-
-
-- id: projectLove
-  title: Demo · Love 页面
-  items:
-    - id: love-demo
-      href: '#'
-      titleAttr: 'Love Demo 修改版 '
-      label: 超火的表白页面
-      meta: 源码在本项目文件中
-      tags:
-        - Demo
-        - 表白
-        - 前端
-      highlightTags:
-        - 表白
-      actions:
-        - href: /demo/love.html
-          label: 在线体验
-          type: primary
-
-
-- id: projectFun
-  title: 🎮 娱乐向项目
-  items:
-    - id: genact
-      text: svenstaro/genact · 程序员摸鱼神器
-      tags:
-        - 摸鱼
-        - 命令行
-        - 娱乐
-      actions:
-        - href: https://github.com/svenstaro/genact
-          title: A nonsense activity generator.
-          label: GitHub 仓库
-          type: primary
-        - href: https://svenstaro.github.io/genact/
-          label: 在线体验
-          type: secondary
-
-
-- id: projectOps
-  title: 📟 监控 & 运维工具
-  items:
-    - id: prometheus
-      href: https://prometheus.io/
-      label: Prometheus · 系统监控报警
-      tags:
-        - 运维
-        - 监控
-        - 报警
-    - id: grafana
-      href: https://grafana.com/
-      label: Grafana · 监控可视化
-      tags:
-        - 运维
-        - 可视化
-        - 面板
-    - id: cloudflare
-      href: https://www.cloudflare.com/zh-cn/
-      label: Cloudflare · CDN 与安全防护
-      tags:
-        - 运维
-        - CDN
-        - 安全
-    - id: namecheap
-      href: https://www.namecheap.com/
-      label: Namecheap · 域名注册
-      tags:
-        - 域名
-        - 注册
-        - 服务
-
-
-- id: staticSiteGen
-  title: 📝 静态站点生成器
-  items:
-    - id: hexo
-      href: https://hexo.io/zh-cn/
-      label: Hexo · 快速、简洁且高效的博客框架
-      tags:
-        - 博客
-        - Node.js
-        - 静态
-    - id: hugo
-      href: https://gohugo.io/
-      label: Hugo · The world’s fastest framework
-      tags:
-        - 博客
-        - Go
-        - 极速
-    - id: vitepress
-      href: https://vitepress.dev/
-      label: VitePress · Vue 驱动的静态站点生成器
-      tags:
-        - 文档
-        - Vue
-        - 现代
+        - JSON
+        - 格式化

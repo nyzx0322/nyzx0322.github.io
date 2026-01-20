@@ -1,91 +1,6 @@
-- id: aiTools
-  title: 🤖 AI 助手 & 工具
+- id: tech_community
+  title: 🏘️ 社区交流
   items:
-    - id: chatgpt
-      href: https://chat.openai.com/
-      label: ChatGPT · OpenAI
-      tags:
-        - AI
-        - 聊天
-        - 工具
-    - id: deepseek
-      href: https://www.deepseek.com/
-      label: DeepSeek · 深度求索
-      tags:
-        - AI
-        - 聊天
-        - 国产
-    - id: claude
-      href: https://claude.ai/
-      label: Claude · Anthropic
-      tags:
-        - AI
-        - 聊天
-        - 工具
-
-
-- id: productivity
-  title: 效率与笔记
-  items:
-    - id: notion
-      href: https://www.notion.so/
-      label: Notion · 知识库
-      tags:
-        - 笔记
-        - 协作
-        - 效率
-    - id: obsidian
-      href: https://obsidian.md/
-      label: Obsidian · 第二大脑
-      tags:
-        - 笔记
-        - Markdown
-        - 本地
-    - id: flomo
-      href: https://flomoapp.com/
-      label: flomo · 浮墨笔记
-      tags:
-        - 笔记
-        - 思考
-        - 记录
-
-
-- id: toolPrivacy
-  title: 🔒 隐私 & 文件传输
-  items:
-    - id: bitwarden
-      href: https://bitwarden.com/
-      label: Bitwarden · 开源密码管理器
-      tags:
-        - 隐私
-        - 密码
-        - 安全
-    - id: wetransfer
-      href: https://wetransfer.com/
-      label: WeTransfer · 大文件传输
-      tags:
-        - 文件
-        - 传输
-        - 效率
-    - id: snapdrop
-      href: https://snapdrop.net/
-      label: Snapdrop · 局域网文件传输
-      tags:
-        - 文件
-        - 局域网
-        - 免安装
-
-
-- id: techCommunity
-  title: 💬 技术社区
-  items:
-    - id: stackoverflow
-      href: https://stackoverflow.com/
-      label: Stack Overflow · 全球最大技术问答
-      tags:
-        - 社区
-        - 问答
-        - 技术
     - id: v2ex
       href: https://www.v2ex.com/
       label: V2EX · 创意工作者社区
@@ -95,85 +10,355 @@
         - 极客
     - id: juejin
       href: https://juejin.cn/
-      label: 掘金 · 帮助开发者成长
+      label: 掘金 · 开发者社区
       tags:
         - 社区
-        - 博客
-        - 国内
-    - id: infoq
-      href: https://www.infoq.cn/
-      label: InfoQ · 促进软件开发领域知识与创新
-      tags:
-        - 社区
-        - 资讯
-        - 架构
-    - id: github
-      href: https://github.com/
-      label: GitHub · 开发者社区
-      tags:
-        - 社区
-        - 开源
-        - 代码
-    - id: segmentfault
-      href: https://segmentfault.com/
-      label: SegmentFault 思否 · 开发者技术社区
+        - 前端
+        - 后端
+    - id: stackoverflow
+      href: https://stackoverflow.com/
+      label: Stack Overflow · 问答社区
       tags:
         - 社区
         - 问答
-        - 技术
-
-
-- id: jobHunt
-  title: 🧑‍💻 求职 & 面试
-  items:
-    - id: nowcoder
-      href: https://www.nowcoder.com/
-      label: 牛客网 · 找工作神器
-      tags:
-        - 求职
-        - 笔试
-        - 社区
-    - id: jianli-download
-      href: https://jianlixiazai.cn/
-      titleAttr: 免费提供各行业简历制作模板 WORD 可编辑格式下载。
-      label: 简历下载网 · 个人简历 WORD 模板
-      tags:
-        - 简历
-        - 模板
-        - 求职
-
-
-- id: remoteWork
-  title: 🏠 远程工作
-  items:
-    - id: eleduck
-      href: https://eleduck.com/
-      label: 电鸭社区 · 远程工作社区
-      tags:
-        - 远程
-        - 招聘
-        - 社区
-    - id: remoteok
-      href: https://remoteok.com/
-      label: Remote OK · 全球远程工作
-      tags:
-        - 远程
         - 全球
-        - 招聘
-- id: techInfo
+    - id: github-explore
+      href: https://github.com/explore
+      label: GitHub Explore · 发现开源
+      tags:
+        - 开源
+        - 社区
+        - 趋势
+    - id: devto
+      href: https://dev.to/
+      label: DEV Community · 开发者社区
+      tags:
+        - 社区
+        - 博客
+        - 交流
+    - id: reddit-prog
+      href: https://www.reddit.com/r/programming/
+      label: Reddit · 编程节点
+      tags:
+        - 社区
+        - 资讯
+        - 全球
+    - id: zhihu
+      href: https://www.zhihu.com/
+      label: 知乎 · 知识问答
+      tags:
+        - 社区
+        - 问答
+        - 知识
+    - id: jike
+      href: https://web.okjike.com/
+      label: 即刻 · 年轻人的社区
+      tags:
+        - 社区
+        - 社交
+        - 兴趣
+    - id: chao-fan
+      href: https://chao.fan/
+      label: 炒饭 · 兴趣聚合社区
+      tags:
+        - 社区
+        - 趣事
+        - 交流
+
+- id: tech_news
   title: 📰 科技资讯
   items:
-    - id: sspai
-      href: https://sspai.com/
-      label: 少数派 · 高品质数字消费指南
+    - id: hackernews
+      href: https://news.ycombinator.com/
+      label: Hacker News · 极客资讯
       tags:
         - 资讯
-        - 评测
-        - 效率
+        - 极客
+        - 创业
+    - id: creatorsdaily
+      href: https://creatorsdaily.com/
+      label: 创造者日报 · 独立开发资讯
+      tags:
+        - 资讯
+        - 独立开发
+        - 产品
+    - id: infoq
+      href: https://www.infoq.cn/
+      label: InfoQ · 促进软件开发
+      tags:
+        - 资讯
+        - 技术
+        - 架构
     - id: 36kr
       href: https://36kr.com/
-      label: 36氪 · 让一部分人先看到未来
+      label: 36氪 · 新商业媒体
       tags:
         - 资讯
-        - 创投
         - 商业
+        - 创投
+    - id: solidot
+      href: https://www.solidot.org/
+      label: Solidot · 奇客的资讯
+      tags:
+        - 资讯
+        - 开源
+        - 极客
+
+- id: startup_indie
+  title: 🚀 创业与独立开发
+  items:
+    - id: producthunt
+      href: https://www.producthunt.com/
+      label: Product Hunt · 新产品发现
+      tags:
+        - 产品
+        - 发现
+        - 独立开发
+    - id: indiehackers
+      href: https://www.indiehackers.com/
+      label: Indie Hackers · 独立开发者
+      tags:
+        - 社区
+        - 独立开发
+        - 创业
+    - id: w2solo
+      href: https://w2solo.com/
+      label: 独立开发者社区 · 国内
+      tags:
+        - 社区
+        - 独立开发
+        - 国内
+    - id: qimingpian
+      href: https://www.qimingpian.com/
+      label: 企名片 · 企业数据
+      tags:
+        - 数据
+        - 创业
+        - 融资
+
+- id: job_career
+  title: 💼 求职与职场
+  items:
+    - id: linkedin
+      href: https://www.linkedin.com/
+      label: LinkedIn · 领英
+      tags:
+        - 职场
+        - 社交
+        - 全球
+    - id: boss
+      href: https://www.zhipin.com/
+      label: Boss直聘 · 招聘
+      tags:
+        - 招聘
+        - 求职
+        - 国内
+    - id: lagou
+      href: https://www.lagou.com/
+      label: 拉勾网 · 互联网招聘
+      tags:
+        - 招聘
+        - 互联网
+        - 垂直
+    - id: leetcode
+      href: https://leetcode.cn/
+      label: LeetCode · 力扣刷题
+      tags:
+        - 面试
+        - 算法
+        - 刷题
+    - id: nowcoder
+      href: https://www.nowcoder.com/
+      label: 牛客网 · 求职神器
+      tags:
+        - 面试
+        - 笔试
+        - 交流
+
+- id: search_tools
+  title: 🔍 搜索引擎
+  items:
+    - id: google
+      href: https://www.google.com/
+      label: Google · 谷歌搜索
+      tags:
+        - 搜索
+        - 全球
+        - 工具
+    - id: bing
+      href: https://www.bing.com/
+      label: Bing · 必应搜索
+      tags:
+        - 搜索
+        - 微软
+        - 工具
+    - id: duckduckgo
+      href: https://duckduckgo.com/
+      label: DuckDuckGo · 隐私搜索
+      tags:
+        - 搜索
+        - 隐私
+        - 安全
+    - id: baidu
+      href: https://www.baidu.com/
+      label: 百度 · 中文搜索
+      tags:
+        - 搜索
+        - 国内
+        - 工具
+    - id: magi
+      href: https://magi.com/
+      label: Magi · AI搜索引擎
+      tags:
+        - 搜索
+        - AI
+        - 知识
+
+- id: resource_nav
+  title: 🧭 资源导航
+  items:
+    - id: iui-su
+      href: https://iui.su/
+      label: 不死鸟 · 优质资源分享
+      tags:
+        - 导航
+        - 资源
+        - 分享
+    - id: yougit
+      href: https://yougit.net/
+      label: YouGit · 云盘资源搜索
+      tags:
+        - 搜索
+        - 云盘
+        - 资源
+    - id: yapan
+      href: https://pan.ccof.cc/
+      label: YaPan · 网盘检索工具
+      tags:
+        - 搜索
+        - 网盘
+        - 资源
+    - id: jiumo
+      href: https://www.jiumodiary.com/
+      label: 鸠摩搜索 · 文档搜索
+      tags:
+        - 搜索
+        - 文档
+        - 书籍
+    - id: shuxiangjia
+      href: https://www.shuxiangjia.cn/
+      label: 书享家 · 电子书导航
+      tags:
+        - 导航
+        - 书籍
+        - 下载
+    - id: youquhome
+      href: https://youquhome.com/
+      label: 有趣网址之家 · 收藏乐趣
+      tags:
+        - 导航
+        - 趣站
+        - 发现
+    - id: bookmarkearth
+      href: https://www.bookmarkearth.cn/
+      label: 书签地球 · 书签共享搜索
+      tags:
+        - 搜索
+        - 书签
+        - 资源
+
+- id: blog_platform
+  title: 📝 博客平台
+  items:
+    - id: medium
+      href: https://medium.com/
+      label: Medium · 优质阅读
+      tags:
+        - 博客
+        - 阅读
+        - 全球
+    - id: wordpress
+      href: https://wordpress.com/
+      label: WordPress · 建站平台
+      tags:
+        - 博客
+        - 建站
+        - CMS
+    - id: csdn
+      href: https://www.csdn.net/
+      label: CSDN · 开发者社区
+      tags:
+        - 博客
+        - 技术
+        - 国内
+    - id: cnblogs
+      href: https://www.cnblogs.com/
+      label: 博客园 · 开发者的网上家园
+      tags:
+        - 博客
+        - 技术
+        - 纯粹
+    - id: jianshu
+      href: https://www.jianshu.com/
+      label: 简书 · 创作你的创作
+      tags:
+        - 博客
+        - 写作
+        - 分享
+
+- id: academic_sci
+  title: 🎓 学术科研
+  items:
+    - id: google-scholar
+      href: https://scholar.google.com/
+      label: Google Scholar · 学术搜索
+      tags:
+        - 学术
+        - 搜索
+        - 论文
+    - id: arxiv
+      href: https://arxiv.org/
+      label: arXiv · 预印本库
+      tags:
+        - 学术
+        - 论文
+        - 计算机
+    - id: researchgate
+      href: https://www.researchgate.net/
+      label: ResearchGate · 科研社交
+      tags:
+        - 学术
+        - 社交
+        - 交流
+    - id: cnki
+      href: https://www.cnki.net/
+      label: 知网 · 中文文献
+      tags:
+        - 学术
+        - 文献
+        - 国内
+
+- id: lifestyle_nav
+  title: 🥗 生活指南
+  items:
+    - id: smzdm
+      href: https://www.smzdm.com/
+      label: 什么值得买 · 消费决策
+      tags:
+        - 导购
+        - 生活
+        - 优惠
+    - id: douban
+      href: https://www.douban.com/
+      label: 豆瓣 · 书影音
+      tags:
+        - 社区
+        - 文化
+        - 评分
+    - id: mafengwo
+      href: https://www.mafengwo.cn/
+      label: 马蜂窝 · 旅游攻略
+      tags:
+        - 旅游
+        - 攻略
+        - 生活
