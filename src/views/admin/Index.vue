@@ -1,20 +1,20 @@
 <script setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { learnSections } from '../../data/learnResources'
-import { projectSections } from '../../data/projectResources'
-import { entertainmentSections } from '../../data/entertainmentResources'
-import { hackSections } from '../../data/hackResources'
-import { otherSections } from '../../data/otherResources'
+import learnSections from '../../data/learnResources.yaml'
+import projectSections from '../../data/projectResources.yaml'
+import entertainmentSections from '../../data/entertainmentResources.yaml'
+import hackSections from '../../data/hackResources.yaml'
+import otherSections from '../../data/otherResources.yaml'
 
 const router = useRouter()
 
 const files = [
-  { key: 'learnResources.js', name: '学习资源', data: learnSections },
-  { key: 'projectResources.js', name: '项目与工具', data: projectSections },
-  { key: 'entertainmentResources.js', name: '休闲娱乐', data: entertainmentSections },
-  { key: 'hackResources.js', name: 'Hack', data: hackSections },
-  { key: 'otherResources.js', name: '其他', data: otherSections },
+  { key: 'learnResources.yaml', name: '学习资源', data: learnSections },
+  { key: 'projectResources.yaml', name: '项目与工具', data: projectSections },
+  { key: 'entertainmentResources.yaml', name: '休闲娱乐', data: entertainmentSections },
+  { key: 'hackResources.yaml', name: 'Hack', data: hackSections },
+  { key: 'otherResources.yaml', name: '其他', data: otherSections },
 ]
 
 const stats = computed(() =>

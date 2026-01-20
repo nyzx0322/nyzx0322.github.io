@@ -1,6 +1,6 @@
 <script setup>
 import CategoryPage from '../../components/CategoryPage.vue'
-import { entertainmentSections } from '../../data/entertainmentResources'
+import entertainmentSections from '../../data/entertainmentResources.yaml'
 import { siteText } from '../../config/siteText'
 
 const pageInfo = siteText.home.cards.find(c => c.path === '/entertainment')

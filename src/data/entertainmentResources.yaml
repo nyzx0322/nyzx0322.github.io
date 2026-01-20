@@ -1,0 +1,377 @@
+- id: moreSite
+  title: 🌐 网站 · 趣味资源
+  items:
+    - id: bushiniao
+      href: https://iui.su/
+      titleAttr: 不死鸟:专注分享优质资源
+      label: 不死鸟 · 分享为王官网
+      tags:
+        - 资源导航
+        - 综合
+        - 博客
+
+
+- id: designRes
+  title: 💡 设计灵感 & 资源
+  items:
+    - id: dribbble
+      href: https://dribbble.com/
+      label: Dribbble · 设计师作品分享社区
+      tags:
+        - 设计
+        - 社区
+        - 灵感
+    - id: behance
+      href: https://www.behance.net/
+      label: Behance · 展示和发现创意作品
+      tags:
+        - 设计
+        - 作品集
+        - 灵感
+    - id: unsplash
+      href: https://unsplash.com/
+      label: Unsplash · 免费高质量图片
+      tags:
+        - 图片
+        - 素材
+        - 免费
+
+
+- id: gamePlatform
+  title: 🎮 游戏平台
+  items:
+    - id: steam
+      href: https://store.steampowered.com/
+      label: Steam · 游戏发行平台
+      tags:
+        - 游戏
+        - 平台
+        - 社区
+    - id: epic
+      href: https://store.epicgames.com/
+      label: Epic Games · 虚幻引擎
+      tags:
+        - 游戏
+        - 平台
+        - 免费
+    - id: itchio
+      href: https://itch.io/
+      label: itch.io · 独立游戏平台
+      tags:
+        - 游戏
+        - 独立
+        - 免费
+
+
+- id: entSearch
+  title: 🔍 擎 · 资源搜索
+  items:
+    - id: yougit
+      href: https://yougit.net/?dalao.ru
+      label: YouGit · 云盘资源搜索引擎
+      tags:
+        - 网盘
+        - 搜索
+        - 资源
+    - id: yapan
+      href: https://pan.ccof.cc/
+      titleAttr: Yapan - 网盘检索工具
+      label: YaPan · 阿里云盘搜索引擎
+      tags:
+        - 阿里云盘
+        - 搜索
+        - 资源
+
+
+- id: entSoftware
+  title: 💾 软件导航
+  items:
+    - id: alternativeto
+      href: https://alternativeto.net/
+      titleAttr: 'AlternativeTo: crowdsourced software recommendations。'
+      label: AlternativeTo · 寻找软件替代品
+      tags:
+        - 软件
+        - 替代品
+        - 导航
+    - id: guohe
+      href: https://www.ghxi.com/
+      titleAttr: 果核剥壳：综合科技站点，看新闻、分享破解软件、绿色软件、Windows 系统。
+      label: 果核剥壳 · 互联网的净土
+      tags:
+        - 软件
+        - 破解
+        - Windows
+    - id: sumatrapdf
+      href: https://github.com/sumatrapdfreader/sumatrapdf
+      titleAttr: SumatraPDF reader.
+      label: sumatrapdfreader/sumatrapdf · 开源 PDF 阅读器
+      tags:
+        - PDF
+        - 阅读器
+        - 开源
+    - id: jexchan
+      href: https://www.ghxi.com/jexchandwj.html
+      titleAttr: JexChan 单文件制作工具。
+      label: JexChan 单文件制作工具 · 果核剥壳
+      tags:
+        - 打包
+        - Windows
+        - 工具
+    - id: potplayer
+      href: https://potplayer.daum.net/
+      label: Potplayer · 媒体播放器
+      tags:
+        - 播放器
+        - 视频
+        - 软件
+    - id: kurd-store
+      href: https://kurdstore.info/ipa/null.php
+      label: Kurd store · iOS 软件
+      tags:
+        - iOS
+        - 软件
+        - 下载
+    - id: macapp
+      href: https://macapp.org.cn/app/?iao.su
+      titleAttr: Mac 软件分享。
+      label: MacApp 分享频道 · Mac 软件
+      tags:
+        - Mac
+        - 软件
+        - 分享
+
+
+- id: entSites
+  title: 🔍挖掘新世界
+  items:
+    - id: youquhome
+      href: https://youquhome.com/
+      titleAttr: 分享有趣的国内外网站&应用的新奇 HTML5 网站。
+      label: 有趣网址之家 · 收藏全球最有趣的网站
+      tags:
+        - 趣站
+        - 导航
+        - 聚合
+    - id: how-to-cook
+      href: https://cook.aiurs.co/
+      label: How To Cook · 程序员做饭指南
+      tags:
+        - 做饭
+        - 教程
+        - 生活
+    - id: chaofan
+      href: https://chao.fan/
+      titleAttr: 兴趣聚合优质内容社区。
+      label: 炒饭 · 世界那么大：网络迷踪
+      tags:
+        - 社区
+        - 兴趣
+        - 聚合
+
+
+- id: entReading
+  title: 📚 阅读与漫画
+  items:
+    - id: zlibrary
+      href: https://z-lib.org/
+      label: Z-Library · 全球最大的数字图书馆
+      tags:
+        - 图书
+        - 免费
+        - 下载
+    - id: manhuagui
+      href: https://www.manhuagui.com/
+      label: 漫画柜 · 免费在线漫画
+      tags:
+        - 漫画
+        - 二次元
+        - 阅读
+    - id: weread
+      href: https://weread.qq.com/
+      label: 微信读书 · 深度阅读
+      tags:
+        - 阅读
+        - 书籍
+        - 社区
+
+
+- id: entAnime
+  title: 🌸 动漫 & 二次元
+  items:
+    - id: bilibili
+      href: https://www.bilibili.com/
+      label: Bilibili · 哔哩哔哩
+      tags:
+        - 动漫
+        - 视频
+        - 社区
+    - id: agefans
+      href: https://www.agemys.com/
+      label: AGE 动漫 · 动漫资源
+      tags:
+        - 动漫
+        - 番剧
+        - 资源
+    - id: pixiv
+      href: https://www.pixiv.net/
+      label: Pixiv · 插画交流网站
+      tags:
+        - 二次元
+        - 插画
+        - 社区
+
+
+- id: learnVideos
+  title: 🎬 影视 · 观影网站
+  items:
+    - id: vip-video-1
+      href: /demo/vipVIdeoPlayer/index.html
+      titleAttr: 本窗口打开
+      label: VIP 视频解析 1
+      meta: 源码位于本项目的 /demo 目录中
+      tags:
+        - 视频
+        - 解析
+        - Demo
+    - id: vip-video-2
+      href: /demo/vipVIdeoPlayer/02.html
+      titleAttr: 新窗口打开
+      label: VIP 视频解析 2
+      meta: 源码位于本项目的 /demo 目录中
+      tags:
+        - 视频
+        - 解析
+        - Demo
+    - id: 88-zhibo
+      href: http://www.88zhibo.cc/
+      titleAttr: 世界杯直播、NBA、英超、西甲、欧冠等。
+      label: 88 直播 · 体育直播
+      tags:
+        - 体育
+        - 直播
+        - 世界杯
+    - id: fifa2022
+      href: http://www.fifa2022.tv/
+      label: 高清在线直播网
+      tags:
+        - 体育
+        - 直播
+        - 综合
+    - id: tv-stream
+      href: http://tonkiang.us/
+      titleAttr: 电视直播源搜索引擎。
+      label: 电视直播源搜索引擎
+      meta: 可搭配媒体播放器 PotPlayer 使用
+      tags:
+        - 电视
+        - 直播源
+        - 工具
+    - id: douban-movie
+      href: https://movie.douban.com/
+      label: 豆瓣电影 · 你的电影指南
+      tags:
+        - 电影
+        - 评分
+        - 社区
+
+
+- id: learnMp3
+  title: 🎵 音乐 · 听歌网站
+  items:
+    - id: xiageba
+      href: https://music.y444.cn/#/
+      titleAttr: 下歌吧：音乐在线试听与下载。
+      label: 下歌吧 · 音乐免费下载/在线试听/无损下载
+      tags:
+        - 音乐
+        - 下载
+        - 在线播放
+    - id: tongzhong
+      href: https://tonzhon.com/
+      titleAttr: 纯粹的音乐网站，专注学习和工作时听歌。
+      label: 铜钟 · Listen to all the music in one place
+      tags:
+        - 音乐
+        - 专注
+        - 白噪音
+
+
+- id: entWallpapers
+  title: 🖼️ 壁纸 & 美化
+  items:
+    - id: wallhaven
+      href: https://wallhaven.cc/
+      label: Wallhaven · 高清壁纸
+      tags:
+        - 壁纸
+        - 高清
+        - 二次元
+    - id: bing-wallpaper
+      href: https://bing.wallpaper.pics/
+      label: Bing Wallpaper · 必应每日壁纸
+      tags:
+        - 壁纸
+        - 摄影
+        - 风景
+    - id: simple-desktops
+      href: http://simpledesktops.com/
+      label: Simple Desktops · 极简壁纸
+      tags:
+        - 壁纸
+        - 极简
+        - 设计
+
+
+- id: learnGames
+  title: 🎲 游戏与站点
+  items:
+    - id: switch520
+      href: https://www.gamer520.com
+      titleAttr: Switch 游戏下载站。
+      label: Switch520 · Switch/PC 游戏下载
+      tags:
+        - Switch
+        - 游戏
+        - 下载
+    - id: vgter
+      href: https://www.vgter.com/archives/category/pc
+      label: 上游世界 · PC 单机游戏下载
+      tags:
+        - PC
+        - 游戏
+        - 下载
+    - id: watch-dogs-2
+      href: https://xxxxx520.com/14746.html
+      label: 看门狗 2 / Watch Dogs 2
+      tags:
+        - 游戏
+        - 开放世界
+        - 动作
+    - id: civilization-6
+      href: https://xxxxx520.com/42788.html
+      titleAttr: 文明 6 介绍与下载。
+      label: 文明 6 / Civilization VI
+      tags:
+        - 游戏
+        - 策略
+        - 回合制
+
+
+- id: entPodcast
+  title: 🎙️ 播客与有声
+  items:
+    - id: xiaoyuzhou
+      href: https://www.xiaoyuzhoufm.com/
+      label: 小宇宙 · 播客 App
+      tags:
+        - 播客
+        - 社区
+        - 听觉
+    - id: ximalaya
+      href: https://www.ximalaya.com/
+      label: 喜马拉雅 · 有声小说
+      tags:
+        - 有声书
+        - 音频
+        - 综合

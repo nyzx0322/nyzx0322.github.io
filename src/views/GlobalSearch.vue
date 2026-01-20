@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
+import Fuse from 'fuse.js'
+import { pinyin } from 'pinyin-pro'
 import TagFilterBar from '../components/TagFilterBar.vue'
 import { allResources } from '../data/allResourcesIndex'
 
@@ -27,37 +29,66 @@ const allTags = computed(() => {
   return Array.from(tagSet)
 })
 
+// 预处理数据：添加拼音字段
+const processedResources = computed(() => {
+  return allResources.map((item) => {
+    const label = item.label || ''
+    const tags = Array.isArray(item.tags) ? item.tags : []
+    const sectionTitle = item.sectionTitle || ''
+    const titleAttr = item.titleAttr || ''
+
+    return {
+      ...item,
+      labelPy: pinyin(label, { toneType: 'none', separator: '' }),
+      labelFirst: pinyin(label, { pattern: 'first', toneType: 'none', separator: '' }),
+      tagsPy: tags.map(t => pinyin(t, { toneType: 'none', separator: '' })).join(' '),
+      sectionTitlePy: pinyin(sectionTitle, { toneType: 'none', separator: '' }),
+      titleAttrPy: pinyin(titleAttr, { toneType: 'none', separator: '' })
+    }
+  })
+})
+
 const filteredResources = computed(() => {
-  const kw = keyword.value.trim().toLowerCase()
+  const kw = keyword.value.trim()
   const tags = activeTags.value
   const category = activeCategory.value
 
-  return allResources.filter((item) => {
-    if (category !== 'all' && item.category !== category) {
-      return false
-    }
+  // 1. 先进行分类和标签的硬性过滤
+  let baseList = processedResources.value
 
-    if (tags && tags.length) {
+  if (category !== 'all') {
+    baseList = baseList.filter(item => item.category === category)
+  }
+
+  if (tags && tags.length) {
+    baseList = baseList.filter(item => {
       const itemTags = Array.isArray(item.tags) ? item.tags : []
       if (!itemTags.length) return false
-      const hasAllTags = tags.every((tag) => itemTags.includes(tag))
-      if (!hasAllTags) return false
-    }
+      return tags.every((tag) => itemTags.includes(tag))
+    })
+  }
 
-    if (!kw) return true
+  // 2. 如果没有关键字，直接返回硬过滤结果
+  if (!kw) return baseList
 
-    const label = (item.label || '').toLowerCase()
-    const titleAttr = (item.titleAttr || '').toLowerCase()
-    const sectionTitle = (item.sectionTitle || '').toLowerCase()
-    const tagText = Array.isArray(item.tags) ? item.tags.join(' ').toLowerCase() : ''
-
-    return (
-      label.includes(kw) ||
-      titleAttr.includes(kw) ||
-      sectionTitle.includes(kw) ||
-      tagText.includes(kw)
-    )
+  // 3. 使用 Fuse.js 进行模糊搜索和权重排序
+  const fuse = new Fuse(baseList, {
+    keys: [
+      { name: 'label', weight: 1.0 },       // 标题匹配最重要
+      { name: 'labelPy', weight: 0.8 },     // 标题全拼
+      { name: 'labelFirst', weight: 0.7 },  // 标题首字母
+      { name: 'tags', weight: 0.6 },        // 标签
+      { name: 'tagsPy', weight: 0.5 },      // 标签拼音
+      { name: 'titleAttr', weight: 0.3 },   // 描述/Tooltip
+      { name: 'sectionTitle', weight: 0.2 } // 分类名
+    ],
+    threshold: 0.4, // 模糊匹配阈值，0.0 完全匹配，1.0 匹配任何内容
+    includeScore: true,
+    ignoreLocation: true // 忽略位置，全文搜索
   })
+
+  const results = fuse.search(kw)
+  return results.map(res => res.item)
 })
 </script>
 

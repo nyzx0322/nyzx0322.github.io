@@ -1,6 +1,6 @@
 <script setup>
 import CategoryPage from '../../components/CategoryPage.vue'
-import { learnSections } from '../../data/learnResources'
+import learnSections from '../../data/learnResources.yaml'
 import { siteText } from '../../config/siteText'
 
 const pageInfo = siteText.home.cards.find(c => c.path === '/learn')

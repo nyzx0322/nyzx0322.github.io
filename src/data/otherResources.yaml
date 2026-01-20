@@ -1,0 +1,179 @@
+- id: aiTools
+  title: 🤖 AI 助手 & 工具
+  items:
+    - id: chatgpt
+      href: https://chat.openai.com/
+      label: ChatGPT · OpenAI
+      tags:
+        - AI
+        - 聊天
+        - 工具
+    - id: deepseek
+      href: https://www.deepseek.com/
+      label: DeepSeek · 深度求索
+      tags:
+        - AI
+        - 聊天
+        - 国产
+    - id: claude
+      href: https://claude.ai/
+      label: Claude · Anthropic
+      tags:
+        - AI
+        - 聊天
+        - 工具
+
+
+- id: productivity
+  title: 效率与笔记
+  items:
+    - id: notion
+      href: https://www.notion.so/
+      label: Notion · 知识库
+      tags:
+        - 笔记
+        - 协作
+        - 效率
+    - id: obsidian
+      href: https://obsidian.md/
+      label: Obsidian · 第二大脑
+      tags:
+        - 笔记
+        - Markdown
+        - 本地
+    - id: flomo
+      href: https://flomoapp.com/
+      label: flomo · 浮墨笔记
+      tags:
+        - 笔记
+        - 思考
+        - 记录
+
+
+- id: toolPrivacy
+  title: 🔒 隐私 & 文件传输
+  items:
+    - id: bitwarden
+      href: https://bitwarden.com/
+      label: Bitwarden · 开源密码管理器
+      tags:
+        - 隐私
+        - 密码
+        - 安全
+    - id: wetransfer
+      href: https://wetransfer.com/
+      label: WeTransfer · 大文件传输
+      tags:
+        - 文件
+        - 传输
+        - 效率
+    - id: snapdrop
+      href: https://snapdrop.net/
+      label: Snapdrop · 局域网文件传输
+      tags:
+        - 文件
+        - 局域网
+        - 免安装
+
+
+- id: techCommunity
+  title: 💬 技术社区
+  items:
+    - id: stackoverflow
+      href: https://stackoverflow.com/
+      label: Stack Overflow · 全球最大技术问答
+      tags:
+        - 社区
+        - 问答
+        - 技术
+    - id: v2ex
+      href: https://www.v2ex.com/
+      label: V2EX · 创意工作者社区
+      tags:
+        - 社区
+        - 交流
+        - 极客
+    - id: juejin
+      href: https://juejin.cn/
+      label: 掘金 · 帮助开发者成长
+      tags:
+        - 社区
+        - 博客
+        - 国内
+    - id: infoq
+      href: https://www.infoq.cn/
+      label: InfoQ · 促进软件开发领域知识与创新
+      tags:
+        - 社区
+        - 资讯
+        - 架构
+    - id: github
+      href: https://github.com/
+      label: GitHub · 开发者社区
+      tags:
+        - 社区
+        - 开源
+        - 代码
+    - id: segmentfault
+      href: https://segmentfault.com/
+      label: SegmentFault 思否 · 开发者技术社区
+      tags:
+        - 社区
+        - 问答
+        - 技术
+
+
+- id: jobHunt
+  title: 🧑‍💻 求职 & 面试
+  items:
+    - id: nowcoder
+      href: https://www.nowcoder.com/
+      label: 牛客网 · 找工作神器
+      tags:
+        - 求职
+        - 笔试
+        - 社区
+    - id: jianli-download
+      href: https://jianlixiazai.cn/
+      titleAttr: 免费提供各行业简历制作模板 WORD 可编辑格式下载。
+      label: 简历下载网 · 个人简历 WORD 模板
+      tags:
+        - 简历
+        - 模板
+        - 求职
+
+
+- id: remoteWork
+  title: 🏠 远程工作
+  items:
+    - id: eleduck
+      href: https://eleduck.com/
+      label: 电鸭社区 · 远程工作社区
+      tags:
+        - 远程
+        - 招聘
+        - 社区
+    - id: remoteok
+      href: https://remoteok.com/
+      label: Remote OK · 全球远程工作
+      tags:
+        - 远程
+        - 全球
+        - 招聘
+- id: techInfo
+  title: 📰 科技资讯
+  items:
+    - id: sspai
+      href: https://sspai.com/
+      label: 少数派 · 高品质数字消费指南
+      tags:
+        - 资讯
+        - 评测
+        - 效率
+    - id: 36kr
+      href: https://36kr.com/
+      label: 36氪 · 让一部分人先看到未来
+      tags:
+        - 资讯
+        - 创投
+        - 商业

@@ -1,13 +1,9 @@
-import { reactive } from 'vue'
+import { defineStore } from 'pinia'
 
-const state = reactive({
-  siteName: '示例站点',
-  version: '0.0.1',
+export const useRootStore = defineStore('root', {
+  state: () => ({
+    siteName: '示例站点',
+    version: '0.0.1',
+  }),
 })
-
-export function useRootStore() {
-  return {
-    state,
-  }
-}
 

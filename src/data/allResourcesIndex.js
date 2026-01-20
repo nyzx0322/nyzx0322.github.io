@@ -1,8 +1,8 @@
-import { learnSections } from './learnResources'
-import { projectSections } from './projectResources'
-import { entertainmentSections } from './entertainmentResources'
-import { hackSections } from './hackResources'
-import { otherSections } from './otherResources'
+import learnSections from './learnResources.yaml'
+import projectSections from './projectResources.yaml'
+import entertainmentSections from './entertainmentResources.yaml'
+import hackSections from './hackResources.yaml'
+import otherSections from './otherResources.yaml'
 
 function flattenSections(sections, category) {
   const items = []

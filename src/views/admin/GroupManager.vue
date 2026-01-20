@@ -1,23 +1,23 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { learnSections } from '../../data/learnResources'
-import { projectSections } from '../../data/projectResources'
-import { entertainmentSections } from '../../data/entertainmentResources'
-import { hackSections } from '../../data/hackResources'
-import { otherSections } from '../../data/otherResources'
+import learnSections from '../../data/learnResources.yaml'
+import projectSections from '../../data/projectResources.yaml'
+import entertainmentSections from '../../data/entertainmentResources.yaml'
+import hackSections from '../../data/hackResources.yaml'
+import otherSections from '../../data/otherResources.yaml'
 
 const resources = {
-  'learnResources.js': { name: 'learnSections', data: learnSections },
-  'projectResources.js': { name: 'projectSections', data: projectSections },
-  'entertainmentResources.js': { name: 'entertainmentSections', data: entertainmentSections },
-  'hackResources.js': { name: 'hackSections', data: hackSections },
-  'otherResources.js': { name: 'otherSections', data: otherSections },
+  'learnResources.yaml': { name: 'learnSections', data: learnSections },
+  'projectResources.yaml': { name: 'projectSections', data: projectSections },
+  'entertainmentResources.yaml': { name: 'entertainmentSections', data: entertainmentSections },
+  'hackResources.yaml': { name: 'hackSections', data: hackSections },
+  'otherResources.yaml': { name: 'otherSections', data: otherSections },
 }
 
 const route = useRoute()
 const router = useRouter()
-const selectedFile = ref('learnResources.js')
+const selectedFile = ref('learnResources.yaml')
 const sections = ref([])
 const selectedSectionId = ref('')
 const statusMsg = ref('')
@@ -129,7 +129,6 @@ const saveFile = async () => {
       },
       body: JSON.stringify({
         file: selectedFile.value,
-        variable: variableName,
         content: sections.value
       })
     })

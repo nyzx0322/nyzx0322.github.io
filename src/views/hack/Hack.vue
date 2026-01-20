@@ -1,6 +1,6 @@
 <script setup>
 import CategoryPage from '../../components/CategoryPage.vue'
-import { hackSections } from '../../data/hackResources'
+import hackSections from '../../data/hackResources.yaml'
 import { siteText } from '../../config/siteText'
 
 const pageInfo = siteText.home.cards.find(c => c.path === '/hack')
